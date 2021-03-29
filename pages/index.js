@@ -1,6 +1,12 @@
-import Body from '../components/Body';
-import Footer from '../components/Footer';
 import Head from 'next/head'
+
+import HomeBody from '../components/HomeBody';
+
+import Header from '../components/Header';
+import SubscribeSection from '../components/Subscribe';
+import Loader from '../components/Loader';
+import Footer from '../components/Footer';
+
 
 export default function Home() {
   return (
@@ -22,7 +28,10 @@ export default function Home() {
         <script src="js/jquery.sticky.js"></script>
         <script src="js/main.js"></script>
       </Head>
-      <Body/>
+      <Header/>
+      <HomeBody/>
+      <SubscribeSection/>
+      <Loader/>
       <Footer/>
     </div>
   )

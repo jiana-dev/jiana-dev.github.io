@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.siteLogo {
+  font-family: 'Playfair Display', serif;
+  font-size: xx-large;
+  color: #000;
+}
+
+a.siteLogo:hover {
+  color: #9f9787;
+}

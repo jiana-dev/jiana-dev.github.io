@@ -1,12 +1,15 @@
 /* Base */
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 body {
   line-height: 1.7;
   color: gray;
   font-weight: 300;
-  font-size: .9rem; }
+  font-size: .9rem;
+  background: #e2ded1;
+}
 
 ::-moz-selection {
   background: #000;
@@ -226,7 +229,6 @@ h1, h2, h3, h4, h5,
   margin-bottom: 0px;
   z-index: 1999;
   width: 100%;
-  background: #fff;
   font-family: "B612 Mono", monospace; }
   .site-navbar .site-navigation.border-bottom {
     border-bottom: 1px solid #f3f3f4 !important; }
@@ -286,7 +288,6 @@ h1, h2, h3, h4, h5,
         padding: 0px 0;
         margin-top: 20px;
         margin-left: 0px;
-        background: #fff;
         -webkit-transition: 0.2s 0s;
         -o-transition: 0.2s 0s;
         transition: 0.2s 0s; }
@@ -326,7 +327,8 @@ h1, h2, h3, h4, h5,
             display: block; }
             .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover {
               background: #f4f5f9;
-              color: #25262a; }
+              color: #9f9787;
+            }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
             content: "\e315";
             right: 20px; }
@@ -356,7 +358,6 @@ h1, h2, h3, h4, h5,
   right: 0;
   z-index: 2000;
   padding-top: 20px;
-  background: #fff;
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
@@ -493,8 +494,7 @@ h1, h2, h3, h4, h5,
 .sticky-wrapper {
   position: absolute;
   z-index: 100;
-  width: 100%;
-  background: #fff; }
+  width: 100%; }
   @media (max-width: 991.98px) {
     .sticky-wrapper {
       display: none; } }
@@ -581,8 +581,7 @@ h1, h2, h3, h4, h5,
     height: 40px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background: #fff; }
+    transform: translateY(-50%); }
     .owl-slide-3 .owl-nav .owl-prev > span,
     .owl-slide-3 .owl-nav .owl-next > span, .owl-slide .owl-nav .owl-prev > span,
     .owl-slide .owl-nav .owl-next > span, .owl-style .owl-nav .owl-prev > span,
@@ -654,7 +653,6 @@ h1, h2, h3, h4, h5,
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  background-color: #fff;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none; }
@@ -951,7 +949,6 @@ h1, h2, h3, h4, h5,
       margin-bottom: 10px;
       width: 40px;
       height: 40px;
-      background: #fff;
       position: relative; }
       .person .social a > span {
         position: absolute;
@@ -1014,8 +1011,7 @@ h1, h2, h3, h4, h5,
   padding: 25px;
   font-size: 15px;
   width: 100%;
-  float: left;
-  background: #fff; }
+  float: left; }
   .sidebar-box *:last-child {
     margin-bottom: 0; }
   .sidebar-box h3 {
