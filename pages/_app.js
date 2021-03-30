@@ -1,5 +1,6 @@
 // import App from 'next/app'
 import '../meranda-master/master.css'
+import '../components/styles/pagination.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
