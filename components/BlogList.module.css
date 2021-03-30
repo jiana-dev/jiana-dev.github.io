@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+
+.blogPagination {
+  font-family: 'Dm Sans', sans-serif;
+  color: #635d4f;
+}
+
+.blogPagination a {
+  font-family: 'Dm Sans', sans-serif;
+  font-size: medium;
+}
+
+.dateRead {
+  color: #c4bead;
+}
+
+.sectionTitle {
+  float: right;
+}
+
+.blogTitle{
+  color: #6b6251;
+  font-weight: 500;
+}

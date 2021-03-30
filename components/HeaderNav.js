@@ -1,6 +1,8 @@
+import styles from './HeaderNav.module.css';
+
 export default function HeaderNav() {
   return (
-    <div className="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+    <div className={styles.nav + " site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block"} role="banner">
       <div className="container">
         <div className="d-flex align-items-center">
           <div className="mr-auto">
@@ -13,7 +15,10 @@ export default function HeaderNav() {
                   <a href="blog" className="nav-link text-left">Blog</a>
                 </li>
                 <li>
-                  <a href="projects" className="nav-link text-left">Projects</a>
+                  <a href="code" className="nav-link text-left">Code</a>
+                </li>
+                <li>
+                  <a href="learn" className="nav-link text-left">Learn</a>
                 </li>
                 <li>
                   <a href="podcast" className="nav-link text-left">Podcast</a>

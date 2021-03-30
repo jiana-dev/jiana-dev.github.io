@@ -1,36 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 import dataset from '../data/blogs.json';
+import styles from './BlogList.module.css';
 
 export default function BlogList() {
-  const perPage = 10;
+  const perPage = 4;
   const pageCount = Math.ceil(dataset.length/perPage);
 
   const [blogPosts, setBlogPosts] = useState([]);
-  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-    let currentPosts = getPaginatedItems(dataset);
+    let currentPosts = getPaginatedItems(dataset, 0);
     setBlogPosts(currentPosts)
   }, []);
 
   let posts = blogPosts.map((blogPost, index) => {
     return (
       <div className="post-entry-2 d-flex" key={index}>
-        <div className="thumbnail order-md-2" style={{ backgroundImage: `url('images/img_v_1.jpg')`}}></div>
+        { /* <div className="thumbnail order-md-2" style={{ backgroundImage: `url('images/img_v_1.jpg')`}}></div> */ }
         <div className="contents order-md-1 pl-0">
-          <h2><a href="blog-single.html">{blogPost.username}</a></h2>
-          <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+          <h2 className={styles.blogTitle}><a href="blog-single.html">{blogPost.title}</a></h2>
+          <p className="mb-3">{blogPost.preview}</p>
           <div className="post-meta">
-            <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-            <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
+            <span className={styles.dateRead}>{blogPost.date}</span>
           </div>
         </div>
       </div>
     )
   });
 
-  function getPaginatedItems(items) {
+  function getPaginatedItems(items, offset) {
     return items.slice(offset, offset + perPage);
   }
 
@@ -38,19 +37,16 @@ export default function BlogList() {
     let selected = data.selected;
     let offset = Math.ceil(selected * perPage);
 
-    setOffset(offset)
-
-    const currentPosts = getPaginatedItems(dataset);
+    const currentPosts = getPaginatedItems(dataset, offset);
     setBlogPosts(currentPosts)
   };
 
   return (
-    <div className="col-lg-9">
-      <div className="section-title">
-        <span className="caption d-block small">Categories</span>
-        <h2>Politics</h2>
+    <div className="col-lg-12">
+      <div className={styles.sectionTitle}>
+        <span className="caption d-block medium">Jiana's Corner of Random Rambles</span>
       </div>
-      <div className='blogPagination'>
+      <div className={styles.blogPagination}>
         { posts }
         <ReactPaginate previousLabel={"previous"}
               nextLabel={"next"}
