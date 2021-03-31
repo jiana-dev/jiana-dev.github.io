@@ -12,22 +12,22 @@ export default function HeaderNav() {
                   <a href="/" className="nav-link text-left">Home</a>
                 </li>
                 <li>
-                  <a href="blog" className="nav-link text-left">Blog</a>
+                  <a href="/blog" className="nav-link text-left">Blog</a>
                 </li>
                 <li>
-                  <a href="code" className="nav-link text-left">Code</a>
+                  <a href="/code" className="nav-link text-left">Code</a>
                 </li>
                 <li>
-                  <a href="learn" className="nav-link text-left">Learn</a>
+                  <a href="/learn" className="nav-link text-left">Learn</a>
                 </li>
                 <li>
-                  <a href="podcast" className="nav-link text-left">Podcast</a>
+                  <a href="/podcast" className="nav-link text-left">Podcast</a>
                 </li>
                 <li>
-                  <a href="youtube" className="nav-link text-left">Youtube</a>
+                  <a href="/youtube" className="nav-link text-left">Youtube</a>
                 </li>
                 <li>
-                  <a href="contact" className="nav-link text-left">Contact</a>
+                  <a href="/contact" className="nav-link text-left">Contact</a>
                 </li>
               </ul>
             </nav>

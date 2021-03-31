@@ -1,50 +1,12 @@
-[
-  {
-    "title": "Rediscovering The Joy of Analog Creation",
-    "subtitle": "",
-    "preview": "About two years ago now, I spent a lot of time creating things with my hands.",
-    "date": "Monday, February 15, 2021 9:30AM"
-  },
-  {
-    "title": "Napoleon Hill's Self Analysis Questions",
-    "subtitle": "",
-    "preview": "With the end of the insane year that was 2020, I decided to do a Self-Analysis taken straight from Think and Grow Rich! by Napoleon Hill. It gives you a really great self-examination that you can refer to year over year to qualitatively measure improvement. More context is provided in the book's Epilogue.",
-    "date": "Saturday, January 2, 2021 1:37PM"
-  },
-  {
-    "title": "What Digital Minimalism Means to me as a Software Developer",
-    "subtitle": "",
-    "preview": "I'm coming to the end of reading Digital Minimalism and it felt only fitting to accompany my learnings with a blog post. I have quite a few thoughts about Digital Minimalism as a whole, but I want to focus in on framing it in the perspective of my identity as a Software Developer, and as someone who has been exposed to and supported by tech all her life.",
-    "date": "Sunday, December 6, 2020 8:17PM"
-  },
-  {
-    "title": "Github Gems: Mos",
-    "subtitle": "",
-    "preview": "Whenever I'm looking for a particular software to help me do something, I always look to the most advertised and popular option that shows up in my Google search results first.",
-    "date": "Sunday, November 29, 2020 8:02PM"
-  },
-  {
-    "title": "A Productivity Marathon",
-    "subtitle": "",
-    "preview": "This week, I've been struggling a lot with managing my productivity system. It pains me to think about how much time I've spent on... tangibly nothing. But I like to believe that if nothing else, I'm feeding my soul and I'd really like to think that I'm taking steps towards developing something that truly works for me.",
-    "date": "Sunday November 22, 2020 2:31PM"
-  },
-  {
-    "title": "Things I Wish I Knew When I Started as a Software Developer",
-    "subtitle": "",
-    "preview": "Soon after settling into my first job out of university, I realized that software development is not at all the same as Computer Science. The skills you develop learning Computer Science are sure to help you with development, but are not a necessary prerequisite to do well in it.",
-    "date": "Sunday, November 15, 2020 12:00PM"
-  },
-  {
-    "title": "How to Plan Your Goals Using Scrum",
-    "subtitle": "Tech Translation",
-    "preview": "The goal of this post is to give you an idea for a structured way to organize your goals using concepts borrowed from software development processes.",
-    "date": "Sunday, November 8, 2020 6:13PM"
-  },
-  {
-    "title": "Re-learning the Value of Money",
-    "subtitle": "Frugality as a Hindrance",
-    "preview": "I thought of it as scarce, as the most prized commodity. In turn, leading me to not being as generous as I could have been, quite frugal in the moments where it could potentially hinder my relationships with people, wasting tons of time on negligible money-related decisions, and in general turning me into a person I didn't like when it came to the topic of money.",
-    "date": "Saturday October 17, 2020 11:20PM"
-  }
-]
+{
+  "posts": [
+    "analog_creation",
+    "napoleon_hill",
+    "digital_minimalism",
+    "github_gems_mos",
+    "productivity_marathon",
+    "developer_advice",
+    "scrum_goal_planning",
+    "time_is_money"
+  ]
+}

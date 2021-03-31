@@ -10,7 +10,11 @@
   font-size: medium;
 }
 
-.dateRead {
+.date {
+  color: #999183;
+}
+
+.read {
   color: #c4bead;
 }
 

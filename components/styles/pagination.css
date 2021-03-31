@@ -1,4 +1,13 @@
-ul.pagination > li > a {
+ul.pagination li a {
     color: black;
     padding: 1em;
+    outline: none;
+}
+
+ul.pagination li.disabled > a {
+    color: #999183;
+}
+
+ul.pagination li.active > a {
+    font-weight: 700;
 }
