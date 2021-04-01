@@ -4,10 +4,10 @@ import SubscribeSection from '../../components/Subscribe';
 import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 
-import BlogList from '../../components/BlogList';
+import LearnList from '../../components/LearnList';
 import PopularPostsSection from '../../components/PopularPostsSection';
 
-export default function Blog() {
+export default function Learn() {
   return (
     <div className="container">
       <HeadTag/>
@@ -16,7 +16,7 @@ export default function Blog() {
         <div className="site-section">
           <div className="container">
             <div className="row">
-              <BlogList/>
+              <LearnList/>
             </div>
           </div>
         </div>

@@ -7,9 +7,9 @@ import Footer from '../../components/Footer';
 
 import BlogPostHeader from '../../components/BlogPostHeader';
 
-import postData from '../../public/data/blogs/analog_creation.json';
+import postData from '../../public/data/resources/stock_value_chart.json';
 
-export default function AnalogCreation() {
+export default function StockValueChart() {
   const post =
     <div>
       <p>About two years ago now, I spent a lot of time creating things with my hands. I ventured into crocheting at first, and made a few baskets.</p>
