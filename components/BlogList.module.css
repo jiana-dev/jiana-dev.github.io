@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
 
 .blogPagination {
   font-family: 'Dm Sans', sans-serif;
@@ -25,4 +25,8 @@
 .blogTitle{
   color: #6b6251;
   font-weight: 500;
+}
+
+.updateLabel {
+  font-weight: 600;
 }

@@ -5,7 +5,7 @@ export default function BlogPostHeader(props) {
       <div className="post-meta d-flex mb-5">
         <div className="vcard">
           <span className="date">
-            {props.date}
+            {new Date(props.date).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})}
             <span className="readTime mx-1">
               {props.readTime}
             </span>

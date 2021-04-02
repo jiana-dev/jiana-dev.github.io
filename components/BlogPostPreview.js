@@ -9,6 +9,7 @@ export default function BlogPostPreview(props) {
           <p className="mb-3">{props.blogPost.preview}</p>
           <div className="post-meta">
             <span className={styles.date}>
+              {props.lastUpdated && <span className={styles.updateLabel}>Updated at: </span>}
               {props.blogPost.date}
               <span className={styles.read + " mx-1"}>
                 {props.blogPost.readTime}

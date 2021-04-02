@@ -20,7 +20,7 @@ export default function HeaderTop() {
           <form action="#" className="search-form d-inline-block">
 
             <div className="d-flex">
-              <input type="email" className="form-control" placeholder="Search..."/>
+              <input type="text" className="form-control" placeholder="Search..."/>
               <button type="submit" className="btn btn-secondary" ><span className="icon-search"></span></button>
             </div>
           </form>

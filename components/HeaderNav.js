@@ -24,7 +24,7 @@ export default function HeaderNav() {
                   <a href="/podcast" className="nav-link text-left">Podcast</a>
                 </li>
                 <li>
-                  <a href="/youtube" className="nav-link text-left">Youtube</a>
+                  <a href="https://www.youtube.com/channel/UC0YV5q6gv_rdkaFZlgnycjg" className="nav-link text-left">Youtube</a>
                 </li>
                 <li>
                   <a href="/contact" className="nav-link text-left">Contact</a>

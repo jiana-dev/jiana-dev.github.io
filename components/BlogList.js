@@ -21,6 +21,7 @@ export default function BlogList() {
       await fetch(`../data/blogs/${filename}.json`)
         .then(response => response.json())
         .then(data => {
+          data['date'] = new Date(data['date']).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})
           fetched.push(data)
           idx++;
 

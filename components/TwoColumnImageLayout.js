@@ -17,6 +17,7 @@ export default function TwoColumnImageLayout() {
       await fetch(`../data/blogs/${filename}.json`)
         .then(response => response.json())
         .then(data => {
+          data['date'] = new Date(data['date']).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})
           fetched.push(data)
           idx++;
 
@@ -38,6 +39,7 @@ export default function TwoColumnImageLayout() {
       await fetch(`../data/resources/${filename}.json`)
         .then(response => response.json())
         .then(data => {
+          data['date'] = new Date(data['date']).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})
           fetched.push(data)
           idx++;
 
@@ -59,7 +61,7 @@ export default function TwoColumnImageLayout() {
 
   let learns = learnPosts.map((blogPost, index) => {
     return (
-      <BlogPostPreview key={index} index={index} blogPost={blogPost}/>
+      <BlogPostPreview key={index} index={index} blogPost={blogPost} lastUpdated={true}/>
     )
   });
 
