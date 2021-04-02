@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 import resources from '../data/learning_resources.json';
 import styles from './BlogList.module.css';
+import BlogPostPreview from './BlogPostPreview';
 
 export default function LearnList() {
   const perPage = 4;
 
   const [fetchedPosts, setFetchedPosts] = useState([]);
-  const [blogPosts, setLearnPosts] = useState([]);
+  const [learnPosts, setLearnPosts] = useState([]);
   const [pageCount, setPageCount] = useState(Math.ceil(resources.posts.length/perPage));
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function LearnList() {
           fetched.push(data)
           idx++;
 
-          if (idx === postCount - 1) {
+          if (fetched.length === postCount) {
             fetched.sort(function(a,b){
               return Date.parse(b.date) - Date.parse(a.date)
             })
@@ -34,23 +35,9 @@ export default function LearnList() {
     });
   }, []);
 
-  let posts = blogPosts.map((blogPost, index) => {
+  let posts = learnPosts.map((blogPost, index) => {
     return (
-      <div className="post-entry-2 d-flex" key={index}>
-        { /* <div className="thumbnail order-md-2" style={{ backgroundImage: `url('images/img_v_1.jpg')`}}></div> */ }
-        <div className="contents order-md-1 pl-0">
-          <h2 className={styles.blogTitle}><a href={blogPost.link}>{blogPost.title}</a></h2>
-          <p className="mb-3">{blogPost.preview}</p>
-          <div className="post-meta">
-            <span className={styles.date}>
-              {blogPost.date}
-              <span className={styles.read + " mx-1"}>
-                {blogPost.readTime}
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>
+      <BlogPostPreview key={index} index={index} blogPost={blogPost}/>
     )
   });
 
