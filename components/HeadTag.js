@@ -17,6 +17,16 @@ export default function HeadTag() {
       <script src="../js/jquery.fancybox.min.js"></script>
       <script src="../js/jquery.sticky.js"></script>
       <script src="../js/main.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJM7QC73T6"></script>
+      <script dangerouslySetInnerHTML={{ __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RJM7QC73T6');
+      `}}/>
     </Head>
   )
 }

@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import HeadTag from '../../components/HeadTag';
 
 import Header from '../../components/Header';
@@ -9,7 +11,14 @@ import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/resources/back_in_stock_tutorial.json';
 
+import { CodeBlock } from '@atlaskit/code';
+import { Code } from '@atlaskit/code';
+
+import CODE_BLOCKS from '../../components/code/BackInStockCode';
+
 export default function BackInStockTutorial() {
+  const [mode, setMode] = useState("dark");
+
   const post =
     <div className="dm-sans back-in-stock">
       <p>Have you ever wasted your life away checking if that item you&#39;ve been eyeing for months is finally back in stock? Do you wish you could just live your life not obsessively checking over material things and be notified when something is available to purchase again?</p>
@@ -74,10 +83,12 @@ export default function BackInStockTutorial() {
             <li><p><a href="https://docs.docker.com/docker-for-mac/install/">https://docs.docker.com/docker-for-mac/install/</a> <strong>OR</strong></p>
             </li>
             <li><p>Install with Homebrew (a <a href="https://en.wikipedia.org/wiki/Package_manager">package manager</a> for MacOS)</p>
-              <pre><code>$ <span className="hljs-keyword">brew </span>update
-    $ <span className="hljs-keyword">brew </span><span className="hljs-keyword">install </span>docker
-    $ <span className="hljs-keyword">brew </span><span className="hljs-keyword">install </span>docker-machine
-            </code></pre></li>
+              <CodeBlock
+                language="shell"
+                text={ CODE_BLOCKS.BREW }
+                theme={{ mode }}
+              />
+            </li>
           </ul>
         </li>
         <li><p><strong>Email address</strong> to send your main email address the notification<sup><a href="#cliffnote-2">2</a></sup></p>
@@ -89,16 +100,18 @@ export default function BackInStockTutorial() {
         <li><p><strong>Code</strong></p>
           <ul>
             <li>
-              <p>
+              <p> 
+                <Code language="text" text="git clone" />
                 <code>git clone</code>
                 <sup><a href="#cliffnote-3">3</a></sup> my <a href="https://github.com/jianajavier/back_in_stock">back in stock repository</a>
                 somewhere on your computer. I have it in a folder called <code>workspace</code> in my home directory.
               </p>
-              <pre>
-              <code>
-                $ cd ~/workspace
-                $ git <span className="hljs-keyword">clone</span> <span className="hljs-title">git</span>@github.com:jianajavier/back_in_stock.git
-            </code></pre></li>
+              <CodeBlock
+                language="shell"
+                text={ CODE_BLOCKS.CLONE }
+                theme={{ mode }}
+              />
+            </li>
           </ul>
         </li>
       </ol>
@@ -109,10 +122,11 @@ export default function BackInStockTutorial() {
             <li><p>Open the <code>back_in_stock/helpers/web_helper_methods.py</code> file</p>
             </li>
             <li><p>Change the constants in <code>helpers/web_helper_methods.py</code></p>
-              <pre><code className="lang-python"><span className="hljs-attribute">TO_EMAIL</span> = <span className="hljs-string">'youremail<span className="hljs-variable">@gmail</span>.com'</span> <span className="hljs-comment"># Replace between quotes with your email address</span>
-    FROM_EMAIL = <span className="hljs-string">'yournamescripts<span className="hljs-variable">@gmail</span>.com'</span> <span className="hljs-comment"># Replace between quotes with new email address from Step 1</span>
-    APP_PASSWORD = <span className="hljs-string">'password'</span> <span className="hljs-comment"># Replace between quotes with the app password you generated in Step 1</span>
-              </code></pre>
+              <CodeBlock
+                language="python"
+                text={ CODE_BLOCKS.CONSTANTS }
+                theme={{ mode }}
+              />
             </li>
           </ol>
         </li>
@@ -421,35 +435,40 @@ export default function BackInStockTutorial() {
               </ul>
             </li>
             <li><p>For now, we can use what I think is the simplest for this purpose (<a href="https://selenium-python.readthedocs.io/locating-elements.html#locating-by-xpath"><code>find_element_by_xpath</code></a>). Let&#39;s put this in our code first.</p>
-              <pre><code className="lang-python">def skims(driver):
-        f = open(<span className="hljs-string">"skims.txt"</span>, <span className="hljs-string">"r"</span>)
+              <pre>
+                <code className="lang-python">def skims(driver):
+                f = open(<span className="hljs-string">"skims.txt"</span>, <span className="hljs-string">"r"</span>)
 
-        <span className="hljs-keyword">for</span> link in f:
-            link = link.strip(<span className="hljs-string">"\\n"</span>)
-            driver.<span className="hljs-keyword">get</span>(link)
+                <span className="hljs-keyword">for</span> link in f:
+                  link = link.strip(<span className="hljs-string">"\\n"</span>)
+                  driver.<span className="hljs-keyword">get</span>(link)
 
-            color_button = driver.find_element_by_xpath(<span className="hljs-string">""</span>) # Add <span className="hljs-keyword">this</span> line
-              </code></pre>
-            </li>
-            <li><p>Then we need to <strong>get the absolute xpath of this element</strong>.</p>
-              <p><img src="../images/back_in_stock_tutorial/Screen Shot 2020-09-25 at 8.54.31 PM.png" alt="getting absolute xpath"/></p>
-            </li>
-            <li><p>Paste it within the empty quotes on the line we just added.<sup><a href="#cliffnote-16">16</a></sup></p>
-              <pre><code className="lang-python">def skims(driver):
-        f = open(<span className="hljs-string">"skims.txt"</span>, <span className="hljs-string">"r"</span>)
+                  color_button = driver.find_element_by_xpath(<span className="hljs-string">""</span>) # Add <span className="hljs-keyword">this</span> line
+                    </code></pre>
+                  </li>
+                  <li><p>Then we need to <strong>get the absolute xpath of this element</strong>.</p>
+                    <p><img src="../images/back_in_stock_tutorial/Screen Shot 2020-09-25 at 8.54.31 PM.png" alt="getting absolute xpath"/></p>
+                  </li>
+                  <li><p>Paste it within the empty quotes on the line we just added.<sup><a href="#cliffnote-16">16</a></sup></p>
+                    <pre><code className="lang-python">def skims(driver):
+              f = open(<span className="hljs-string">"skims.txt"</span>, <span className="hljs-string">"r"</span>)
 
-        <span className="hljs-keyword">for</span> link in f:
-            link = link.strip(<span className="hljs-string">"\\n"</span>)
-            driver.<span className="hljs-keyword">get</span>(link)
+              <span className="hljs-keyword">for</span> link in f:
+                  link = link.strip(<span className="hljs-string">"\\n"</span>)
+                  driver.<span className="hljs-keyword">get</span>(link)
 
-            color_button = driver.find_element_by_xpath(<span className="hljs-string">"/html/body/main/section[1]/div/div/section[1]/div/div[2]/div[3]/div/button[4]/span[1]"</span>)
-              </code></pre>
+                  color_button = driver.find_element_by_xpath(<span className="hljs-string">"/html/body/main/section[1]/div/div/section[1]/div/div[2]/div[3]/div/button[4]/span[1]"</span>)
+              </code>
+            </pre>
             </li>
-            <li><p>At this point, I would <a href="debugging">test my code</a>.</p>
+            <li>
+              <p>At this point, I would <a href="debugging">test my code</a>.</p>
             </li>
-            <li><p>During testing, I realized I was getting an error because a popup was showing up on the page, making me unable to click the color button. After testing, we end up with the code to click the color button and handle any errors if they come up.</p>
-              <pre><code className="lang-python">def skims(driver):
-        f = open(<span className="hljs-string">"skims.txt"</span>, <span className="hljs-string">"r"</span>)
+            <li>
+              <p>During testing, I realized I was getting an error because a popup was showing up on the page, making me unable to click the color button. After testing, we end up with the code to click the color button and handle any errors if they come up.</p>
+              <pre>
+                <code className="lang-python">def skims(driver):
+          f = open(<span className="hljs-string">"skims.txt"</span>, <span className="hljs-string">"r"</span>)
 
         <span className="hljs-keyword">for</span> link in f:
             link = link.strip(<span className="hljs-string">"\\n"</span>)
@@ -890,16 +909,19 @@ export default function BackInStockTutorial() {
       <h4 id="debugging">Debugging</h4>
       <ul>
         <li><p>In order to see if I could actually get the colour button through the code, I added a breakpoint (a point where the code stops after we run it where we can interact with the code live) by inserting <code>pdb.set_trace()</code> where you want the program to stop</p>
-          <pre><code className="lang-python">def skims(driver):
-        f = open(<span className="hljs-string">"skims.txt"</span>, <span className="hljs-string">"r"</span>)
+          <pre>
+            <code className="lang-python">
+              def skims(driver):
+              f = open(<span className="hljs-string">"skims.txt"</span>, <span className="hljs-string">"r"</span>)
 
-        <span className="hljs-keyword">for</span> link in f:
-            link = link.strip(<span className="hljs-string">"\\n"</span>)
-            driver.<span className="hljs-keyword">get</span>(link)
+              <span className="hljs-keyword">for</span> link in f:
+                  link = link.strip(<span className="hljs-string">"\\n"</span>)
+                  driver.<span className="hljs-keyword">get</span>(link)
 
-            pdb.set_trace()
-            color_button = driver.find_element_by_xpath(<span className="hljs-string">"/html/body/main/section[1]/div/div/section[1]/div/div[2]/div[3]/div/button[4]/span[1]"</span>)
-          </code></pre>
+                  pdb.set_trace()
+                  color_button = driver.find_element_by_xpath(<span className="hljs-string">"/html/body/main/section[1]/div/div/section[1]/div/div[2]/div[3]/div/button[4]/span[1]"</span>)
+            </code>
+          </pre>
         </li>
         <li><p>Now I run in interactive mode:</p>
           <pre><code>$ docker run -<span className="hljs-literal">it</span> -v /Users/jianajavier/workspace/back_in_stock:/back_in_stock back_in_stock
@@ -1054,6 +1076,98 @@ export default function BackInStockTutorial() {
         </li>
         <li><p id="cliffnote-19">See <a href="#learning-about-docker-volumes">Learning about Docker Volumes</a> to learn about the issues I ran into when running this.</p></li>
       </ol>
+      <style jsx>{`
+        .back-in-stock
+        input,
+        .back-in-stock
+        textarea,
+        .back-in-stock
+        select,
+        .back-in-stock
+        pre,
+        .back-in-stock
+        blockquote,
+        .back-in-stock
+        figure,
+        .back-in-stock
+        table,
+        .back-in-stock
+        p,
+        .back-in-stock
+        dl,
+        .back-in-stock
+        form,
+        .back-in-stock
+        .video-container,
+        .back-in-stock
+        .ss-custom-select {
+          font-family: "DM Sans", sans-serif;
+          font-size: 0.9em;
+          margin-bottom: 1rem;
+        }
+
+        .dm-sans p, .dm-sans h2, .dm-sans h3, .dm-sans h4, .dm-sans h5, .dm-sans h6, .dm-sans .h1, .dm-sans .h2, .dm-sans .h3, .dm-sans .h4, .dm-sans .h5, .dm-sans .h6, .dm-sans em, .dm-sans strong, .dm-sans li {
+          font-family: "DM Sans", sans-serif;
+        }
+
+        .dm-sans h2, .dm-sans h3, .dm-sans h4, .dm-sans h5, .dm-sans h6, .dm-sans .h1, .dm-sans .h2, .dm-sans .h3, .dm-sans .h4, .dm-sans .h5, .dm-sans .h6, .dm-sans strong {
+          font-weight: 600;
+        }
+
+        .dm-sans * p, .dm-sans * p strong, .dm-sans * li {
+          font-size: 0.9em;
+        }
+
+        #things-you-ll-need, #general {
+          margin-top: 0rem;
+        }
+
+        code {
+          background: #33322d;
+          color: #dad8d8;
+        }
+        code,
+        pre {
+          font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+        }
+        pre {
+          padding: 2.4rem 3.2rem 3.2rem;
+          background: #e0e0e0;
+          overflow-x: auto;
+        }
+
+        code {
+          font-size: 1.4rem;
+          margin: 0 0.2rem;
+          padding: 0.4rem 0.8rem;
+          white-space: nowrap;
+          background: #e0e0e0;
+          color: #000000;
+          border-radius: 3px;
+        }
+
+        pre > code {
+          display: block;
+          white-space: pre;
+          line-height: 2;
+          padding: 0;
+          margin: 0;
+        }
+
+        code.light {
+          background: #e0e0e0;
+          color: #000000;
+          margin-bottom: 1em;
+          font-size: 1em;
+          align-self: center;
+        }
+
+        pre.prettyprint > code {
+          border: none;
+        }
+
+
+    `}</style>
     </div>
 
   return (
