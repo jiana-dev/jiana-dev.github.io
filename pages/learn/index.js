@@ -10,7 +10,7 @@ import PopularPostsSection from '../../components/PopularPostsSection';
 export default function Learn() {
   return (
     <div className="container">
-      <HeadTag/>
+      <HeadTag pagetitle='Learn'/>
       <Header/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">

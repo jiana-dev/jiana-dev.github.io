@@ -1172,7 +1172,7 @@ export default function BackInStockTutorial() {
 
   return (
     <div className="container">
-      <HeadTag/>
+      <HeadTag pageTitle="Back In Stock Tutorial"/>
       <Header/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
