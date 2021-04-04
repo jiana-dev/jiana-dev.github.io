@@ -1,19 +1,22 @@
+import React, { useState, useEffect } from 'react';
 import HeadTag from '../../components/HeadTag';
 import Header from '../../components/Header';
 import SubscribeSection from '../../components/Subscribe';
 import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
+import { useRouter } from 'next/router'
+import { useForm } from "react-hook-form";
 
 export default function Contact() {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    let myForm = document.getElementById('contact');
-    let formData = new FormData(myForm)
+  const router = useRouter()
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
     fetch('/', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString()
-    }).then(() => console.log('Form successfully submitted')).catch((error) =>
+      body: new URLSearchParams(data).toString()
+    }).then(() => router.push('contact/thank-you')).catch((error) =>
       alert(error))
   }
 
@@ -29,37 +32,37 @@ export default function Contact() {
                 <div className="section-title mb-5">
                   <h2>Contact Us</h2>
                 </div>
-                <form method="post" id='contact' name='contact' onSubmit={handleSubmit} data-netlify='true'>
+                <form method="post" id='contact' name='contact' onSubmit={handleSubmit(onSubmit)} data-netlify='true' netlify-honeypot="bot-field">
+                    <input hidden name="form-name" value="contact" {...register("form-name")}/>
+                    <p className="hidden" hidden>
+                      <label>Don’t fill this out if you’re human: <input name="bot-field" {...register("bot-field")}/></label>
+                    </p>
                     <div className="row">
                         <div className="col-md-6 form-group">
                             <label htmlFor="fname">First Name</label>
-                            <input type="text" id="fname" className="form-control form-control-lg"/>
+                            <input type="text" id="fname" className="form-control form-control-lg" {...register("first_name")}/>
                         </div>
                         <div className="col-md-6 form-group">
                             <label htmlFor="lname">Last Name</label>
-                            <input type="text" id="lname" className="form-control form-control-lg"/>
+                            <input type="text" id="lname" className="form-control form-control-lg" {...register("last_name")}/>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-md-6 form-group">
                             <label htmlFor="eaddress">Email Address</label>
-                            <input type="text" id="eaddress" className="form-control form-control-lg"/>
-                        </div>
-                        <div className="col-md-6 form-group">
-                            <label htmlFor="tel">Tel. Number</label>
-                            <input type="text" id="tel" className="form-control form-control-lg"/>
+                            <input type="text" id="eaddress" className="form-control form-control-lg" {...register("email_address")}/>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-md-12 form-group">
                             <label htmlFor="message">Message</label>
-                            <textarea name="" id="message" cols="30" rows="10" className="form-control"></textarea>
+                            <textarea name="" id="message" cols="30" rows="10" className="form-control" {...register("message")}></textarea>
                         </div>
                     </div>
                     <div className="row" hidden>
                         <div className="col-md-12 form-group">
                             <label htmlFor="subject">Subject</label>
-                            <textarea name="" id="subject" cols="30" rows="10" className="form-control"></textarea>
+                            <textarea name="" id="subject" cols="30" rows="10" className="form-control" {...register("subject")}></textarea>
                         </div>
                     </div>
 
