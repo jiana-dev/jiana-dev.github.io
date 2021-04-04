@@ -4,19 +4,23 @@ import Header from '../../components/Header';
 import SubscribeSection from '../../components/Subscribe';
 import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router'; // unused
 import { useForm } from "react-hook-form";
 
 export default function Contact() {
   const router = useRouter()
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
+  const [submitted, setSubmitted] = useState(false);
 
   const onSubmit = (data) => {
     fetch('/', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(data).toString()
-    }).then(() => router.push('contact/thank-you')).catch((error) =>
+    }).then(() => {
+      setSubmitted(true)
+      reset()
+  }).catch((error) =>
       alert(error))
   }
 
@@ -70,6 +74,9 @@ export default function Contact() {
                         <div className="col-12">
                             <input type="submit" value="Send Message" className="btn btn-primary py-3 px-5"/>
                         </div>
+                    </div>
+                    <div className="row">
+                      { submitted && <p>Submitted! Thank you!</p>}
                     </div>
                 </form>
               </div>
