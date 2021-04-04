@@ -14,7 +14,7 @@ export default function HeadTag(props) {
     });
   }, [])
 
-  const GA_TRACKING_ID = 'G-RJM7QC73T6'
+  const GA_TRACKING_ID = "G-RJM7QC73T6"
 
   return (
     <Head>
@@ -28,7 +28,7 @@ export default function HeadTag(props) {
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', ${GA_TRACKING_ID},
+        gtag('config', "${GA_TRACKING_ID}",
         {
           debug_mode: true,
         });
