@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="container site-container">
       <Head>
         <title>JIANA</title>
         <link rel="icon" href="/favicon.ico" />
@@ -33,6 +33,12 @@ export default function Home() {
       <SubscribeSection/>
       <Loader/>
       <Footer/>
+      <style jsx>{`
+      .site-container {
+        margin: 0;
+        padding: 0;
+      }
+      `}</style>
     </div>
   )
 }

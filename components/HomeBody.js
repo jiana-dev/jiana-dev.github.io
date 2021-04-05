@@ -9,6 +9,9 @@ export default function HomeBody() {
     <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
       <FeaturePost/>
       <TwoColumnImageLayout/>
+      <style jsx>{`
+        padding: 0 2em 0 2em;
+      `}</style>
     </div>
   )
 }

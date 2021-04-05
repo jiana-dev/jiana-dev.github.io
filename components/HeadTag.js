@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head'
-import TagManager from 'react-gtm-module'
+import Head from 'next/head';
+import TagManager from 'react-gtm-module';
 
 export default function HeadTag(props) {
   const tagManagerArgs = {
@@ -19,6 +19,9 @@ export default function HeadTag(props) {
   return (
     <Head>
       <title>{props.pageTitle ? props.pageTitle : 'Jiana'}</title>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
       <script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

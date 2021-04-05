@@ -27,6 +27,7 @@ a:hover {
   width: min-content;
   padding-right: 2rem;
   position: right;
+  height: 100%;
 }
 
 .site-mobile-menu .site-nav-wrap > li > a {
@@ -57,4 +58,14 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 
 .site-mobile-menu {
   background: #f5f1e5;
+}
+
+@media {
+  .container {
+    max-width: 100%
+  }
+}
+
+.post-entry-2 .contents {
+  width: 95%;
 }
