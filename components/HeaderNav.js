@@ -15,16 +15,10 @@ export default function HeaderNav() {
                   <a href="/blog" className="nav-link text-left">Blog</a>
                 </li>
                 <li>
-                  <a href="/code" className="nav-link text-left">Code</a>
-                </li>
-                <li>
                   <a href="/learn" className="nav-link text-left">Learn</a>
                 </li>
                 <li>
-                  <a href="/podcast" className="nav-link text-left">Podcast</a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/channel/UC0YV5q6gv_rdkaFZlgnycjg" className="nav-link text-left">Youtube</a>
+                  <a href="/podcasts" className="nav-link text-left">Podcasts</a>
                 </li>
                 <li>
                   <a href="/contact" className="nav-link text-left">Contact</a>

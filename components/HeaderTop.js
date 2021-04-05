@@ -1,4 +1,5 @@
 import styles from './Header.module.css';
+import Icons from './Icons.js';
 
 export default function HeaderTop() {
   return (
@@ -8,24 +9,11 @@ export default function HeaderTop() {
           <a href="/" className={styles.siteLogo}>
             JIANA
           </a>
+          <div className="col-12 col-lg-6 ml-auto d-flex">
+            <Icons class="ml-md-auto top-social d-none d-lg-inline-block"/>
+          </div>
           <a href="#" className="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
               className="icon-menu h3"></span></a>
-        </div>
-        <div className="col-12 col-lg-6 ml-auto d-flex">
-          <div className="ml-md-auto top-social d-none d-lg-inline-block">
-            <a href="#" className="d-inline-block p-3"><span className="icon-facebook"></span></a>
-              <a href="#" className="d-inline-block p-3"><span className="icon-twitter"></span></a>
-              <a href="#" className="d-inline-block p-3"><span className="icon-instagram"></span></a>
-          </div>
-          <form action="#" className="search-form d-inline-block">
-
-            <div className="d-flex">
-              <input type="text" className="form-control" placeholder="Search..."/>
-              <button type="submit" className="btn btn-secondary" ><span className="icon-search"></span></button>
-            </div>
-          </form>
-        </div>
-        <div className="col-6 d-block d-lg-none text-right">
         </div>
       </div>
     </div>

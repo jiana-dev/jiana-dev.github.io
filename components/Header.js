@@ -1,5 +1,6 @@
 import HeaderTop from './HeaderTop';
 import HeaderNav from './HeaderNav';
+import Icons from './Icons.js';
 
 export default function Header() {
   return (
@@ -10,7 +11,11 @@ export default function Header() {
           <span className="icon-close2 js-menu-toggle"></span>
         </div>
       </div>
-      <div className="site-mobile-menu-body"></div>
+      <>
+        <div className="site-mobile-menu-body">
+        </div>
+        <Icons class='mobile-menu-icons'/>
+      </>
     </div>
     <div className="header-top">
       <HeaderTop/>

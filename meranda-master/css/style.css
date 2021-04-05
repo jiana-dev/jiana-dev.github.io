@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5,
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li.active > a {
-        color: #8bc34a !important; }
+        color: #8bc34a; }
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;

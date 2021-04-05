@@ -21,7 +21,7 @@ export default function SubscribeSection() {
   <div className="site-section subscribe bg-light">
     <div className="container">
       <form className="row align-items-center" method="post" id='newsletter' name='newsletter' onSubmit={handleSubmit(onSubmit)} data-netlify='true' netlify-honeypot="bot-field">
-        <input hidden name="form-name" value="newsletter" {...register("form-name")}/>
+        <input hidden name="form-name" defaultValue="newsletter" {...register("form-name")}/>
         <div className="col-md-5 mr-auto">
           <h2>Newsletter Subscribe</h2>
           <p>This doesn't exist yet, but when it does, I promise it'll be full of good things. Subscribe to let me know you're interested so I know I should prioritize this!</p>

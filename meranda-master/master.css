@@ -16,6 +16,33 @@
 
 a {
   cursor: pointer;
+  color: #7d7a71;
+}
+
+a:hover {
+  color: #b7b2a2;
+}
+
+.site-mobile-menu {
+  width: min-content;
+  padding-right: 2rem;
+  position: right;
+}
+
+.site-mobile-menu .site-nav-wrap > li > a {
+  font-size: medium;
+}
+
+.site-mobile-menu .site-nav-wrap li.active > a {
+  color: #b7b2a2;
+}
+
+.site-mobile-menu .site-nav-wrap a:hover {
+  color: #b7b2a2;
+}
+
+.site-mobile-menu .site-mobile-menu-body {
+  height: calc(100vh - 12em);
 }
 
 body {
@@ -26,4 +53,8 @@ body {
 
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   font-family: 'Lora', serif;
+}
+
+.site-mobile-menu {
+  background: #f5f1e5;
 }

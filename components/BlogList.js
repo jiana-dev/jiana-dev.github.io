@@ -38,7 +38,7 @@ export default function BlogList() {
 
   let posts = blogPosts.map((blogPost, index) => {
     return (
-      <BlogPostPreview index={index} blogPost={blogPost}/>
+      <BlogPostPreview key={index} index={index} blogPost={blogPost}/>
     )
   });
 

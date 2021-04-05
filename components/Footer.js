@@ -1,9 +1,12 @@
 export default function Loader() {
   return (
   <footer>
-    <a href="https://jianajavier.github.io" target="_blank" rel="noopener noreferrer">
-      old as gold
-    </a>
+    <span className="icon-copyright"> Jiana Javier 2021</span>
+    <style jsx>{`
+    .icon-copyright {
+      width: 20%;
+    }
+  `}</style>
   </footer>
   )
 }
