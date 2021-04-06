@@ -9,8 +9,8 @@ import Button from 'react-bootstrap/Button';
 
 export default function Podcasts() {
   return (
-    <div className="container">
-      <HeadTag pagetitle='Contact'/>
+    <>
+      <HeadTag pagetitle='JIANA - Contact'/>
       <Header/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
@@ -68,6 +68,6 @@ export default function Podcasts() {
       <SubscribeSection/>
       <Loader/>
       <Footer/>
-    </div>
+    </>
   )
 }

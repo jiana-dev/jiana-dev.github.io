@@ -18,7 +18,7 @@ export default function HeadTag(props) {
 
   return (
     <Head>
-      <title>{props.pageTitle ? props.pageTitle : 'Jiana'}</title>
+      <title>{props.pageTitle ? props.pageTitle : 'JIANA - I forgot to title this'}</title>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
 

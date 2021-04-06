@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="container site-container">
       <Head>
-        <title>JIANA</title>
+        <title>JIANA - Home</title>
         <link rel="icon" href="/favicon.ico" />
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.1.min.js"></script>

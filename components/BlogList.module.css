@@ -19,7 +19,6 @@
 }
 
 .sectionTitle {
-  float: right;
 }
 
 .blogTitle{
@@ -29,4 +28,9 @@
 
 .updateLabel {
   font-weight: 600;
+}
+
+@media (min-width: 992px)
+.site-section {
+    padding: 7em 0;
 }

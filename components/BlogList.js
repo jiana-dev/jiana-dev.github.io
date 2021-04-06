@@ -3,19 +3,24 @@ import ReactPaginate from 'react-paginate';
 import blogs from '../data/blogs.json';
 import styles from './BlogList.module.css';
 import BlogPostPreview from './BlogPostPreview';
+import { useRouter } from 'next/router'
 
-export default function BlogList() {
+export default function BlogList(props) {
+  const router = useRouter()
+
   const perPage = 4;
 
   const [fetchedPosts, setFetchedPosts] = useState([]);
   const [blogPosts, setBlogPosts] = useState([]);
   const [pageCount, setPageCount] = useState(Math.ceil(blogs.posts.length/perPage));
+  const [currentPage, setCurrentPage] = useState(props.page);
 
   useEffect(() => {
     let postCount = blogs.posts.length
     let idx = 0
     let fetched = []
 
+    setCurrentPage(props.page);
     // Is there a better solution than this? I kinda hate this
     blogs.posts.map(async(filename) => {
       await fetch(`../data/blogs/${filename}.json`)
@@ -30,11 +35,11 @@ export default function BlogList() {
               return Date.parse(b.date) - Date.parse(a.date)
             })
             setFetchedPosts(fetched);
-            setPaginatedItems(fetched, 0);
+            setPaginatedItems(fetched, Math.ceil(props.page * perPage));
           }
         })
     });
-  }, []);
+  }, [props.page]);
 
   let posts = blogPosts.map((blogPost, index) => {
     return (
@@ -50,7 +55,10 @@ export default function BlogList() {
     let selected = data.selected;
     let offset = Math.ceil(selected * perPage);
 
+    let pageNum = selected + 1
+    router.push('/blog/' + pageNum, undefined, { shallow: true })
     setPaginatedItems(fetchedPosts, offset);
+    setCurrentPage(selected);
   };
 
   return (
@@ -68,6 +76,7 @@ export default function BlogList() {
               marginPagesDisplayed={2}
               pageRangeDisplayed={5}
               onPageChange={ handlePageClick }
+              forcePage={currentPage}
               containerClassName={"pagination"}
               subContainerClassName={"pages pagination"}
               activeClassName={"active"} />
