@@ -37,7 +37,7 @@ export default function Contact() {
                   <h2>Contact Us</h2>
                 </div>
                 <form method="post" id='contact' name='contact' onSubmit={handleSubmit(onSubmit)} data-netlify='true' netlify-honeypot="bot-field">
-                    <input hidden name="form-name" value="contact" {...register("form-name")}/>
+                    <input hidden name="form-name" defaultValue="contact" {...register("form-name")}/>
                     <p className="hidden" hidden>
                       <label>Don’t fill this out if you’re human: <input name="bot-field" {...register("bot-field")}/></label>
                     </p>

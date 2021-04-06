@@ -39,7 +39,7 @@ export default function ChapterFive() {
       <p>If you got here, I appreciate you. Truly, I do. You’re the nudge that brings me closer to super Jiana, and for that I am eternally grateful. I hope you’ll stick around, and I’ll let you know when I see her. </p>
       <p>Endless love,</p>
       <p>Jiana</p>
-    <div>
+    </div>
 
   return (
     <div className="container">

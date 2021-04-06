@@ -24,7 +24,7 @@ export default function Blog() {
         <div className="site-section">
           <div className="container">
             <div className="row">
-              <BlogList routeName='secret_blogs' page={currPage} posts={blogs.posts} folder={blogs.folder}/>
+              <BlogList routeName='blogs' page={currPage} posts={blogs.posts} folder={blogs.folder}/>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function HeaderNav() {
                 <a href="/" className="nav-link text-left">Home</a>
               </li>
               <li>
-                <a href="/blog" className="nav-link text-left">Blog</a>
+                <a href="/blogs" className="nav-link text-left">Blog</a>
               </li>
               <li>
                 <a href="/resources" className="nav-link text-left">Resources</a>
