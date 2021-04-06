@@ -5,8 +5,8 @@ import parse from 'html-react-parser';
 export default function BlogPostPreview(props) {
   let blogTitle;
   if (props.blogPost.subtitle) {
-    let parsedTitle = parse(props.blogPost.subtitle);
-    blogTitle = <a href={props.blogPost.link}>{props.blogPost.title} - {parsedTitle}</a>
+    let parsedTitle = parse(props.blogPost.title);
+    blogTitle = <a href={props.blogPost.link}>{parsedTitle} - {props.blogPost.subtitle}</a>
   } else {
     blogTitle = <a href={props.blogPost.link}>{props.blogPost.title}</a>
   }

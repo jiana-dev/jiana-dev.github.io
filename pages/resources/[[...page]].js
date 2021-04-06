@@ -16,7 +16,7 @@ export default function Learn() {
 
   return (
     <div>
-      <HeadTag pagetitle='JIANA - Learn'/>
+      <HeadTag pageTitle='JIANA - Resources'/>
       <Header/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
