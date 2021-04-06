@@ -7,7 +7,6 @@ import { useRouter } from 'next/router'
 
 export default function BlogList(props) {
   const router = useRouter()
-
   const perPage = 4;
 
   const [fetchedPosts, setFetchedPosts] = useState([]);

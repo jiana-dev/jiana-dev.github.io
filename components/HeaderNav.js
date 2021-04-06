@@ -14,7 +14,7 @@ export default function HeaderNav() {
                 <a href="/blog" className="nav-link text-left">Blog</a>
               </li>
               <li>
-                <a href="/learn" className="nav-link text-left">Learn</a>
+                <a href="/resources" className="nav-link text-left">Resources</a>
               </li>
               <li>
                 <a href="/podcasts" className="nav-link text-left">Podcasts</a>

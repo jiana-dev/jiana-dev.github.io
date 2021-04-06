@@ -6,8 +6,14 @@ import Footer from '../../components/Footer';
 
 import LearnList from '../../components/LearnList';
 import PopularPostsSection from '../../components/PopularPostsSection';
+import { useRouter } from 'next/router'
 
 export default function Learn() {
+  const router = useRouter()
+  const { page } = router.query
+
+  let currPage = page ? parseInt(page) - 1 : 0
+
   return (
     <div>
       <HeadTag pagetitle='JIANA - Learn'/>
@@ -16,7 +22,7 @@ export default function Learn() {
         <div className="site-section">
           <div className="container">
             <div className="row">
-              <LearnList/>
+              <LearnList page={currPage}/>
             </div>
           </div>
         </div>
