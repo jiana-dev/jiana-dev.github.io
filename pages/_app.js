@@ -2,6 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../meranda-master/master.css'
 import '../components/styles/pagination.css';
+import 'loaders.css/src/animations/pacman.scss';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

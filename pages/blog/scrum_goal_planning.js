@@ -149,7 +149,7 @@ export default function ScrumGoalPlanning() {
         <div className="site-section">
           <div className="container">
             <div className="row">
-              <BlogPostHeader title={postData.title} date={postData.date} readTime={postData.readTime}/>
+              <BlogPostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
               { post }
             </div>
           </div>

@@ -8,9 +8,9 @@ import BlogList from '../../components/BlogList';
 import PopularPostsSection from '../../components/PopularPostsSection';
 import { useRouter } from 'next/router'
 
-import blogs from '../../data/blogs.json';
+import secret_blogs from '../../data/secret_blogs.json';
 
-export default function Blog() {
+export default function SecretBlog() {
   const router = useRouter()
   const { page } = router.query
 
@@ -18,13 +18,13 @@ export default function Blog() {
 
   return (
     <>
-      <HeadTag pageTitle="JIANA - Blog"/>
+      <HeadTag pageTitle="JIANA - Secret Blog"/>
       <Header/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
           <div className="container">
             <div className="row">
-              <BlogList routeName='secret_blogs' page={currPage} posts={blogs.posts} folder={blogs.folder}/>
+              <BlogList routeName='secret_blogs' page={currPage} posts={secret_blogs.posts} folder={secret_blogs.folder}/>
             </div>
           </div>
         </div>

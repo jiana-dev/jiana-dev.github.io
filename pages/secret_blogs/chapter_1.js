@@ -1,0 +1,49 @@
+import HeadTag from '../../components/HeadTag';
+
+import Header from '../../components/Header';
+import SubscribeSection from '../../components/Subscribe';
+import Loader from '../../components/Loader';
+import Footer from '../../components/Footer';
+
+import BlogPostHeader from '../../components/BlogPostHeader';
+
+import postData from '../../public/data/secret_blogs/chapter_1.json';
+
+export default function ChapterOne() {
+  const post =
+    <div>
+      <h2 className="lead">For a huge part of my childhood, I was a sponge.</h2>
+      <p>The people around me were the biggest determinant of my own personality, habits, and tendencies. They say you are the product of your surroundings, or the average of the five people you spend the most time with, and boy were they right. At least, in my life they were.</p>
+      <p>I’d always been the type to want to be in a relationship. Actually, there was never a time in my life that I wasn’t in one. It sounds silly to say that since I was 13 years old, I had been in “relationships”. Looking back, I realize that it gave me a sense of belonging to always have a right-hand person, and being in a relationship felt like my way of securing one.</p>
+      <p>The issue with this, which I didn’t see at the time, was that my choice in partners would have such a substantial impact on my own development when it came to every other aspect of my life. This person, and anyone I surrounded myself with because of him would be the anchor point for my habits, actions, and mindset.</p>
+      <p>Most of my friends were "smokers" by the time high school came around. It feels silly to say because our minds were so young and underdeveloped. Me, being the eager to fit in, easily-influenced, naive girl I was, the exposure to smoking as a norm was a bit too close for comfort. It only took one instance of self-manifested and exaggerated drama, to put myself in a situation to try this method of stress-relief that seemed to be all the rage among my peers.</p>
+      <blockquote>I started smoking cigarettes when I was 16. A choice no 16 year old should be exposed to making, really. In my high school, it was sadly regarded as something that was “cool”.</blockquote>
+      <p>It was gross at first, like most people’s experience smoking their first anything. And I didn’t think I would do that again. But lo and behold, a couple days later, smoking started to become the most efficient means for coping with stress. <i>It seemed to be working for everyone else. So why not take the excuse to go outside, take a break, have a deep talk?</i></p>
+      <p>And you know how it goes, one a week turns into one a day turns into buying my first pack (mind you at this time I was under-age so I’m embarrassed to admit I went to whatever lengths it took to do this), turns into a pack a week (Where was I getting all this money?). Before I knew it, all of my friends were smokers, I was regularly smoking weed, and doing rebellious and crazy things including but not limited to taking a 10-hour bus trip for a day trip to New York, staying overnight in the middle of a swamp-like park and smoking hookah, and hanging around sketchy arcades with sketchy people. At the time, I didn’t think anything of my behaviour. I was going where life took me, and I was living, unapologetically.</p>
+      <p>I look back on this time, from all the videos, and documents I created and I wonder who that girl was, cause she sure as heck resembles nothing of who I feel I am now. I will never regret being her because if I was never her then I would never be me. But when I look back, I see a girl who had no idea who she was and she let everyone else define that for her. She took the pieces she resonated with from each person in her life and formed a girl who had but the tiniest grasp on her true personality.</p>
+      <p>From the way she talked, to the way she acted, to her spontaneity, to her principles and values. They were all a product of her environment.</p>
+      <p>The years moved on, the boys came and went, the excitement peaked and valleyed. Until I was out of university, I had made the switch from smoking to vaping, thinking that was an improvement in my life, and I was smoking weed everyday thinking it was putting me in a zen state to access my thoughts better and journal, so it was <i>productive</i>.  The running total of friends I still had from high school: 2. </p>
+      <p>When I started working, I met my now partner, Stephen. He was a complete shift from the people I was used to. All my previous boyfriends had been smokers, weed-smokers, and had struggled with determining what their calling in life was. What a change this was to meet a man who had virtually none of the struggles I was used to supporting, and shared none of the bad habits I had.</p>
+      <p>Little did I realize that meeting Stephen was the catalyst to my paradigm shift. I had always been the type to resist exercise, eat whatever the heck I wanted, and indulge for indulgence’s sake. Never have I made a serious attempt to get in shape or be healthy. It just wasn’t important to me, ever. I realize now that a big reason for that was because I didn’t see a point in casting votes for the healthy, well-rounded person I could be when I was casting equal votes for the same high school, prone to bad habit addiction version of me. #AtomicHabits
+      </p>
+    </div>
+  return (
+    <div className="container">
+      <HeadTag pageTitle={`JIANA - ${postData.title}`}/>
+      <Header/>
+      <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+        <div className="site-section">
+          <div className="container">
+            <div className="row">
+              <BlogPostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
+              { post }
+            </div>
+          </div>
+        </div>
+      </div>
+      <SubscribeSection/>
+      <Loader/>
+      <Footer/>
+    </div>
+  )
+}

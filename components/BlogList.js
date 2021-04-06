@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
-import blogs from '../data/blogs.json';
 import styles from './BlogList.module.css';
 import BlogPostPreview from './BlogPostPreview';
 import { useRouter } from 'next/router'
@@ -11,18 +10,19 @@ export default function BlogList(props) {
 
   const [fetchedPosts, setFetchedPosts] = useState([]);
   const [blogPosts, setBlogPosts] = useState([]);
-  const [pageCount, setPageCount] = useState(Math.ceil(blogs.posts.length/perPage));
+  const [pageCount, setPageCount] = useState(Math.ceil(props.posts.length/perPage));
   const [currentPage, setCurrentPage] = useState(props.page);
 
   useEffect(() => {
-    let postCount = blogs.posts.length
+    let postCount = props.posts.length
     let idx = 0
     let fetched = []
+    let folder = props.folder;
 
     setCurrentPage(props.page);
     // Is there a better solution than this? I kinda hate this
-    blogs.posts.map(async(filename) => {
-      await fetch(`../data/blogs/${filename}.json`)
+    props.posts.map(async(filename) => {
+      await fetch(`../data/${folder}/${filename}.json`)
         .then(response => response.json())
         .then(data => {
           data['date'] = new Date(data['date']).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})
@@ -38,7 +38,7 @@ export default function BlogList(props) {
           }
         })
     });
-  }, [props.page]);
+  }, [props.page, props.posts, props.folder]);
 
   let posts = blogPosts.map((blogPost, index) => {
     return (
@@ -55,7 +55,7 @@ export default function BlogList(props) {
     let offset = Math.ceil(selected * perPage);
 
     let pageNum = selected + 1
-    router.push('/blog/' + pageNum, undefined, { shallow: true })
+    router.push(`/${props.routeName}/${pageNum}`, undefined, { shallow: true })
     setPaginatedItems(fetchedPosts, offset);
     setCurrentPage(selected);
   };
