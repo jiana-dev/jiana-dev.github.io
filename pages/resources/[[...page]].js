@@ -4,7 +4,7 @@ import SubscribeSection from '../../components/Subscribe';
 import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 
-import LearnList from '../../components/LearnList';
+import ResourceList from '../../components/ResourceList';
 import PopularPostsSection from '../../components/PopularPostsSection';
 import { useRouter } from 'next/router'
 
@@ -16,13 +16,13 @@ export default function Learn() {
 
   return (
     <div>
-      <HeadTag pageTitle='JIANA - Resources'/>
-      <Header/>
+      <HeadTag pageTitle="Jiana's Cool Tools"/>
+      <Header activePage='resources'/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
           <div className="container">
             <div className="row">
-              <LearnList page={currPage}/>
+              <ResourceList page={currPage}/>
             </div>
           </div>
         </div>

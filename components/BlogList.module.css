@@ -1,24 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
 
 .blogPagination {
-  font-family: 'Dm Sans', sans-serif;
+  /*font-family: 'Dm Sans', sans-serif;*/
   color: #635d4f;
 }
 
 .blogPagination a {
-  font-family: 'Dm Sans', sans-serif;
+  /*font-family: 'Dm Sans', sans-serif;*/
   font-size: medium;
 }
 
 .date {
+  font-family: 'Dm Sans', sans-serif;
   color: #999183;
 }
 
 .read {
   color: #c4bead;
-}
-
-.sectionTitle {
 }
 
 .blogTitle{
@@ -28,9 +26,4 @@
 
 .updateLabel {
   font-weight: 600;
-}
-
-@media (min-width: 992px)
-.site-section {
-    padding: 7em 0;
 }

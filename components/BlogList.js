@@ -61,14 +61,11 @@ export default function BlogList(props) {
   };
 
   return (
-    <div className="col-lg-12">
-      <div className={styles.sectionTitle}>
-        <span className="caption d-block medium">Jiana's Corner of Random Rambles</span>
-      </div>
+    <>
       <div className={styles.blogPagination}>
         { posts }
-        <ReactPaginate previousLabel={"previous"}
-              nextLabel={"next"}
+        <ReactPaginate previousLabel={"page.pre"}
+              nextLabel={"page.next"}
               breakLabel={"..."}
               breakClassName={"break-me"}
               pageCount={pageCount}
@@ -80,6 +77,6 @@ export default function BlogList(props) {
               subContainerClassName={"pages pagination"}
               activeClassName={"active"} />
       </div>
-    </div>
+    </>
   )
 }

@@ -5,7 +5,7 @@ import styles from './BlogList.module.css';
 import BlogPostPreview from './BlogPostPreview';
 import { useRouter } from 'next/router'
 
-export default function LearnList(props) {
+export default function ResourceList(props) {
   const router = useRouter()
   const perPage = 4;
 
@@ -61,14 +61,11 @@ export default function LearnList(props) {
   };
 
   return (
-    <div className="col-lg-12">
-      <div className={styles.sectionTitle}>
-        <span className="caption d-block medium">Jiana's Corner of Cool Tools</span>
-      </div>
+    <>
       <div className={styles.blogPagination}>
         { posts }
-        <ReactPaginate previousLabel={"previous"}
-              nextLabel={"next"}
+        <ReactPaginate previousLabel={"page.pre"}
+              nextLabel={"page.next"}
               breakLabel={"..."}
               breakClassName={"break-me"}
               pageCount={pageCount}
@@ -80,6 +77,6 @@ export default function LearnList(props) {
               subContainerClassName={"pages pagination"}
               activeClassName={"active"} />
       </div>
-    </div>
+    </>
   )
 }

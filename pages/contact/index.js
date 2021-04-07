@@ -1,3 +1,5 @@
+import styles from '../../components/PodcastPage.module.css';
+
 import React, { useState, useEffect } from 'react';
 import HeadTag from '../../components/HeadTag';
 import Header from '../../components/Header';
@@ -26,15 +28,20 @@ export default function Contact() {
 
   return (
     <>
-      <HeadTag pagetitle='JIANA - Contact'/>
-      <Header/>
+      <HeadTag pageTitle='JIANA - Contact'/>
+      <Header activePage='contact'/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <div className="section-title mb-5">
-                  <h2>Contact Us</h2>
+                <div className="section-title">
+                  <h2 className='caption'>Let's Chat</h2>
+                  <style jsx>{`
+                  .section-title {
+                    margin: 1em 0 1em 0;
+                  }
+                  `}</style>
                 </div>
                 <form method="post" id='contact' name='contact' onSubmit={handleSubmit(onSubmit)} data-netlify='true' netlify-honeypot="bot-field">
                     <input hidden name="form-name" defaultValue="contact" {...register("form-name")}/>
@@ -71,13 +78,37 @@ export default function Contact() {
                     </div>
 
                     <div className="row">
-                        <div className="col-12">
-                            <input type="submit" value="Send Message" className="btn btn-primary py-3 px-5"/>
-                        </div>
+                      <div className="col-12">
+                          <input type="submit" value="Send Message" className={styles.buttonLink}/>
+                      </div>
                     </div>
                     <div className="row">
                       { submitted && <p>Submitted! Thank you!</p>}
                     </div>
+                    <style jsx>{`
+                    .col-12 {
+                      padding: 1em 0em 2em 0em;
+                    }
+                    label {
+                      color: #6a675d;
+                      font-size: small;
+                      letter-spacing: .1rem;
+                      text-transform: uppercase;
+                    }
+                    [type=submit] {
+                      padding: 1em;
+                      border-radius: 30px;
+                      color: #f0f0f0;
+                      font-size: small;
+                      font-weight: 600;
+                      letter-spacing: .1rem;
+                      text-transform: uppercase;
+                    }
+                    input[type=text] {
+                      font-family: 'B612 Mono';
+                      font-size: small;
+                    }
+                    `}</style>
                 </form>
               </div>
             </div>

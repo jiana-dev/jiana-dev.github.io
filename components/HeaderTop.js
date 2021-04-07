@@ -16,16 +16,8 @@ export default function HeaderTop() {
         </div>
       </div>
       <style jsx>{`
-      @media (min-width: 992px) {
-        .container {
-          padding: 1em 5em 1em 5em;
-        }
-      }
-
-      @media (max-width: 992px) {
-        .container {
-          padding: 1em 3em 1em 3em;
-        }
+      .container {
+        padding: 1em 2em 1em 2em;
       }
 
       .site-menu-toggle {

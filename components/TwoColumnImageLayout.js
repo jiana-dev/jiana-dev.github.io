@@ -71,7 +71,7 @@ export default function TwoColumnImageLayout() {
         <div className="row">
           <div className="col-lg-6">
             <div className="section-title">
-              <h2>Blog Posts</h2>
+              <h2 className='caption'>Blog Posts</h2>
             </div>
             { blogps }
             <div className='additional-links-container'>
@@ -80,7 +80,7 @@ export default function TwoColumnImageLayout() {
           </div>
           <div className="col-lg-6">
             <div className="section-title">
-              <h2>Learning Resources</h2>
+              <h2 className='caption'>Learning Resources</h2>
             </div>
             { learns }
             <div className='additional-links-container'>

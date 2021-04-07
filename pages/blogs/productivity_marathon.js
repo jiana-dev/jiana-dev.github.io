@@ -52,7 +52,7 @@ export default function ProductivityMarathon() {
     </div>
 
   return (
-    <div className="container">
+    <>
       <HeadTag pageTitle={`JIANA - ${postData.title}`}/>
       <Header/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -68,6 +68,6 @@ export default function ProductivityMarathon() {
       <SubscribeSection/>
       <Loader/>
       <Footer/>
-    </div>
+    </>
   )
 }

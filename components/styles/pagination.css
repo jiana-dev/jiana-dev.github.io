@@ -1,6 +1,8 @@
 ul.pagination li a {
+    font-family: 'B612 Mono';
+    font-size: small;
     color: black;
-    padding: 1em;
+    padding: 0em 1em 0 0;
     outline: none;
 }
 

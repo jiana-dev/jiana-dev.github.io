@@ -80,6 +80,9 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   background: #ccc0aabf;
 }
 
+.row {
+  margin: 0;
+}
 div[data-code-block] {
   overflow-x: scroll;
   max-width: calc(100vw - 12em);
@@ -100,13 +103,13 @@ div[data-code-block] {
 }
 
 .subscribe-section {
-  padding: 5em;
+  padding: 5em 2em;
   background-color: #f0ede4;
 }
 
 @media (min-width: 992px) {
   .site-section {
-      padding: 5em 0;
+      padding: 5em 2em 1em 2em ;
   }
 }
 
@@ -114,4 +117,17 @@ div[data-code-block] {
   .site-section {
       padding: 0 2em 0 2em;
   }
+}
+
+.pagination {
+    padding-bottom: 2em;
+}
+
+h2.caption {
+  font-size: large;
+  color: #afaaa0;
+  padding: 0;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 700;
 }

@@ -18,8 +18,8 @@ export default function Blog() {
 
   return (
     <>
-      <HeadTag pageTitle="JIANA - Blog"/>
-      <Header/>
+      <HeadTag pageTitle="Jiana's Corner of Random Rambles"/>
+      <Header activePage='blog'/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
           <div className="container">

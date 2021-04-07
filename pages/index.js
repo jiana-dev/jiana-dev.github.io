@@ -28,7 +28,7 @@ export default function Home() {
         <script src="js/jquery.sticky.js"></script>
         <script src="js/main.js"></script>
       </Head>
-      <Header/>
+      <Header activePage='home'/>
       <HomeBody/>
       <SubscribeSection/>
       <Loader/>
