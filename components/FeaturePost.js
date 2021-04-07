@@ -18,7 +18,7 @@ export default function FeaturePost() {
       }
       @media (min-width: 992px) {
         .site-section {
-            padding: 7em 2em 1em 2em ;
+            padding: 7em 4em 1em 4em ;
         }
       }
     `}</style>

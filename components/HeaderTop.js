@@ -17,7 +17,7 @@ export default function HeaderTop() {
       </div>
       <style jsx>{`
       .container {
-        padding: 1em 2em 1em 2em;
+        padding: 1em 4em 1em 4em;
       }
 
       .site-menu-toggle {

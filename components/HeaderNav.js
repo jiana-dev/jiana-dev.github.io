@@ -61,10 +61,10 @@ export default function HeaderNav(props) {
           }
           @media (min-width: 992px) {
             .option-first{
-              margin-left: 2em;
+              margin-left: 4em;
             }
             .option-last{
-              margin-right: 2em;
+              margin-right: 4em;
             }
           }
 
