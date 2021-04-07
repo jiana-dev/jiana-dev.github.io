@@ -74,18 +74,41 @@ export default function TwoColumnImageLayout() {
               <h2>Blog Posts</h2>
             </div>
             { blogps }
+            <div className='additional-links-container'>
+              <a className='additional-links' href="/blogs">More Good Blogg-y Stuff</a>
+            </div>
           </div>
           <div className="col-lg-6">
             <div className="section-title">
               <h2>Learning Resources</h2>
             </div>
             { learns }
+            <div className='additional-links-container'>
+              <a className='additional-links' href="/resources">Additional Cool Learn-y Doodads</a>
+            </div>
           </div>
         </div>
       </div>
       <style jsx>{`
       .site-section {
-        padding: 1em 0;
+        padding: 2em;
+      }
+
+      .additional-links-container {
+        margin-bottom: 3em;
+      }
+      .additional-links {
+        font-size: small;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: 0px solid;
+        border-radius: 10px;
+        padding: 7px;
+        background-color: #acb2a1;
+        color: #f0f0f0;
+      }
+      .additional-links:hover {
+        background-color: #7e8277;
       }
     `}</style>
     </div>

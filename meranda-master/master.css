@@ -29,13 +29,19 @@ a:hover {
   position: right;
   height: 100%;
 }
+.site-mobile-menu .site-nav-wrap > li {
+  line-height: 1;
+}
 
 .site-mobile-menu .site-nav-wrap > li > a {
-  font-size: medium;
+  font-family: 'B612 Mono';
+  text-transform: uppercase;
+  font-size: small;
 }
 
 .site-mobile-menu .site-nav-wrap li.active > a {
   color: #b7b2a2;
+  font-weight: 600;
 }
 
 .site-mobile-menu .site-nav-wrap a:hover {
@@ -77,4 +83,35 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 div[data-code-block] {
   overflow-x: scroll;
   max-width: calc(100vw - 12em);
+}
+
+.subscribe form p {
+  font-size: small;
+}
+
+.subscribe form .btn {
+  border: 0px solid;
+  border-radius: 10px;
+  padding: 7px;
+  background-color: #acb2a1;
+}
+.subscribe form .btn:hover {
+  background-color: #7e8277;
+}
+
+.subscribe-section {
+  padding: 5em;
+  background-color: #f0ede4;
+}
+
+@media (min-width: 992px) {
+  .site-section {
+      padding: 5em 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .site-section {
+      padding: 0 2em 0 2em;
+  }
 }
