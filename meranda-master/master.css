@@ -73,6 +73,19 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   font-family: 'Lora', serif;
 }
 
+.photo-caption {
+  color: #988a7f;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.smaller-img {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
 .site-mobile-menu {
   background: #f5f1e5;
 }
@@ -158,6 +171,21 @@ h2.caption {
 
 blockquote > p {
   font-family: Lora,serif;
+  font-weight: 500;
+  padding: 0;
+  font-size: small;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-left: 1px solid #b7a290;
+}
+
+blockquote.thoughts > p {
+  font-family: Lora,serif;
   font-weight: 400;
   font-style: italic;
   padding: 0;
@@ -165,15 +193,14 @@ blockquote > p {
   color: #000;
 }
 
-blockquote {
-  margin: 1rem 0;
-  padding: 1rem;
-  border-left: 1px solid #000;
-}
-
 img {
   width: 100%;
-  padding: 2em 0em;
+  padding: 2em 0em 1em 0em;
+}
+
+video {
+  width: 100%;
+  padding: 2em 0em 1em 0em;
 }
 
 table {
@@ -187,7 +214,7 @@ li {
 td, th {
   padding: 1.1rem 1rem;
   text-align: left;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid rgb(1,1,1,0.1);
 }
 
 strong {

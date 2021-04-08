@@ -5,7 +5,7 @@ export default function BlogPostHeader(props) {
     <div className='blogPostHeader'>
       <h1>{parse(props.title)}</h1>
       {props.subtitle && <h3 className='caption'>{props.subtitle}</h3>}
-      <div className="post-meta d-flex mb-5">
+      <div className="post-meta d-flex mb-4">
         <div className="vcard">
           <span className="date">
             {new Date(props.date).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})}

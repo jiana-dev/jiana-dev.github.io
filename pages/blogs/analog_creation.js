@@ -6,26 +6,33 @@ import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 
 import BlogPostHeader from '../../components/BlogPostHeader';
+import ImageWithCaption from '../../components/ImageWithCaption';
 
 import postData from '../../public/data/blogs/analog_creation.json';
 import styles from '../../components/BlogPost.module.css';
 
 export default function AnalogCreation() {
   const post =
-    <div className={styles.postContent, styles.garamond}>
+    <div className={styles.postContent}>
       <p><span className={styles.lead}>A</span>bout two years ago now, I spent a lot of time creating things with my hands. I ventured into crocheting at first, and made a few baskets.</p>
       <div className={styles.imgHolder}>
-        <img src="/images/analog_creation/basket.jpg" alt="basket"/>
+        <div className='smaller-img'>
+          <ImageWithCaption src="/images/analog_creation/basket.jpg" alt="basket" caption="Laylagirl and my basket"/>
+        </div>
       </div>
       <p>I dabbled in clay and made a few figurines.</p>
       <div className={styles.imgHolder}>
-        <img src="/images/analog_creation/elephants.jpg" alt="elephants"/>
-      </div>
-      <div className={styles.imgHolder}>
-        <img src="/images/analog_creation/ferb.jpg" alt="ferb"/>
-      </div>
-      <div className={styles.imgHolder}>
-        <img src="/images/analog_creation/baljeet.jpg" alt="baljeet"/>
+        <div className="row">
+          <ImageWithCaption src="/images/analog_creation/elephants.jpg" alt="elephants" caption="elephants"/>
+        </div>
+        <div className="row col-12">
+          <div className="col-6">
+            <ImageWithCaption src="/images/analog_creation/ferb.jpg" alt="ferb" caption="ferb"/>
+          </div>
+          <div className="col-6">
+            <ImageWithCaption src="/images/analog_creation/baljeet.jpg" alt="baljeet" caption="baljeet"/>
+          </div>
+        </div>
       </div>
       <p>My usual routine while doing these arts and crafts would be to put on a show in the background, relax, and enjoy using my hands to create something. In real life!</p>
       <p>Now, I know it sounds weird to be so fascinated with this concept but for someone who almost always only builds things digitally, the change in pace was refreshing. The idea of using a picture for reference and bringing something to life with my hands was kind of exhilarating. Albeit, the real life versions I made never looked as good as the reference pictures, but I did get better at making them over time.</p>
@@ -37,13 +44,17 @@ export default function AnalogCreation() {
       </blockquote>
       <p>Now, I&#39;ll post my failure here for a reference point of where I&#39;m at right now. I&#39;m a long way before I can create something good enough to attempt to sell, but if nothing comes out of this experience, I&#39;ve at least re-sparked the joy that comes from creating outside of the digital world.</p>
       <p>Here was the beautiful expectation:</p>
-      <span className='image-container'>
-        <img src="/images/analog_creation/a885d0ddd531faa88870e6a85db56f34.jpg" alt="toothbrush_holder"/>
-      </span>
+      <div className={styles.imgHolder}>
+        <div className='smaller-img'>
+          <ImageWithCaption src="/images/analog_creation/a885d0ddd531faa88870e6a85db56f34.jpg" alt="toothbrush_holder" caption="A beautiful pinterest brush holder"/>
+        </div>
+      </div>
       <p>And the sad, sad reality:</p>
-      <span className='image-container'>
-        <img src="/images/analog_creation/my_version.jpg" alt="my_version"/>
-      </span>
+      <div className={styles.imgHolder}>
+        <div className='smaller-img'>
+          <ImageWithCaption src="/images/analog_creation/my_version.jpg" alt="my version" caption="Whatever this thing is"/>
+        </div>
+      </div>
       <p>Hey, I tried!</p>
       <p>Now, this blog post isn&#39;t just to harp on myself for my lack of creative execution, nor to arbitrarily introduce you to my hobbies outside of tech.</p>
       <p>I think there&#39;s a real certain wonder in using your hands and your physical body to produce something in real life that we so easily forget wrapped up in our digital world. Since high school, I haven&#39;t been put in a setting to exercise creating in real life so I&#39;ve let this skill wither away with time. I just never felt I was as good with it as digital creation, hence why I went into a purely digital field!</p>

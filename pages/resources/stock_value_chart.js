@@ -11,6 +11,7 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/resources/stock_value_chart.json';
+import styles from '../../components/BlogPost.module.css';
 
 import BerkshireChart from '../../components/BerkshireChart';
 import BigShortsChart from '../../components/BigShortsChart';
@@ -24,8 +25,8 @@ export default function StockValueChart() {
   ];
 
   const post =
-    <div>
-      <p>This is the result of a script I wrote to value stocks in any given portfolio according to Peter Lynch's method for a stock's fair value. This method is as follows:</p>
+    <div className={styles.postContent}>
+      <p><span className={styles.lead}>T</span>his is the result of a script I wrote to value stocks in any given portfolio according to Peter Lynch's method for a stock's fair value. This method is as follows:</p>
       <code>value rating = p/e ratio / growth rate + dividend yield</code>
       <p>Let me know via email if you'd like me to run this for any other Yahoo Finance portfolios or any ticker symbols in particular!</p>
       <h6><strong>How to read the results:</strong></h6>

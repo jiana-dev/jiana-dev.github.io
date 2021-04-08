@@ -12,7 +12,7 @@ import styles from '../../components/BlogPost.module.css';
 
 export default function DigitalMinimalism() {
   const post =
-    <div>
+    <div className={styles.postContent}>
       <p><span className={styles.lead}>I</span>&#39;m coming to the end of reading Digital Minimalism and it felt only fitting to accompany my learnings with a blog post. I have quite a few thoughts about Digital Minimalism as a whole, but I want to focus in on framing it in the perspective of my identity as a Software Developer, and as someone who has been exposed to and supported by tech all her life.</p>
       <p>When first hearing about Digital Minimalism, I was pretty reluctant to the idea. Seeing as the role technology plays in my life today is so substantial, it doesn&#39;t feel like I would be as effective of a person should I attempt to further reduce its presence in my life.</p>
       <p>However, this concept was still so intriguing to me, so I continued hearing Cal Newport out. I agree with everything he states about the benefits of digital minimalism, the risks and problems that arise with ubiquitous technology, and the quality of life one can have should they adopt this philosophy.</p>
@@ -23,11 +23,11 @@ export default function DigitalMinimalism() {
       <p>What responsibility has fell into my lap as a software developer after reading this book! Don&#39;t even get me started on the fact that I am only starting to use social media (YouTube, podcasts) to create content, and am inevitably also feeding into this black hole of technological takeover! So I better be making some quality content, or I&#39;ll feel as if I&#39;m doing the world more harm than good.</p>
       <p>Perhaps it shouldn&#39;t be so intense, and I should be taking Cal Newport&#39;s words with a heavier grain of salt than I seem to be now. I know I&#39;m being quite a bit dramatic with these words.</p>
       <p>I just found it interesting how I went from</p>
-      <blockquote>
+      <blockquote className='thoughts'>
         <p> &quot;Okay, just gotta develop an app, who cares what it is, as long as you produce something that people will find useful.&quot; </p>
       </blockquote>
       <p>To</p>
-      <blockquote>
+      <blockquote className='thoughts'>
         <p>&quot;So not only do you have to develop an app, Jiana. You also have to ensure that you&#39;re not inadvertently manipulating people. Ensure that your app brings true value, not pseudo-value. If it&#39;s a social platform, try to make it so that you&#39;re not adding another measure by which people feel anxiety and pressure to be adored and liked. If it&#39;s an app for day-to-day use, make sure you&#39;re not unnecessarily adding an app to someone&#39;s digital world that will become phased out if they decide to endeavour into the world of Digital Minimalism. If you&#39;re fostering connections between people, how can you make it so that the connection is not fundamentally meaningless? How do you make it so that you&#39;re actually benefitting the people you are connecting rather than allowing them to settle for fostering lower quality relationships?&quot;</p>
       </blockquote>
       <p>Yikes on me.</p>

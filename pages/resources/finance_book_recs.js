@@ -8,10 +8,11 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/resources/finance_book_recs.json';
+import styles from '../../components/BlogPost.module.css';
 
 export default function FinanceBookRecs() {
   const post =
-  <div>
+  <div className={styles.postContent}>
     <div className="row">
       <div className="column book-title">
         <h3><b>I Will Teach You To Be Rich</b></h3> 

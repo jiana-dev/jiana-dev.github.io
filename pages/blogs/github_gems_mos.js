@@ -6,6 +6,7 @@ import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 
 import BlogPostHeader from '../../components/BlogPostHeader';
+import ImageWithCaption from '../../components/ImageWithCaption';
 
 import postData from '../../public/data/blogs/github_gems_mos.json';
 import styles from '../../components/BlogPost.module.css';
@@ -28,13 +29,19 @@ export default function GithubGemsMos() {
       <p>I don&#39;t know how I got there, but somewhere along my hunt, I was led to Github. People were linking <a href="https://github.com/Caldis/Mos">Mos</a>. I took a quick peak, and didn&#39;t understand a thing because it wasn&#39;t English, but from the comments, it looked like this could work. So I <code>brew install</code>&#39;d that shiz and tested it out for myself.</p>
       <p>OMG It was exactly what I was looking for! And they thought of everything! They even solved my problem of having to check and uncheck <strong>Reverse Direction</strong> everytime I plugged my mouse back in (which <strong>BetterTouchTool</strong> also does I believe).</p>
       <div className={styles.imgHolder}>
-        <img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.48.39 PM.png" alt="Screen Shot 2020-11-29 at 7.48.39 PM"/>
+        <div className='smaller-img'>
+          <ImageWithCaption src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.48.39 PM.png" alt="mos1" caption="Mos"/>
+        </div>
       </div>
       <div className={styles.imgHolder}>
-        <img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.48.50 PM.png" alt="Screen Shot 2020-11-29 at 7.48.50 PM"/>
+        <div className='smaller-img'>
+          <ImageWithCaption src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.48.50 PM.png" alt="mos2" caption="Mos"/>
+        </div>
       </div>
       <div className={styles.imgHolder}>
-        <img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.49.01 PM.png" alt="Screen Shot 2020-11-29 at 7.49.01 PM"/>
+        <div className='smaller-img'>
+          <ImageWithCaption src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.49.01 PM.png" alt="mos3" caption="Mos"/>
+        </div>
       </div>
       <p>I was in awe. Github strikes again.</p>
       <p>The sheer awesomeness of open source software was enough to make me write this blog post. I just find it amazing that there are all of these people loving and rating <strong>SmoothScroll</strong> and <strong>Smooze</strong> who might not know that this amazingly created free alternative exists! Now perhaps I am being narrow minded, and those apps have something to offer that <a href="https://github.com/Caldis/Mos"><strong>Mos</strong></a> doesn&#39;t, but nonetheless, this post is mostly about bringing awareness to the resources <em>everyone</em> has available to them through Github!</p>

@@ -101,9 +101,6 @@ export default function NapoleonHill() {
       <p>Sincerely,</p>
       <p>Your fellow introvert</p>
       <style jsx>{`
-        li {
-          font-size: large;
-        }
       `}</style>
     </div>
   return (

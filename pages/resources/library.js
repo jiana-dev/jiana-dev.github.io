@@ -8,10 +8,11 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/resources/library.json';
+import styles from '../../components/BlogPost.module.css';
 
 export default function Library() {
   const post =
-    <div>
+    <div className={styles.postContent}>
       <h6>As of March 7, 2020 9:09AM</h6>
       <p>Check out my <a href="/resources/finance_book_recs" target='_blank'>book list all about Learning about Finances</a>!</p>
       <hr/>

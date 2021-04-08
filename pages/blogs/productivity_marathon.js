@@ -6,6 +6,8 @@ import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 
 import BlogPostHeader from '../../components/BlogPostHeader';
+import ImageWithCaption from '../../components/ImageWithCaption';
+import VideoWithCaption from '../../components/VideoWithCaption';
 
 import postData from '../../public/data/blogs/productivity_marathon.json';
 import styles from '../../components/BlogPost.module.css';
@@ -22,7 +24,7 @@ export default function ProductivityMarathon() {
       <p>When I started reading, at first I was riddled with <em>Okay, well I knew that.</em>&#39;s and <em>Ah thats an interesting way of putting it, touché!</em>&#39;s. And then as I got further in, I was getting more and more captivated by how I could use these principles in my own life. I started getting ahead of myself. I was so excited about these things he was saying that I prematurely tried developing the system before even getting through the whole chapter.</p>
       <p>Then I started following the workflow diagram from the book and filling in the blanks for my own life. It started like this.</p>
       <div className={styles.imgHolder}>
-        <img src="../images/productivity_marathon/organizing_life.png" alt="organizing_life"/>
+        <ImageWithCaption src="../images/productivity_marathon/organizing_life.png" alt="flowchart" caption="Flowchart of digital organization"/>
       </div>
       <p>I thought okay this isn&#39;t the worst! My <strong>Inbox</strong> is my Drafts, and from there I delegate to the proper places, this is GREAT!</p>
       <p>My thought process went a little something like this: <em>Right! Well everything should have a date if it&#39;s to get done, right?</em> So I started inserting literally everything into my calendar. Even dates that I didn&#39;t know about in the future, journal entries I wanted to write <em>eventually</em> but didn&#39;t know when, I would pop em in as a week long event to indicate to myself, this should be done during this week. <em>Now the only place I had to look was my Calendar!</em> Perfect, right?</p>
@@ -42,21 +44,21 @@ export default function ProductivityMarathon() {
       </ol>
       <p>There is a lot I learned, but let me just show you how I incorporated my learnings into the system I am currently trying out. Here lies my current system.</p>
       <div className={styles.imgHolder}>
-        <img src="../images/productivity_marathon/DigitalOrg.png" alt="DigitalOrg"/>
+        <ImageWithCaption src="../images/productivity_marathon/DigitalOrg.png" alt="Digital Org" caption="Reminder of my digital organization system"/>
       </div>
       <div className={styles.imgHolder}>
-        <img src="../images/productivity_marathon/DigitalFiling.png" alt="DigitalFiling"/>
+        <ImageWithCaption src="../images/productivity_marathon/DigitalFiling.png" alt="Digital Filing" caption="Reminder of my filing system"/>
       </div>
       <div className={styles.imgHolder}>
-        <img src="../images/productivity_marathon/Screen Shot 2020-11-22 at 2.06.25 PM.png" alt="Screen Shot 2020-11-22 at 2.06.25 PM"/>
+        <ImageWithCaption src="../images/productivity_marathon/Screen Shot 2020-11-22 at 2.06.25 PM.png" alt="som" caption="Reminder of my filing system"/>
       </div>
       <div className={styles.imgHolder}>
-        <video src="../images/productivity_marathon/notion.mp4" autoPlay controls></video>
+        <VideoWithCaption src="../images/productivity_marathon/notion.mp4" alt="Notion tour" caption="A quick notion tour"/>
       </div>
       <div className={styles.imgHolder}>
+        <VideoWithCaption src="../images/productivity_marathon/Reminders.mp4" alt="reminders tour" caption="A quick reminders tour"/>
         <video src="../images/productivity_marathon/Reminders.mp4" autoPlay controls></video>
       </div>
-      <br></br>
 
       <p>I suspect that although my system looks promising to me, I think it&#39;s still far from done. It probably won&#39;t be done for the rest of my life! But for now, here is a snippet in My Productivity Marathon. Don&#39;t you worry, cause we&#39;ll be back.</p>
       <p>Until next time,</p>

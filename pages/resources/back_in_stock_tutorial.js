@@ -10,6 +10,7 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/resources/back_in_stock_tutorial.json';
+import styles from '../../components/BlogPost.module.css';
 
 import { CodeBlock } from '@atlaskit/code';
 import { Code } from '@atlaskit/code';
@@ -20,7 +21,7 @@ export default function BackInStockTutorial() {
   const [mode, setMode] = useState("dark");
 
   const post =
-    <>
+    <div className={styles.postContent}>
       <p>Have you ever wasted your life away checking if that item you&#39;ve been eyeing for months is finally back in stock? Do you wish you could just live your life not obsessively checking over material things and be notified when something is available to purchase again?</p>
       <p>If so, you may be in luck, because this was the exact scenario that led me to making something so that I&#39;d never have to waste another moment checking a store&#39;s online website.</p>
       <br/>
@@ -1256,7 +1257,7 @@ export default function BackInStockTutorial() {
           width: 20%;
         }
     `}</style>
-    </>
+    </div>
 
   return (
     <>
