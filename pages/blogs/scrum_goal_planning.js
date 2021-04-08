@@ -8,11 +8,12 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/blogs/scrum_goal_planning.json';
+import styles from '../../components/BlogPost.module.css';
 
 export default function ScrumGoalPlanning() {
   const post =
-    <div>
-      <p>Welcome back to my brain, friends. The goal of this post is to give you an idea for a <strong>structured way to organize your goals using concepts borrowed from software development processes.</strong></p>
+    <div className={styles.postContent}>
+      <p><span className={styles.lead}>W</span>elcome back to my brain, friends. The goal of this post is to give you an idea for a <strong>structured way to organize your goals using concepts borrowed from software development processes.</strong></p>
       <p>First, let&#39;s give you some context.</p>
       <p>In software development, there are a lot of different frameworks for bringing an idea to an end product. The one we&#39;ll be talking about is called <strong>Scrum.</strong></p>
       <p><strong>Scrum</strong> (as defined by <a href="https://www.scrum.org/resources/scrum-glossary">the scrum glossary</a>) is a framework to support teams in complex product development. Scrum consists of Scrum Teams and their associated roles, events, artifacts, and rules, as defined in the <a href="https://www.scrumguides.org/">Scrum Guide</a>.</p>
@@ -22,37 +23,37 @@ export default function ScrumGoalPlanning() {
       <p>In this example, I&#39;ll be choosing one goal to run through this process but realistically, you&#39;ll want to do this for each thing you dump into your <strong>Backlog</strong>.</p>
       <ol>
         <li><p>Choose how you will measure your time and effort. This will be your <strong>estimation</strong> measurement. In our case, we will use the <strong>Pomodoro Technique</strong> like a <strong>timebox</strong> you give yourself to measure task completion.</p>
-          <p><img src="../images/scrum_goal_planning/estimation.png" alt="estimation"/></p>
+          <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/estimation.png" alt="estimation"/></div>
         </li>
         <li><p>Identify and dump your goals and ideas into your <strong>Backlog</strong> (this is intended to be an ongoing process everytime you think of something new)</p>
-          <p><img src="../images/scrum_goal_planning/backlog 1.png" alt="backlog"/></p>
+          <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/backlog 1.png" alt="backlog"/></div>
         </li>
       </ol>
-      <h6 id="refinement-grooming">Refinement/Grooming</h6>
+      <h3 id="refinement-grooming">Refinement/Grooming</h3>
       <ol start='3'>
         <li>Classify your goals into categories. We&#39;ll use Large, Medium, Small.</li>
-        <p><img src="../images/scrum_goal_planning/backlog 2.png" alt="backlog"/></p>
+        <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/backlog 2.png" alt="backlog"/></div>
         <li>Prioritize your goals. Choose the ones that are most important to you, as many as you think are achievable within one year, for instance. Order them by perceived impact and desirability.</li>
-        <p><img src="../images/scrum_goal_planning/backlog 3.png" alt="backlog"/></p>
+        <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/backlog 3.png" alt="backlog"/></div>
         <li>Take the goal and break it down into smaller pieces, preferably one conceptual level down (Large to Medium, Medium to Small).<sup><a href="#cliffnote-1">1</a></sup></li>
-        <p><img src="../images/scrum_goal_planning/backlog 4.png" alt="backlog"/></p>
+        <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/backlog 4.png" alt="backlog"/></div>
         <li>If needed, break down again until we are at the smallest level. Ensure the goal is measurable by your chosen time in Step 0. <sup><a href="#cliffnote-2">2</a></sup></li>
-        <p><img src="../images/scrum_goal_planning/backlog 5.png" alt="backlog"/></p>
+        <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/backlog 5.png" alt="backlog"/></div>
         <li>If your Small goal isn&#39;t clear or granular enough, gather <strong>requirements</strong>. <em>What exactly is expected to mark it as <strong>Done</strong>?</em></li>
-        <p><img src="../images/scrum_goal_planning/requirements.png" alt="requirements"/></p>
+        <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/requirements.png" alt="requirements"/></div>
         <li><strong>Estimate</strong> your Small goals in the measurement above using the Step 0 measurement.</li>
-        <p><img src="../images/scrum_goal_planning/working backlog.png" alt="working backlog"/></p>
+        <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/working backlog.png" alt="working backlog"/></div>
       </ol>
       <h6 id="planning">Planning</h6>
       <ol start='9'>
         <li>Choose your <strong>Sprint</strong> timeline.</li>
         <li>Identify how many of your estimation measurement from Step 0 you will be able to complete in one sprint.</li>
-        <p><img src="../images/scrum_goal_planning/sprint timeline.png" alt="sprint timeline"/></p>
+        <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/sprint timeline.png" alt="sprint timeline"/></div>
         <li>Plan your sprint. Take your small goals and drag and drop into your sprint to build your <strong>Sprint Backlog</strong>.</li>
-        <p><img src="../images/scrum_goal_planning/dragdrop.gif" alt="dragdrop"/></p>
+        <div className={styles.imgHolder}><img src="../images/scrum_goal_planning/dragdrop.gif" alt="dragdrop"/></div>
         <li>Rinse and Repeat for all goals.</li>
       </ol>
-      <h6 id="definitions">Definitions</h6>
+      <h3 id="definitions">Definitions</h3>
       <table>
         <thead>
           <tr>

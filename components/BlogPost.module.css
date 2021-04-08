@@ -1,0 +1,20 @@
+.postContent {
+  width: 100%;
+}
+
+.garamond {
+  font-family: 'Garamond';
+  font-size: large;
+}
+
+.lead {
+  font-family: 'Garamond';
+  font-size: xx-large;
+}
+
+.imgHolder {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+}
+

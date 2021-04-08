@@ -8,24 +8,25 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/blogs/analog_creation.json';
+import styles from '../../components/BlogPost.module.css';
 
 export default function AnalogCreation() {
   const post =
-    <div>
-      <p>About two years ago now, I spent a lot of time creating things with my hands. I ventured into crocheting at first, and made a few baskets.</p>
-      <span className='image-container'>
+    <div className={styles.postContent, styles.garamond}>
+      <p><span className={styles.lead}>A</span>bout two years ago now, I spent a lot of time creating things with my hands. I ventured into crocheting at first, and made a few baskets.</p>
+      <div className={styles.imgHolder}>
         <img src="/images/analog_creation/basket.jpg" alt="basket"/>
-      </span>
-      <p>I dabbled in clay and made a few figurines. </p>
-      <span className='image-container'>
+      </div>
+      <p>I dabbled in clay and made a few figurines.</p>
+      <div className={styles.imgHolder}>
         <img src="/images/analog_creation/elephants.jpg" alt="elephants"/>
-      </span>
-      <span className='image-container'>
+      </div>
+      <div className={styles.imgHolder}>
         <img src="/images/analog_creation/ferb.jpg" alt="ferb"/>
-      </span>
-      <span className='image-container'>
+      </div>
+      <div className={styles.imgHolder}>
         <img src="/images/analog_creation/baljeet.jpg" alt="baljeet"/>
-      </span>
+      </div>
       <p>My usual routine while doing these arts and crafts would be to put on a show in the background, relax, and enjoy using my hands to create something. In real life!</p>
       <p>Now, I know it sounds weird to be so fascinated with this concept but for someone who almost always only builds things digitally, the change in pace was refreshing. The idea of using a picture for reference and bringing something to life with my hands was kind of exhilarating. Albeit, the real life versions I made never looked as good as the reference pictures, but I did get better at making them over time.</p>
       <p>However, over the past two years I kind of just stopped. I stopped making things with my hands because frankly I didn&#39;t feel like it yielded me anything except a cool new figurine or practical jewellery holder. I also didn&#39;t think I was any good at it. My interests shifted and I no longer had the desire to create a new character from my favourite movie or TV show and so I shelfed the clay and the yarn for a while.</p>

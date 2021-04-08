@@ -3,10 +3,11 @@ import ReactPaginate from 'react-paginate';
 import styles from './BlogList.module.css';
 import BlogPostPreview from './BlogPostPreview';
 import { useRouter } from 'next/router'
+import metadata from '../data/metadata.json';
 
 export default function BlogList(props) {
   const router = useRouter()
-  const perPage = 4;
+  const perPage = metadata.perPage;
 
   const [fetchedPosts, setFetchedPosts] = useState([]);
   const [blogPosts, setBlogPosts] = useState([]);

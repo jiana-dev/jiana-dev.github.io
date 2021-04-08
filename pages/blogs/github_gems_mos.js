@@ -8,12 +8,13 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/blogs/github_gems_mos.json';
+import styles from '../../components/BlogPost.module.css';
 
 export default function GithubGemsMos() {
   const post =
-    <div>
+    <div className={styles.postContent}>
       <p>
-      Whenever I&#39;m looking for a particular software to help me do something, I always look to the most advertised and popular option that shows up in my Google search results first.
+      <span className={styles.lead}>W</span>henever I&#39;m looking for a particular software to help me do something, I always look to the most advertised and popular option that shows up in my Google search results first.
       </p>
       <p>This often leads to me finding software that fits my needs entirely, but with a cost. Don&#39;t get me wrong, I&#39;m happy to pay for software that I think is truly outstanding. That I see the complete need for using everyday, is well reviewed, and well-worth supporting the developers and team that made it.</p>
       <p>However, when I can, I like to find free alternatives as much as possible. <em>Call me cheap, because it&#39;s true. I am quite frugal.</em> This isn&#39;t always easy as some apps are very specialized and free versions are limited and just not as good. I think most people are like me in this sense, where of course, they&#39;re happy to pay if they need to but would love a free alternative.</p>
@@ -26,9 +27,15 @@ export default function GithubGemsMos() {
       <p>I knew this was likely a fairly simple thing to code, this smooth scrolling feature. Why did they have to mark it up like that? I looked online and people gave it rave reviews, but I wasn&#39;t convinced. That&#39;s when I saw another alternative, <strong>Smooze</strong>. Someone had posted it on Reddit, and I think it was the developer, so I thought <em>Oh! Sweet! That will probably be free because it&#39;ll be less well-known.</em> But then I saw the words trial again and continued on my search.</p>
       <p>I don&#39;t know how I got there, but somewhere along my hunt, I was led to Github. People were linking <a href="https://github.com/Caldis/Mos">Mos</a>. I took a quick peak, and didn&#39;t understand a thing because it wasn&#39;t English, but from the comments, it looked like this could work. So I <code>brew install</code>&#39;d that shiz and tested it out for myself.</p>
       <p>OMG It was exactly what I was looking for! And they thought of everything! They even solved my problem of having to check and uncheck <strong>Reverse Direction</strong> everytime I plugged my mouse back in (which <strong>BetterTouchTool</strong> also does I believe).</p>
-      <p><img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.48.39 PM.png" alt="Screen Shot 2020-11-29 at 7.48.39 PM"/></p>
-      <p><img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.48.50 PM.png" alt="Screen Shot 2020-11-29 at 7.48.50 PM"/></p>
-      <p><img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.49.01 PM.png" alt="Screen Shot 2020-11-29 at 7.49.01 PM"/></p>
+      <div className={styles.imgHolder}>
+        <img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.48.39 PM.png" alt="Screen Shot 2020-11-29 at 7.48.39 PM"/>
+      </div>
+      <div className={styles.imgHolder}>
+        <img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.48.50 PM.png" alt="Screen Shot 2020-11-29 at 7.48.50 PM"/>
+      </div>
+      <div className={styles.imgHolder}>
+        <img src="../images/github-gems/mos/Screen Shot 2020-11-29 at 7.49.01 PM.png" alt="Screen Shot 2020-11-29 at 7.49.01 PM"/>
+      </div>
       <p>I was in awe. Github strikes again.</p>
       <p>The sheer awesomeness of open source software was enough to make me write this blog post. I just find it amazing that there are all of these people loving and rating <strong>SmoothScroll</strong> and <strong>Smooze</strong> who might not know that this amazingly created free alternative exists! Now perhaps I am being narrow minded, and those apps have something to offer that <a href="https://github.com/Caldis/Mos"><strong>Mos</strong></a> doesn&#39;t, but nonetheless, this post is mostly about bringing awareness to the resources <em>everyone</em> has available to them through Github!</p>
       <p>All it takes is going a little bit out of your comfort zone to figure out how to clone/get something onto your computer, and then it functions just like a normal app would. So this is like a PSA not to shy away from Github or other resource hubs that might not be familiar to you. You might be missing out on a whole world of software opportunities!</p>

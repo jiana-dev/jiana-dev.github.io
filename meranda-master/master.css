@@ -13,6 +13,13 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yrsa&display=swap');
+
+:root {
+  --default-padding: 20em;
+}
 
 a {
   cursor: pointer;
@@ -55,10 +62,14 @@ a:hover {
 body {
   color: black;
   font-family: 'Lora', serif;
-  font-size: medium;
 }
 
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+  font-family: 'Prata', serif;
+  padding: 1em 0 0.5em 0;
+}
+
+.caption {
   font-family: 'Lora', serif;
 }
 
@@ -102,20 +113,33 @@ div[data-code-block] {
   background-color: #7e8277;
 }
 
-.subscribe-section {
-  padding: 5em 2em;
-  background-color: #f0ede4;
+@media (min-width: 1300px) {
+  .site-section { padding: 7em var(--default-padding) 1em var(--default-padding) ; }
+  .subscribe-section {
+    padding: 5em var(--default-padding);
+    background-color: #f0ede4;
+  }
 }
 
-@media (min-width: 992px) {
-  .site-section {
-      padding: 5em 4em 1em 4em ;
+@media (max-width: 1299px) {
+  :root {
+    --default-padding: 10em;
+  }
+  .site-section { padding: 7em var(--default-padding) 1em var(--default-padding); }
+  .subscribe-section {
+    padding: 5em var(--default-padding);
+    background-color: #f0ede4;
   }
 }
 
 @media (max-width: 992px) {
-  .site-section {
-      padding: 0 4em 0 4em;
+  :root {
+    --default-padding: 5em;
+  }
+  .site-section { padding: 2em var(--default-padding) 2em var(--default-padding); }
+  .subscribe-section {
+    padding: 5em var(--default-padding);
+    background-color: #f0ede4;
   }
 }
 
@@ -129,5 +153,43 @@ h2.caption {
   padding: 0;
   text-transform: uppercase;
   border: none;
+  font-weight: 700;
+}
+
+blockquote > p {
+  font-family: Lora,serif;
+  font-weight: 400;
+  font-style: italic;
+  padding: 0;
+  font-size: small;
+  color: #000;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-left: 1px solid #000;
+}
+
+img {
+  width: 100%;
+  padding: 2em 0em;
+}
+
+table {
+  margin: 2em 0em;
+}
+
+li {
+  line-height: 2;
+}
+
+td, th {
+  padding: 1.1rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #efefef;
+}
+
+strong {
   font-weight: 700;
 }

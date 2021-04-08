@@ -61,10 +61,10 @@ export default function HeaderNav(props) {
           }
           @media (min-width: 992px) {
             .option-first{
-              margin-left: 4em;
+              margin-left: var(--default-padding);
             }
             .option-last{
-              margin-right: 4em;
+              margin-right: var(--default-padding);
             }
           }
 

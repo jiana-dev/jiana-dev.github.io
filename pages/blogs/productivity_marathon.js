@@ -8,11 +8,12 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/blogs/productivity_marathon.json';
+import styles from '../../components/BlogPost.module.css';
 
 export default function ProductivityMarathon() {
   const post =
-    <div>
-      <p>This week, I&#39;ve been struggling a lot with managing my productivity system. It pains me to think about how much time I&#39;ve spent on... tangibly nothing. But I like to believe that if nothing else, I&#39;m feeding my soul and I&#39;d really like to think that I&#39;m taking steps towards developing something that truly works for me.</p>
+    <div className={styles.postContent}>
+      <p><span className={styles.lead}>T</span>his week, I&#39;ve been struggling a lot with managing my productivity system. It pains me to think about how much time I&#39;ve spent on... tangibly nothing. But I like to believe that if nothing else, I&#39;m feeding my soul and I&#39;d really like to think that I&#39;m taking steps towards developing something that truly works for me.</p>
       <p>I&#39;ve felt like a mess this week when it comes to managing projects I want to complete and everyday tasks. I made a whole plan for the week and followed through on absolutely none of it.</p>
       <p>To give you some context, I recently started dabbling with the app <strong>Notion</strong>, and with the crazy amounts of information out there on it, I felt I would be in good hands to make this my One-Size-Fits-All solution to productivity systems and all I had to do was learn how to use it properly.</p>
       <p>Boy, oh boy was I wrong.</p>
@@ -20,7 +21,9 @@ export default function ProductivityMarathon() {
       <p>I watched a few Youtube videos on how to use Notion to organize your life, but surprise, surprise! No one has the exact same life and needs as me! (Not only that but Notion was quite slow, and I felt like it was too much overhead for things that are very simple and mundane.) I was thinking about agile methodologies, and scrum, and Pomodoro, and trying to get a grip on how I can incorporate all of these things seamlessly. I was starting to feel an extreme sense of helplessness and I decided I would read the highly referenced book made exactly for this purpose: <strong>Getting Things Done</strong> by David Allen.</p>
       <p>When I started reading, at first I was riddled with <em>Okay, well I knew that.</em>&#39;s and <em>Ah thats an interesting way of putting it, touché!</em>&#39;s. And then as I got further in, I was getting more and more captivated by how I could use these principles in my own life. I started getting ahead of myself. I was so excited about these things he was saying that I prematurely tried developing the system before even getting through the whole chapter.</p>
       <p>Then I started following the workflow diagram from the book and filling in the blanks for my own life. It started like this.</p>
-      <p><img src="../images/productivity_marathon/organizing_life.png" alt="organizing_life"/></p>
+      <div className={styles.imgHolder}>
+        <img src="../images/productivity_marathon/organizing_life.png" alt="organizing_life"/>
+      </div>
       <p>I thought okay this isn&#39;t the worst! My <strong>Inbox</strong> is my Drafts, and from there I delegate to the proper places, this is GREAT!</p>
       <p>My thought process went a little something like this: <em>Right! Well everything should have a date if it&#39;s to get done, right?</em> So I started inserting literally everything into my calendar. Even dates that I didn&#39;t know about in the future, journal entries I wanted to write <em>eventually</em> but didn&#39;t know when, I would pop em in as a week long event to indicate to myself, this should be done during this week. <em>Now the only place I had to look was my Calendar!</em> Perfect, right?</p>
       <p>Hell to the no, girl. Once again, I was severely incorrect. I started not really taking my Calendar seriously because some things that were on there weren&#39;t hard deadlines and I could actually just move to another day if I were to do it early or late. When I completed something simple like &quot;Talk to parents&quot;, it just kind of lingered there on my calendar when it felt like it should have been something I could dismiss and check as done.  It no longer became <strong>sacred ground</strong> and I had broken a key principle from the book.</p>
@@ -38,12 +41,21 @@ export default function ProductivityMarathon() {
         <li>You must set out everything that needs to be accomplished on a daily, weekly, monthly, x basis. Within your weekly, it is recommended to do a Weekly Review on things in your Someday/Maybe, Projects, etc. </li>
       </ol>
       <p>There is a lot I learned, but let me just show you how I incorporated my learnings into the system I am currently trying out. Here lies my current system.</p>
-      <p><img src="../images/productivity_marathon/DigitalOrg.png" alt="DigitalOrg"/></p>
-      <p><img src="../images/productivity_marathon/DigitalFiling.png" alt="DigitalFiling"/></p>
-      <p><img src="../images/productivity_marathon/Screen Shot 2020-11-22 at 2.06.25 PM.png" alt="Screen Shot 2020-11-22 at 2.06.25 PM"/></p>
-      <video src="../images/productivity_marathon/notion.mp4" autoPlay controls></video>
-
-      <video src="../images/productivity_marathon/Reminders.mp4" autoPlay controls></video>
+      <div className={styles.imgHolder}>
+        <img src="../images/productivity_marathon/DigitalOrg.png" alt="DigitalOrg"/>
+      </div>
+      <div className={styles.imgHolder}>
+        <img src="../images/productivity_marathon/DigitalFiling.png" alt="DigitalFiling"/>
+      </div>
+      <div className={styles.imgHolder}>
+        <img src="../images/productivity_marathon/Screen Shot 2020-11-22 at 2.06.25 PM.png" alt="Screen Shot 2020-11-22 at 2.06.25 PM"/>
+      </div>
+      <div className={styles.imgHolder}>
+        <video src="../images/productivity_marathon/notion.mp4" autoPlay controls></video>
+      </div>
+      <div className={styles.imgHolder}>
+        <video src="../images/productivity_marathon/Reminders.mp4" autoPlay controls></video>
+      </div>
       <br></br>
 
       <p>I suspect that although my system looks promising to me, I think it&#39;s still far from done. It probably won&#39;t be done for the rest of my life! But for now, here is a snippet in My Productivity Marathon. Don&#39;t you worry, cause we&#39;ll be back.</p>

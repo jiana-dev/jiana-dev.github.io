@@ -91,7 +91,7 @@ export default function TwoColumnImageLayout() {
       </div>
       <style jsx>{`
       .site-section {
-        padding: 4em;
+        padding: 2em var(--default-padding);
       }
 
       .additional-links-container {

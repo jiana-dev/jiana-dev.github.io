@@ -8,15 +8,16 @@ import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 
 import postData from '../../public/data/blogs/developer_advice.json';
+import styles from '../../components/BlogPost.module.css';
 
 export default function DeveloperAdvice() {
   const post =
-    <div>
-      <p>Hello there, fellow friends and cool people!</p>
+    <div className={styles.postContent}>
+      <p><span className={styles.lead}>H</span>ello there, fellow friends and cool people!</p>
       <p>This is the accompanying blog post to my <a href="https://youtu.be/X12FQjqmfuM">three part series on advice I wish I had gotten as a younger developer</a>. I originally planned this to be valuable developer skills and traits, but after filming, I realized that it&#39;s catered more towards those who are just beginning as opposed to intermediates or seniors who likely will already know this stuff.</p>
       <p>Alas, we can only reflect and give advice on our own experiences, right?</p>
       <p>Let&#39;s get into it.</p>
-      <h2 id="my-software-development-preconceptions">My Software Development Preconceptions</h2>
+      <h3 id="my-software-development-preconceptions">My Software Development Preconceptions</h3>
       <p>I thought Software Development == Computer Science based on what I learned in school.</p>
       <ul>
         <li>Data structures and algorithms</li>
@@ -24,7 +25,7 @@ export default function DeveloperAdvice() {
         <li>Being at least semi-proficient with hardware</li>
       </ul>
       <p>Soon after settling into my first job out of university, I realized that software development is not at all the same as Computer Science. The skills you develop learning Computer Science are sure to help you with development, but are not a necessary prerequisite to do well in it.</p>
-      <h2 id="what-i-discovered-is-really-important-as-a-developing-developer">What I Discovered is Really Important as a Developing Developer</h2>
+      <h3 id="what-i-discovered-is-really-important-as-a-developing-developer">What I Discovered is Really Important as a Developing Developer</h3>
       <ol>
         <li>Improving your problem solving skills<ul>
             <li>Almost every task (not just in development) is a problem to be solved. Get good at this.</li>
