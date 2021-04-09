@@ -1,4 +1,3 @@
-import MainContentArea from '../components/MainContentArea'; //unused
 import SecondaryContentArea from '../components/SecondaryContentArea';
 import FeaturePost from '../components/FeaturePost';
 import TwoColumnImageLayout from '../components/TwoColumnImageLayout';

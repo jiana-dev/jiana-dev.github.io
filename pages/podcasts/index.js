@@ -40,7 +40,7 @@ export default function Podcasts() {
                   </Card.Text>
                   <div className='button-holder'>
                     <Button className={styles.buttonLink} variant="primary">
-                      <a href='https://anchor.fm/jianajavier'>Let's Kinda-Talk Tech</a>
+                      <a href='https://anchor.fm/jianajavier'>Let's Talk Kinda-Tech</a>
                     </Button>
                   </div>
                 </Card.Body>

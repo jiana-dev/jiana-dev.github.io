@@ -10,6 +10,9 @@ export default function ImageWithCaption(props) {
           justify-content: center;
           align-items: center;
         }
+        img {
+          padding: 2em 0em 1em 0em;
+        }
       `}</style>
     </div>
   )

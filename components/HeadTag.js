@@ -19,7 +19,7 @@ export default function HeadTag(props) {
   return (
     <Head>
       <title>{props.pageTitle ? props.pageTitle : 'JIANA - I forgot to title this'}</title>
-      <meta charset="utf-8"/>
+      <meta charSet="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
       <script
@@ -41,33 +41,32 @@ export default function HeadTag(props) {
       <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-      <script src="../js/owl.carousel.min.js"></script>
-      <script src="../js/jquery.stellar.min.js"></script>
-      <script src="../js/jquery.countdown.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-      <script src="../js/jquery.easing.1.3.js"></script>
-      <script src="../js/jquery.fancybox.min.js"></script>
-      <script src="../js/jquery.sticky.js"></script>
-      <script src="../js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.1/jquery.stellar.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.js"></script>
+      <script src="/js/main.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJM7QC73T6"></script>
-      <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react/umd/react.production.min.js" crossOrigin="true"></script>
 
       <script
         src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-        crossorigin></script>
+        crossOrigin="true"></script>
 
       <script
         src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-        crossorigin></script>
+        crossOrigin="true"></script>
 
       <script>var Alert = ReactBootstrap.Alert;</script>
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
     </Head>
   )

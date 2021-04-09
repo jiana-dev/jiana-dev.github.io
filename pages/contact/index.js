@@ -39,6 +39,7 @@ export default function Contact() {
                   <h2 className='caption'>Let's Chat</h2>
                   <style jsx>{`
                   .section-title {
+                    padding: 0em 15px;
                     margin: 1em 0 1em 0;
                   }
                   `}</style>
@@ -77,7 +78,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div className="row">
+                    <div className="row submit-button">
                       <div className="col-12">
                           <input type="submit" value="Send Message" className={styles.buttonLink}/>
                       </div>
@@ -88,6 +89,9 @@ export default function Contact() {
                     <style jsx>{`
                     .col-12 {
                       padding: 1em 0em 2em 0em;
+                    }
+                    .row.submit-button {
+                      padding: 0em 15px;
                     }
                     label {
                       color: #6a675d;

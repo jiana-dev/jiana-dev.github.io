@@ -1,0 +1,40 @@
+{
+  "books": [
+    {
+      "title": "I Will Teach You To Be Rich",
+      "author": "Ramit Sethi",
+      "description": "coolio book yknow?",
+      "id": "i-will-teach-you"
+    },
+    {
+      "title": "Millionaire Teacher",
+      "author": "Andrew Hallam",
+      "description": "coolio book yknow?",
+      "id": "millionaire-teacher"
+    },
+    {
+      "title": "Rich Dad, Poor Dad",
+      "author": "Robert Kiyosaki",
+      "description": "coolio book yknow?",
+      "id": "rich-dad-poor-dad"
+    },
+    {
+      "title": "The Total Money Makeover",
+      "author": "Dave Ramsey",
+      "description": "coolio book yknow?",
+      "id": "total-money-makeover"
+    },
+    {
+      "title": "The Little Book of Common Sense Investing",
+      "author": "John Bogle",
+      "description": "coolio book yknow?",
+      "id": "little-book-of-common-sense-investing"
+    },
+    {
+      "title": "One Up On Wall Street",
+      "author": "Peter Lynch",
+      "description": "coolio book yknow?",
+      "id": "one-up-on-wall-street"
+    }
+  ]
+}
