@@ -5,9 +5,9 @@ import Loader from '../../../components/Loader';
 import Footer from '../../../components/Footer';
 import ResourcePostHeader from '../../../components/ResourcePostHeader';
 
-import { getAllPostIds, getPostData } from '../../../lib/finance_books'
+import { getAllPostIds, getPostData } from '../../../lib/books'
 
-export default function FinanceBook({ postData }) {
+export default function Book({ postData }) {
   return (
     <>
       <HeadTag pageTitle={`JIANA - ${postData.title}`}/>

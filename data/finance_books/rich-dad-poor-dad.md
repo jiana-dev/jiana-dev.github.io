@@ -1,8 +1,7 @@
 ---
 title: "Rich Dad, Poor Dad"
-subtitle: "Robert Kiyosaki"
-date: "2020-01-01"
-readTime: "no time at all"
+author: "Robert Kiyosaki"
+date: "2021-03-07T09:09:50.417-07:00"
 ---
 
 ###### What is it about?

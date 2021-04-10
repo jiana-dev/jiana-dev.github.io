@@ -1,8 +1,7 @@
 ---
 title: "I Will Teach You To Be Rich"
-subtitle: "Ramit Sethi"
-date: "2020-01-01"
-readTime: "no time at all"
+author: "Ramit Sethi"
+date: "2021-03-07T09:09:50.417-07:00"
 ---
 
 ###### What is it about?

@@ -1,0 +1,30 @@
+---
+title: "The 4-Hour Workweek"
+author: "Tim Ferriss"
+date: "2020-10-13T21:01:50.417-07:00"
+description: "The book that inspired me to define what I really want in 6 and 12 months and really go for it. Cause why aren't you already? This is what inspired me to finally create my Youtube channel."
+topPick: "topPick"
+---
+
+#### Overall Impression
+
+Very fun and enjoyable read about making sure you're getting what you want out of life.
+
+#### What it Invoked In Me
+
+Makes you define and think about big things that you may have been putting off when it comes to your life purpose. Very much makes you feel like it is not only possible to accomplish anything, but it's "easy" and why haven't you been doing it already? Makes you want to ditch everything that entails your current life now and live in a foreign country for a little while.
+
+
+
+#### Who Should and When Should I Read This?
+
+Any time really. If you're just entering the workforce, to shield you against working yourself into unhappiness. If you're steady in it, to propel you into a more exciting version of what success means to you. If you're still in school, to prepare you for what to prioritize and where to focus your efforts based on what your dreamlines look like. And if you're none of the above, it's just a great book to help you define exactly what you want and what it's going to take for you to get there, with some helpful advice on how you can leverage your time and money to do so.
+
+
+
+#### Noteworthy Concepts
+
+- Dreamlines
+- Back of book resources
+
+

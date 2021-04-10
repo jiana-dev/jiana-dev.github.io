@@ -1,8 +1,7 @@
 ---
 title: "The Little Book of Common Sense Investing"
-subtitle: "John Bogle"
-date: "2020-01-01"
-readTime: "no time at all"
+author: "John Bogle"
+date: "2021-03-07T09:09:50.417-07:00"
 ---
 
 ###### What is it about?

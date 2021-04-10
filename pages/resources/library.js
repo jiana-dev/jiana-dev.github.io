@@ -5,153 +5,36 @@ import SubscribeSection from '../../components/Subscribe';
 import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 
-import BlogPostHeader from '../../components/BlogPostHeader';
+import ResourcePostHeader from '../../components/ResourcePostHeader';
+import ResourcePostFooter from '../../components/ResourcePostFooter';
 
 import postData from '../../public/data/resources/library.json';
 import styles from '../../components/BlogPost.module.css';
 
-export default function Library() {
+import { getSortedPostsData } from '../../lib/books';
+import Book from '../../components/Book';
+
+export default function Library({ allPostsData }) {
+  const bookComponents = allPostsData.map(({ id, title, author, topPick, description }) => (
+    <Book title={title} author={author} description={description} url={`/resources/library/${id}`} topPick={topPick} key={id}/>))
+
   const post =
     <div className={styles.postContent}>
-      <h6>As of March 7, 2020 9:09AM</h6>
-      <p>Check out my <a href="/resources/finance_book_recs" target='_blank'>book list all about Learning about Finances</a>!</p>
-      <hr/>
-      <h6>As of Saturday December 19, 2020 7:30PM</h6>
-      <h4><u>Digital Minimalism by Cal Newport</u></h4>
-      <h5><strong>What is it about?</strong></h5>
-      <p>Cal Newport presents a philosophy where one incorporates the minimal use of technology to enhance meaning in our lives, rather than determine it. He brings to light the hidden impact of our current digital world. He emphasizes the overwhelming benefits of adopting digital minimalism and the profound impact it has had on those who have adopted the philosophy. He also gives an interesting suggestion for a re-connection to analog activity and it's importance.</p>
-      <h5><strong>What it Invoked In Me</strong></h5>
-      <ul>
-        <li>As a developer, gave me food for thought on a &quot;code of ethics&quot; when thinking about developing applications</li>
-        <li>Invoked in me an unspoken commitment to bring true and single value to peoples&#39; lives should I attempt to do so through technology</li>
-        <li>Gave me a reason to not always want to be &quot;plugged in&quot;, receiving input, in front of a screen</li>
-        <li>Prompted thought about developing my own technology philosophy</li>
-        <li>Made me very aware of the danger of distraction a seemingly harmless piece of technology can elicit</li>
-        <li>Gave me a reason to favour analog activity and developing a craft, even though it is not improving my general intellectual quotient</li>
-        <li>Realization about the importance of social interaction</li>
-        <li>Invoked deeper thinking on my bias for technology - Which areas can I limit technology to promote more positivity?</li>
-      </ul>
+      <div className='bookshelf'>
+        { bookComponents }
+      </div>
+      <style jsx>{`
+        .bookshelf {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      `}</style>
+    </div>
 
-      <h5><strong>Noteworthy Concepts</strong></h5>
-      <ul>
-        <li>Computers can do so much, they have no longer become a single-use application and that&#39;s what has turned them into greater dangers in our lives</li>
-        <li>Connection vs. Conversation<ul>
-            <li>Phone office hours</li>
-          </ul>
-        </li>
-        <li>Solitude</li>
-        <li>High-quality leisure</li>
-        <li>We are not meant to have connection with so many people<ul>
-            <li>Social approval nuggets</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h5><strong>Who and When You Should Read This</strong></h5>
-      <ul>
-        <li>If you&#39;re surrounded by technology 24/7, glued to a screen, but don&#39;t necessarily want to be</li>
-        <li>If technology is a gigantic part of your life and you don&#39;t think you could live without it, but you realize it does distract you</li>
-        <li>Social media addicts who want to break the habit/addiction</li>
-        <li>If you&#39;re a developer, this will give you a nice code of ethics that you might not want to hear when it comes to making the big bucks, but important when it comes to making the world better, or perhaps just not making it worse</li>
-      </ul>
-
-      <h4 id="the-creative-habit-by-twyla-tharp"><u>The Creative Habit By Twyla Tharp</u></h4>
-      <h5 id="-what-is-it-about-"><strong>What is it about?</strong></h5>
-      <p>A book written by a professional dancer on fostering your own creativity, getting your creative gears turning, and understanding more about the process of creation. It also includes valuable words on forgiving yourself where necessary, and ideas on how you can do your best work. She gives practical activities to get you going creatively.</p>
-      <h5 id="-what-it-invoked-in-me-"><strong>What it Invoked In Me</strong></h5>
-      <p>I didn&#39;t feel like everything in the book applied to me so much but the advice on harnessing creativity were enough to keep me reading this book. It invoked in me a fire to create. It made me want to spend time seeing what I can come up with creatively. Simultaneously makes me want to go go go! But also take the time to really consider the quality of the things I produce. I felt like it pulled out the artist side of me and gave me some good base knowledge on being a creative individual. I glazed over a lot of examples that I didn&#39;t resonate with or relate to as well. I also reserved reading the chapters for my creativity days.</p>
-      <h5 id="-noteworthy-concepts-"><strong>Noteworthy Concepts</strong></h5>
-      <ul>
-        <li>Ch. 5 - Having a project box</li>
-        <li>Ch. 6 - Scratching</li>
-        <li>Ch. 8 - Spine of a project</li>
-        <li>Ch. 9 - Skill</li>
-        <li>Ch. 10 - Ruts &amp; grooves<ul>
-            <li>Creating a bridge to set yourself up for smooth take-off the next day</li>
-          </ul>
-        </li>
-        <li>Ch. 11 - Failure</li>
-      </ul>
-      <h5 id="-who-and-when-you-should-read-this-"><strong>Who and When You Should Read This</strong></h5>
-      <p>If you have any interest in creative endeavours and honing in on a &quot;craft&quot;, this is for you! Use this when you feel creatively stuck or would love to enhance a skill with some guidance. Allow this to give you a better grasp on creativity and how you can harness it. I think this is very nice for a time when you need some motivation before beginning a project.</p>
-      <h4 id="getting-things-done-by-david-allen"><u>Getting Things Done By David Allen</u></h4>
-      <h5><strong>What is it about?</strong></h5>
-      <ul>
-        <li>A methodology to manage your life optimizing for getting things done</li>
-        <li>Practical steps and advice you can apply to help you get a handle on your brain.</li>
-        <li>Essentially for building a separate brain and ensuring that yours is working optimally for what it is meant to do</li>
-        <li>Gives you core concepts, tips and tricks, easily implementable steps to give you an incrementally better grasp on your day-to-day, and so eventually the long term</li>
-        <li>The low-level management of tasks to support your desired big picture.</li>
-      </ul>
-      <h5 id="-what-it-invoked-in-me-"><strong>What it Invoked In Me</strong></h5>
-      <ul>
-        <li>Organize the constant chaos in my mind about perfecting my productivity system</li>
-        <li>Highlight the traps I fall into with productivity</li>
-        <li>Sense of relief despite having done things inefficiently for now</li>
-        <li>Gives me a forever reference system when it comes to all things life administration</li>
-      </ul>
-      <h5 id="-noteworthy-concepts-"><strong>Noteworthy Concepts</strong></h5>
-      <ul>
-        <li>What is the next action?</li>
-        <li>&quot;In&quot; box</li>
-        <li>Mind like water<ul>
-            <li>A mental and emotional state in which your head is clear, able to create and respond freely, unencumbered with distractions and split focus</li>
-            <li>Respond to stimulus appropriately</li>
-          </ul>
-        </li>
-        <li>Your mind is for having ideas, not storing them</li>
-        <li>The five or six horizons, the low level to the highest levels<ul>
-            <li>Calendar/actions</li>
-            <li>Projects - open loops</li>
-            <li>Areas of focus and acountability</li>
-            <li>1-2 year goals objectives</li>
-            <li>3-5 year vision</li>
-            <li>Purpose and principles</li>
-          </ul>
-        </li>
-      </ul>
-      <h5 id="-who-and-when-you-should-read-this-"><strong>Who and When You Should Read This</strong></h5>
-      <ul>
-        <li>If you have ever felt like your brain is a mess, you have too many things going on to manage</li>
-        <li>You aren&#39;t making progress on things you intend to be</li>
-        <li>You have lost integrity with yourself due to unfulfilled promises</li>
-        <li>You have so many things on your mind</li>
-        <li>Your digital and physical world feels cluttered/disorganized and you&#39;ve had enough. Your brain is scattered in 10,000 different places digitally or physically and you want to consolidate it.</li>
-        <li>You have a general idea of what it is you should do, but feel disorganized in defining your priorities, values, purpose.</li>
-        <li>You&#39;re having difficulty managing day-to-day or remembering important things.</li>
-        <li>You don&#39;t have a personal productivity system that you trust and you are holding/remembering things in too many different places that you still feel a mess.</li>
-      </ul>
-      <h4 id="soft-skills-software-developer-life-manual-by-john-sonmez"><u>Soft Skills - Software Developer Life Manual by John Sonmez</u></h4>
-      <h5 id="-what-is-it-about-"><strong>What is it about?</strong></h5>
-      <p>Encyclopedia-like handbook heavily applicable to software developers, but can be applicable to anyone. Great advice on things like being more productive, becoming a mentor/mentee, <strong>learning how to learn</strong>, marketing yourself and your skills, basics to investing, fitness, working in a development environment, and just general good life advice.</p>
-      <h5 id="-what-it-invoked-in-me-"><strong>What it Invoked In Me</strong></h5>
-      <p>Reading this had me nodding along with everything John Sonmez was saying, and taking notes for parts directly applicable to what I want to and am trying to do. I was made aware of the value of things I normally overlook, for example, the importance of teaching, speaking, getting good at presentations. He gave me perhaps one of the most important pieces of life advice I&#39;ve ever gotten: &quot;You only need to be a few steps ahead to teach someone something&quot;. This book really resonated with me and I highly recommend the time investment. Skim over the parts you think you have a good grasp on.</p>
-      <h5 id="-noteworthy-concepts-"><strong>Noteworthy Concepts</strong></h5>
-      <ul>
-        <li>Being a mentor/mentee</li>
-        <li>Quota and pomodoro system</li>
-        <li>You only need to be a few steps ahead to teach someone something</li>
-        <li>Create a learning/self-education plan — create a running list of your knowledge gaps</li>
-        <li>The importance of speaking and presentations</li>
-        <li>The importance of teaching</li>
-        <li>The 10 Step Process to Learning</li>
-        <li>How to market yourself</li>
-        <li>Working from home advice (Ch. 15)</li>
-        <li>Importance of specialization</li>
-      </ul>
-      <h5 id="-who-and-when-you-should-read-this-"><strong>Who and When You Should Read This</strong></h5>
-      <p>Most useful at any point after you&#39;ve already started your career and have your gears going in it. Would also be useful as a student who is closer to finishing school, getting ready to enter the workplace. I think this material is best absorbed when read chunks at a time, especially when the chapter title is immediately relevant to your life.</p>
-      <h4 id="four-agreements-by-miguel-ruiz"><u>Four Agreements by Miguel Ruiz</u></h4>
-      <h5 id="-what-is-it-about-"><strong>What is it about?</strong></h5>
-      <p>Four simple but profound principles that you can incorporate in your everyday life to make it better for yourself.</p>
-      <h5 id="-what-it-invoked-in-me-"><strong>What it Invoked In Me</strong></h5>
-      <p>Gave me something to track in my bullet journal daily. Four simple principles to live my life and abide by (the four agreements).</p>
-      <h5 id="-noteworthy-concepts-"><strong>Noteworthy Concepts</strong></h5>
-      <p>All of them! (No assumptions, Don&#39;t take things personally, Do your best, Be impeccable with your word)</p>
-      <h5 id="-who-and-when-you-should-read-this-"><strong>Who and When You Should Read This</strong></h5>
-      <p>Read at any time and you&#39;ll see yourself trying to apply these things daily. You&#39;ll also be more in tune with yourself for cases when you don&#39;t follow them. This is a pretty quick read that is well worth the insight it delivers.</p>
-
-
+  const post2 =
+    <>
       <hr/>
       <h6>As of Tuesday, October 13, 2020 9:01PM</h6>
       <table>
@@ -307,7 +190,7 @@ export default function Library() {
           </tr>
         </tbody>
       </table>
-    </div>
+    </>
 
   return (
     <>
@@ -316,10 +199,9 @@ export default function Library() {
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
           <div className="container">
-            <div className="row">
-              <BlogPostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
-              { post }
-            </div>
+            <ResourcePostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
+            { post }
+            <ResourcePostFooter date={postData.date}/>
           </div>
         </div>
       </div>
@@ -328,4 +210,13 @@ export default function Library() {
       <Footer/>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData
+    }
+  }
 }

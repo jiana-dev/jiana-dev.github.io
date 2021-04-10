@@ -1,0 +1,27 @@
+---
+title: "Finding Your Own North Star"
+author: "Martha Beck"
+date: "2020-10-13T21:01:50.417-07:00"
+description: "One of the first books I read on my quest to understanding my purpose and myself. A fantastic read that will help you to understand yourself, learn from your past, and course-correct depending on what you want for your future."
+topPick: "topPick"
+---
+#### Overall Impression
+
+Exactly what the title states. Martha Beck helps people "design their lives" and she provides a practical workbook that asks unique and illuminating questions to help you discover and find what you're meant to offer the world. Really highlights things about yourself you may have never paid attention to before like how your body feels when you're entertaining or disobeying your true nature.
+
+#### What it Invoked In Me
+
+Makes you want to dive deep into self discovery to get the most out of the book as possible. Gives you a sense of relief when it comes to big changes in your life. Puts order the chaos of life ups and downs. Makes you really want to honour your true self and no longer give into what external circumstances have deemed you *should* do.
+
+
+
+#### Who Should and When Should I Read This?
+
+The four cycles of change should be read anytime you're going through a life crisis, or are down on yourself because of an unforeseen circumstance. The rest of the book is amazing for the time when you're ramping up to try to figure out what you want to do, how to spend your time, and learning how to trust your instincts. The earlier these concepts are learned, the better! They will lead you to your right path sooner.
+
+#### Noteworthy Concepts
+
+- Your essential and social self
+- Your everybody
+- Being highly somatic
+- The four cycles of change

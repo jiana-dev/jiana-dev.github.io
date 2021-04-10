@@ -6,11 +6,30 @@
 .bookTitle {
   font-family: 'DM Sans', serif;
   font-weight: 500;
-  font-size: medium;
+  font-size: large;
 }
 
 .bookAuthor {
   font-family: 'DM Sans', serif;
   font-weight: 400;
+  font-size: small;
+}
+
+.topPick {
+}
+
+.topPickTitle {
+  font-family: 'Helvetica', serif;
+  font-weight: 700;
   font-size: x-small;
+  color: #ebaf85;
+  padding-top: 1em;
+}
+
+.headerHolder {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }

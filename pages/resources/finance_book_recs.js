@@ -6,6 +6,7 @@ import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 
 import ResourcePostHeader from '../../components/ResourcePostHeader';
+import ResourcePostFooter from '../../components/ResourcePostFooter';
 import Book from '../../components/Book';
 
 import postData from '../../public/data/resources/finance_book_recs.json';
@@ -17,25 +18,25 @@ export default function FinanceBookRecs() {
   let bookComponents = finance_books.books.map((book, idx) => {
     return (
       <div key={idx}>
-        <Book title={book.title} author={book.author} description={book.description} url={`/resources/finance_books/${book.id}`}/>
+        <Book title={book.title} author={book.author} description={book.description} url={`/resources/finance_books/${book.id}`} topPick={book.topPick}/>
       </div>
     )
   });
 
   const post =
-  <div className={styles.postContent}>
-    <div className='bookshelf'>
-      { bookComponents }
+    <div className={styles.postContent}>
+      <div className='bookshelf'>
+        { bookComponents }
+      </div>
+      <style jsx>{`
+        .bookshelf {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      `}</style>
     </div>
-    <style jsx>{`
-      .bookshelf {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    `}</style>
-  </div>
 
   return (
     <>
@@ -44,8 +45,9 @@ export default function FinanceBookRecs() {
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
           <div className="container">
-            <ResourcePostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
+            <ResourcePostHeader title={postData.title} subtitle={postData.subtitle}/>
             { post }
+            <ResourcePostFooter date={postData.date}/>
           </div>
         </div>
       </div>
