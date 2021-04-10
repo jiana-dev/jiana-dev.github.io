@@ -7,7 +7,7 @@ export default function ResourcePostHeader(props) {
   if (props.date !== undefined) {
     dateText = <p className="date centered">
                 <strong>Last updated at:&nbsp;</strong>
-                {dateFormat(props.blogPost.date, "dddd, mmmm dS, yyyy, h:MM TT")}
+                {dateFormat(props.date, "dddd, mmmm dS, yyyy, h:MM TT")}
                 <style jsx>{`
                 .date{
                   color: #32312d;

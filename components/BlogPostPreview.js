@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import styles from './BlogList.module.css';
 import parse from 'html-react-parser';
-import dateFormat from 'dateformat';
 import ReactMarkdown from 'react-markdown'
 
 export default function BlogPostPreview(props) {
@@ -12,7 +11,6 @@ export default function BlogPostPreview(props) {
   } else {
     blogTitle = <a href={props.blogPost.link}>{props.blogPost.title}</a>
   }
-
   return (
       <div className="post-entry-2 d-flex" key={props.index}>
         { /* <div className="thumbnail order-md-2" style={{ backgroundImage: `url('images/img_v_1.jpg')`}}></div> */ }
@@ -32,7 +30,7 @@ export default function BlogPostPreview(props) {
           <div className="post-meta">
             <span className={styles.date}>
               {props.lastUpdated && <span className={styles.updateLabel}>Updated at: </span>}
-              {dateFormat(props.blogPost.date, "dddd, mmmm dS, yyyy, h:MM TT")}
+              {props.blogPost.date}
               <span className={styles.read + " mx-1"}>
                 {props.blogPost.readTime}
               </span>

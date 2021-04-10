@@ -34,7 +34,7 @@ export default function StockChart(props) {
   }, []);
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    <div style={{ height: 400, width: '100%' }} className='pt-5 pb-5'>
       <h6>{props.title} as of {props.as_of_date}</h6>
       <DataGrid rowHeight={20} rows={chart} columns={columns} pagination/>
     </div>

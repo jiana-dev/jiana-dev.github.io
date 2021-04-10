@@ -58,7 +58,7 @@ export default function StockValueChart() {
       </tr>
       </tbody>
       </table>
-      <h5><strong>DISCLAIMER:</strong> This especially does not work for stocks with negative growth rates. Use at your own risk! Values with None could not be calculated automatically.</h5>
+      <h5 className='caption pt-5 pb-5'><strong>DISCLAIMER:</strong> This especially does not work for stocks with negative growth rates. Use at your own risk! Values with None could not be calculated automatically.</h5>
       <BerkshireChart/>
       <BigShortsChart/>
       <OilGasChart/>

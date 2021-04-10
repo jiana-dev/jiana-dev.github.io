@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import blogs from '../data/blogs.json';
 import resources from '../data/learning_resources.json';
 import BlogPostPreview from './BlogPostPreview';
+import dateFormat from 'dateformat';
 
 export default function TwoColumnImageLayout() {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -17,7 +18,7 @@ export default function TwoColumnImageLayout() {
       await fetch(`../data/blogs/${filename}.json`)
         .then(response => response.json())
         .then(data => {
-          data['date'] = new Date(data['date']).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})
+          data['date'] = dateFormat(data['date'], "dddd, mmmm dS, yyyy, h:MM TT")
           fetched.push(data)
           idx++;
 
@@ -39,7 +40,7 @@ export default function TwoColumnImageLayout() {
       await fetch(`../data/resources/${filename}.json`)
         .then(response => response.json())
         .then(data => {
-          data['date'] = new Date(data['date']).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})
+          data['date'] = dateFormat(data['date'], "dddd, mmmm dS, yyyy, h:MM TT")
           fetched.push(data)
           idx++;
 

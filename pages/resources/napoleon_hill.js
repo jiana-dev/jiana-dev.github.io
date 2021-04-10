@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 
 import BlogPostHeader from '../../components/BlogPostHeader';
 
-import postData from '../../public/data/blogs/napoleon_hill.json';
+import postData from '../../public/data/resources/napoleon_hill.json';
 import styles from '../../components/BlogPost.module.css';
 
 export default function NapoleonHill() {

@@ -4,6 +4,7 @@ import styles from './BlogList.module.css';
 import BlogPostPreview from './BlogPostPreview';
 import { useRouter } from 'next/router'
 import metadata from '../data/metadata.json';
+import dateFormat from 'dateformat';
 
 export default function BlogList(props) {
   const router = useRouter()
@@ -26,7 +27,7 @@ export default function BlogList(props) {
       await fetch(`../data/${folder}/${filename}.json`)
         .then(response => response.json())
         .then(data => {
-          data['date'] = new Date(data['date']).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})
+          data['date'] = dateFormat(data['date'], "dddd, mmmm dS, yyyy, h:MM TT")
           fetched.push(data)
           idx++;
 

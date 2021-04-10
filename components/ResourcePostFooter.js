@@ -5,7 +5,7 @@ export default function ResourcePostFooter(props) {
     <div className={`blogPostHeader centered`}>
       <p className="date centered">
         <strong>Last updated at:&nbsp;</strong>
-        {dateFormat(props.blogPost.date, "dddd, mmmm dS, yyyy, h:MM TT")}
+        {dateFormat(props.date, "dddd, mmmm dS, yyyy, h:MM TT")}
       </p>
       <style jsx>{`
         .blogPostHeader.centered {
