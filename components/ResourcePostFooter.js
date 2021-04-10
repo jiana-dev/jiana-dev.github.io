@@ -1,9 +1,11 @@
+import dateFormat from 'dateformat';
+
 export default function ResourcePostFooter(props) {
   return (
     <div className={`blogPostHeader centered`}>
       <p className="date centered">
         <strong>Last updated at:&nbsp;</strong>
-        {new Date(props.date).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})}
+        {dateFormat(props.blogPost.date, "dddd, mmmm dS, yyyy, h:MM TT")}
       </p>
       <style jsx>{`
         .blogPostHeader.centered {

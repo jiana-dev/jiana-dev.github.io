@@ -1,4 +1,5 @@
 import parse from 'html-react-parser';
+import dateFormat from 'dateformat';
 
 export default function BlogPostHeader(props) {
   return (
@@ -8,7 +9,7 @@ export default function BlogPostHeader(props) {
       <div className={`${props.centered && 'centered'} post-meta d-flex mb-4`}>
         <div className="vcard">
           <span className="date">
-            {new Date(props.date).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})}
+            {dateFormat(props.date, "dddd, mmmm dS, yyyy, h:MM TT")}
             <span className="readTime mx-1">
               {props.readTime}
             </span>

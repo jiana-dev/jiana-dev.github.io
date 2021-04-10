@@ -1,7 +1,9 @@
 ---
 title: "One Up On Wall Street"
 author: "Peter Lynch"
-date: "2021-03-07T09:09:50.417-07:00"
+date: "2021-03-07T09:10:50.417-07:00"
+description: "A must-read when it comes to investing in individual stocks. Written by the head of the Magellan Mutual Fund, Lynch shares all his tips and tricks when choosing stocks. Extremely handy even as a guidebook. This book gave me a much deeper understanding of the valuation of a company. Quite a long read, but worth it."
+topPick: "topPick"
 ---
 
 ###### What is it about?

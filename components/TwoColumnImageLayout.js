@@ -102,10 +102,10 @@ export default function TwoColumnImageLayout() {
         font-weight: 600;
         text-transform: uppercase;
         border: 0px solid;
-        border-radius: 10px;
-        padding: 7px;
+        border-radius: 30px;
+        padding: 10px;
         background-color: #acb2a1;
-        color: #f0f0f0;
+        color: #000;
       }
       .additional-links:hover {
         background-color: #7e8277;

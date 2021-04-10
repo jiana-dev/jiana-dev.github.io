@@ -11,7 +11,7 @@ import ResourcePostFooter from '../../components/ResourcePostFooter';
 import postData from '../../public/data/resources/library.json';
 import styles from '../../components/BlogPost.module.css';
 
-import { getSortedPostsData } from '../../lib/books';
+import { getSortedPostsData } from '../../lib/dynamic_posts_helper';
 import Book from '../../components/Book';
 
 export default function Library({ allPostsData }) {
@@ -213,7 +213,7 @@ export default function Library({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData('data/books')
   return {
     props: {
       allPostsData

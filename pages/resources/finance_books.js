@@ -9,19 +9,14 @@ import ResourcePostHeader from '../../components/ResourcePostHeader';
 import ResourcePostFooter from '../../components/ResourcePostFooter';
 import Book from '../../components/Book';
 
-import postData from '../../public/data/resources/finance_book_recs.json';
+import postData from '../../public/data/resources/finance_books.json';
 import styles from '../../components/BlogPost.module.css';
 
-import finance_books from '../../data/finance_books.json';
+import { getSortedPostsData } from '../../lib/dynamic_posts_helper';
 
-export default function FinanceBookRecs() {
-  let bookComponents = finance_books.books.map((book, idx) => {
-    return (
-      <div key={idx}>
-        <Book title={book.title} author={book.author} description={book.description} url={`/resources/finance_books/${book.id}`} topPick={book.topPick}/>
-      </div>
-    )
-  });
+export default function FinanceBookRecs({ allPostsData }) {
+  const bookComponents = allPostsData.map(({ id, title, author, topPick, description }) => (
+    <Book title={title} author={author} description={description} url={`/resources/finance_books/${id}`} topPick={topPick} key={id}/>))
 
   const post =
     <div className={styles.postContent}>
@@ -56,4 +51,13 @@ export default function FinanceBookRecs() {
       <Footer/>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData('data/finance_books')
+  return {
+    props: {
+      allPostsData
+    }
+  }
 }

@@ -26,6 +26,37 @@ export default function Contact() {
       alert(error))
   }
 
+  let submitArea =
+  <div className={`row submitArea`}>
+    { submitted && <div className='submittedMessage'><p className='caption'>Submitted! Thank you. It's greatly appreciated.</p></div>}
+    { !submitted && <input type="submit" value="Send Message" className={styles.buttonLink}/> }
+    <style jsx>{`
+    .row.submitArea {
+      padding: 1em 15px 2em 15px;
+    }
+    [type=submit] {
+      padding: 1em 0 1em 0em;
+      border-radius: 30px;
+      font-size: small;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+    }
+    .submittedMessage {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      border-radius: 30px;
+      background-color: beige;
+      padding: 1em;
+    }
+    .submittedMessage p {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+    `}</style>
+  </div>
+  
   return (
     <>
       <HeadTag pageTitle='JIANA - Contact'/>
@@ -77,40 +108,24 @@ export default function Contact() {
                             <textarea name="" id="subject" cols="30" rows="10" className="form-control" {...register("subject")}></textarea>
                         </div>
                     </div>
+                    {submitArea}
 
-                    <div className="row submit-button">
-                      <div className="col-12">
-                          <input type="submit" value="Send Message" className={styles.buttonLink}/>
-                      </div>
-                    </div>
-                    <div className="row">
-                      { submitted && <p>Submitted! Thank you!</p>}
-                    </div>
                     <style jsx>{`
-                    .col-12 {
-                      padding: 1em 0em 2em 0em;
-                    }
-                    .row.submit-button {
-                      padding: 0em 15px;
-                    }
                     label {
                       color: #6a675d;
                       font-size: small;
                       letter-spacing: .1rem;
                       text-transform: uppercase;
                     }
-                    [type=submit] {
-                      padding: 1em;
-                      border-radius: 30px;
-                      color: #f0f0f0;
-                      font-size: small;
-                      font-weight: 600;
-                      letter-spacing: .1rem;
-                      text-transform: uppercase;
-                    }
                     input[type=text] {
                       font-family: 'B612 Mono';
                       font-size: small;
+                      border: 1px solid rgb(236 212 212 / 50%);
+                    }
+                    textarea {
+                      font-family: 'B612 Mono';
+                      font-size: small;
+                      border: 1px solid rgb(236 212 212 / 50%);
                     }
                     `}</style>
                 </form>

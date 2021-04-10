@@ -1,13 +1,13 @@
-import HeadTag from '../../../components/HeadTag';
-import Header from '../../../components/Header';
-import SubscribeSection from '../../../components/Subscribe';
-import Loader from '../../../components/Loader';
-import Footer from '../../../components/Footer';
-import ResourcePostHeader from '../../../components/ResourcePostHeader';
+import HeadTag from '../../components/HeadTag';
+import Header from '../../components/Header';
+import SubscribeSection from '../../components/Subscribe';
+import Loader from '../../components/Loader';
+import Footer from '../../components/Footer';
+import BlogPostHeader from '../../components/BlogPostHeader';
 
-import { getAllPostIds, getPostData } from '../../../lib/dynamic_posts_helper'
+import { getAllPostIds, getPostData } from '../../lib/dynamic_posts_helper'
 
-const postsDir = 'data/books';
+const postsDir = 'data/journal_entries';
 
 export default function Book({ postData }) {
   return (
@@ -17,15 +17,21 @@ export default function Book({ postData }) {
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
           <div className="container">
-            <ResourcePostHeader title={postData.title} date={postData.date} author={postData.author}/>
+            <BlogPostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
             <div className='post-data' dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
-            <style jsx>{`
-            .post-data {
-              margin-bottom: 5em;
-            }
-            `}</style>
           </div>
         </div>
+        <style jsx>{`
+        .container {
+          padding: 0em 10em;
+        }
+        @media (max-width: 600px) {
+          .container { padding: 0 2em 0em 2em; }
+        }
+        .post-data {
+          margin-bottom: 5em;
+        }
+        `}</style>
       </div>
       <SubscribeSection/>
       <Footer/>

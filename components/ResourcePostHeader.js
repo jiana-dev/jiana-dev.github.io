@@ -1,4 +1,5 @@
 import parse from 'html-react-parser';
+import dateFormat from 'dateformat';
 
 export default function ResourcePostHeader(props) {
   let dateText = undefined
@@ -6,7 +7,7 @@ export default function ResourcePostHeader(props) {
   if (props.date !== undefined) {
     dateText = <p className="date centered">
                 <strong>Last updated at:&nbsp;</strong>
-                {new Date(props.date).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})}
+                {dateFormat(props.blogPost.date, "dddd, mmmm dS, yyyy, h:MM TT")}
                 <style jsx>{`
                 .date{
                   color: #32312d;

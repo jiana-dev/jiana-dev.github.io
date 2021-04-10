@@ -5,7 +5,9 @@ import Loader from '../../../components/Loader';
 import Footer from '../../../components/Footer';
 import ResourcePostHeader from '../../../components/ResourcePostHeader';
 
-import { getAllPostIds, getPostData } from '../../../lib/finance_books'
+import { getAllPostIds, getPostData } from '../../../lib/dynamic_posts_helper'
+
+const postsDir = 'data/finance_books';
 
 export default function FinanceBook({ postData }) {
   return (
@@ -32,7 +34,7 @@ export default function FinanceBook({ postData }) {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+  const postData = await getPostData(params.id, postsDir)
   return {
     props: {
       postData
@@ -41,7 +43,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths = getAllPostIds(postsDir)
   return {
     paths,
     fallback: false

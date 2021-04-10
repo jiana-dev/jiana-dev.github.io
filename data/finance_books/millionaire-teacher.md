@@ -2,6 +2,8 @@
 title: "Millionaire Teacher"
 author: "Andrew Hallam"
 date: "2021-03-07T09:09:50.417-07:00"
+description: "A short read on some valuable lessons regarding wealth we should have learned in school. An introduction book to becoming more financially responsible and beginning to DIY invest."
+topPick: ""
 ---
 
 ###### What is it about?

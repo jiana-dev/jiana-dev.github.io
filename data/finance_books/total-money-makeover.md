@@ -2,6 +2,8 @@
 title: "Total Money Makeover"
 author: "Dave Ramsey"
 date: "2021-03-07T09:09:50.417-07:00"
+description: "I listened to this as an audiobook. I found it a bit preach-y, but that's what made it pretty entertaining. It's more about going from being in the worst shape possible with money (lots of debt) to climbing out of that and becoming wealthy."
+topPick: ""
 ---
 
 ###### What is it about?

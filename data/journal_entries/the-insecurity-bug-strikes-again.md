@@ -1,0 +1,107 @@
+---
+title: "The Insecurity Bug Strikes Again"
+date: "2021-03-31T09:09:50.417-07:00"
+preview: "One of my worst fears, probably coming from the insecurity that I'm boring *(and anti-social and the whole what have you)*, is that I make content that people feel like they wasted their time on. Even if I wanted to make a video about my journey, or my self-doubts, or my reflections, or even a vlog—If I can't accurately pinpoint what I'm providing people with, it becomes content that I don't prioritize, because I don't feel it warrants the call to attention."
+---
+
+Now and then, I get hit with the insecurity bug. Unfortunately, when she bites, she bites hard. I haven't quite figured out the point of this post but hopefully as I keep going, I'll get there.
+
+I began writing about my insecurity as a creator *(if I can even call myself that)*, but within it, I dredged up all these other insecurities, so I guess they aren't separated by the roles I play, they are just all tied into each other to create a tightly-bound rubber band ball of the insecure person that is me. Welcome to my brain!
+
+
+
+*Am I even a creative person?* I've never really classified myself as such growing up. In fact, much so the opposite. I draw "inspiration" from things I resonate with so much that it feels like I'm just copying everything I create. *Is that what creativity just... is?*
+
+When the insecurity bug hits, here are the things running through my head when I think about my Youtube channel:
+
+*Will I ever reach the success I aim for with it? What is my definition of success with it? Why am I even doing it?*
+
+*Is the content I make even interesting or helpful to people? What if the content I want to create, the stuff that comes from the heart is useless to people?* *How can I stay true to myself, follow my heart, make content that is meaningful to me, and  simultaneously brings value to people's lives? That's a lot to ask for of what I put out there. So much so that I feel like nothing I make is good enough at all.*
+
+
+
+I dove into the whole Youtube creation thing with a preconceived idea that
+
+> **Everything I put out there needs to have a clear message or be practically useful.**
+
+One of my worst fears, probably coming from the insecurity that I'm boring *(and anti-social and the whole what have you)*, is that I make content that people feel like they wasted their time on. Even if I wanted to make a video about my journey, or my self-doubts, or my reflections, or even a vlog—If I can't accurately pinpoint what I'm providing people with, it becomes content that I don't prioritize, because I don't feel it warrants the call to attention.
+
+Then what happens, is that I shy away from making things that are meaningful and resonate with me—the things that provided me with the joy that led to me starting this whole thing.
+
+After the first few months of posting my first video, about a year ago now, I made a pact with myself to post one video a week. All I had to do was come up with something, anything, for each week, and post it, regardless of anything. This was all fine and dandy when I was getting very little views. Since I wasn't getting much feedback, I was free to post whatever I wanted because this time was all about casting those fishing lines, unconcerned with if the bait was working.
+
+Some of my videos started getting more views, and I was ever so grateful—ecstatic really. I was getting a lot more information on what people liked and didn't care about so much. It was awesome to see that people were finding my content useful! What wasn't so awesome was how I allowed it to influence the type of content I leaned towards after.
+
+> *Oh, "How-to" videos, people like "How-to" videos. They get more feedback and views than my rambling videos. Makes sense because it gives people practical steps to apply something into their lives. I just need to make more "How-to" videos.*
+
+I started thinking about how I can frame what I do into "How-to" videos. But there's only so many "How-to"'s one can conjure up in a given time.
+
+Even though I enjoy making tutorial-style videos, in real life, my interests rotate—a lot. So, here I am making a video on "How I Configured My Magic Mouse" because I know that's what resonates better with people who are following my content, but my mind is on "Reflecting on How I've Grown and Lessons Learned" and my heart is being called back to exploring music.
+
+> *What a danger for me to have looked at the 'How many subscribers did you gain from this video' statistic. Or any statistic at all for that matter. It's almost like I was confused on whether my channel was a reflection of me and who I am, or more like a business. It's a balance I still haven't achieved thus far.*
+
+The numbers, the feedback, the pressure to conform to a niche was influencing my direction. My mind, heart, and body were not in sync.
+
+
+
+It wasn't just my video content that was affected, my day-to-day was affected too. This information was affecting how I chose to spend my time. I thought,
+
+"Okay, well I want to make a video on "How I Got My Blog Up", so I'm going to redo that process so I can deliver it in a clear, concise format" *(Sidenote, another one of my insecurities is that I am too verbose and unclear communicator)*.
+
+Fine, cool, cool, cool, until it led to me going all-in (as I tend to do with projects) to revamping my entire blog and something that was scoped out as 5 story points *(Sorry, if you don't get the reference, story points are just a way of estimating work based on complexity of a task in software development)* became an entire epic *(Sorry again, another software development term to mean a collection of stories/tickets/tasks encompassed under one bigger project—the epic)*.
+
+Sorry, where was I? I'm all over the place—yet another one of my insecurities.
+
+I was trying to say that let's say my interest starts out in X. I want to create X because I'm interested in it and I know it will benefit others. So, I spend my time perfecting X. But then, I feel the interest rotation starting to happen, and I start getting called to Y. The disconnect begins.
+
+Even though my mind or heart is being called towards Y, I keep doing X. Y isn't proven to provide value to people. No one asked for Y, Jiana.
+
+But then this thing happens, which I always do because I love to get ahead of myself. X turns into X^x. The project increases in scope exponentially (not always exponential, but I'm a little dramatic), I get really invested and let it consume all my time until I burn out and that's when I either:
+
+1. Don't deliver on X since it turned into X^x, and X^x is incomplete, or
+2. Push through to deliver X^x and start resenting myself somewhere along the way because before I got to the finish line, I experienced a case of the interest rotations that I don't let myself act upon in the name of finishing what I started
+
+
+
+The first path touches on my insecurity that I literally never finish anything that I start, and I'm just one long series of commitment-phobe seasons.
+
+* Okay, maybe not anything but a **lot** of things. Cue my baskets that I never put leather handles on, unfinished claymation projects, any app I've ever began creating, all of my previous relationships (hah), my crochet elephant, piano, karate, guitar, swimming—alright I gotta stop, I'm starting to feel bad.
+* My attention span flows into something else before I can get to the finish line and I can't tell you how many projects I've left undone. *(I know this isn't necessarily the worst thing, because losing interest in something could just mean that it's not for me right now, and it might never be, or it may come back in the future, but maybe I should just ride the tides as they come.)*
+* I also can't help but feel this around my Youtube and Internet content. Is it just another thing I'm into for a while and then I abandon like everything else? I wonder if this has to do with another insecurity where I prefer not to complete things because if it's not complete it then it can't be judged. *Oof!*
+
+
+
+The second path robs me of the accomplished feeling I should feel after completing something because the interest shift means that somewhere along the way, I stop putting the same heart into it the way I would have if the interest fire was burning all the way through (similar to how it was when I started making content).
+
+* This has probably led to my recent feeling of never feeling accomplished. I do one thing, and I think, *onto the next*, before I can even catch a breath.
+* When I scope out X, and it turns into X^x, I never let myself feel the victory of X. But maybe X would have been good enough. And the benefit of X is that the feeling of accomplishment would lead to X^2 which eventually would have lead me to X^x. This is the whole point of baby steps.
+
+
+
+Either way, both paths leave me feeling like I spent my most valuable asset of time doing something that I didn't want to be doing at the time, and that's no good for anyone.
+
+
+
+Now because this has already gone on too long, I'm going to leave it at this. This is my string of thoughts when it comes to my insecurities that stem from creating content. Don't even get me started when it comes to comparing myself to others. That's a whole other can of worms that I do not want to open right now.
+
+I think I've learned a few lessons from this blog therapy though, so I'll try to summarize them here.
+
+
+
+### Bringing it all together
+
+1. Blogging, journalling, whatever you would call it, always helps me sort through my sh*t and it's the best form of free therapy I've ever had. I walked into this not knowing what would come out and I feel oodles more clarity.
+
+2. I need to stop, and I mean seriously stop letting X's scope creep up to X^x's. This isn't just something that happens in my personal projects, this happens to me at work, at home, in my personal life. Generalizing is a prime example of this. When someone does X, and I try to tackle the issue as if it is X^x. When I feel X, and I take it as an indication of X^x. I need to remember **Minimum Viable Product**. It's not directly applicable but here's the definition:
+
+   > A minimum viable product is a version of a product with just enough features to be usable by early customers who can then provide feedback for future product development. A focus on releasing an MVP means that developers potentially avoid lengthy and unnecessary work.
+
+   M. to the freakin' V.P. Jiana. I need to do an entire post about just this.
+
+3. Make content that feels true to you. Make content that you're going to be **happy** about editing, that's going to make you feel good creatively. **It's not all about doing what you're doing so that you can make content that is useful.** Live your life. It's just a bonus if you get to share it with people and they find it meaningful later. But first and foremost, stay true to you.
+
+4. This is kind of a sub-point to 2. But, please for the love of God, take things in bite-sized pieces. Or at least portion control. You've never been a successful take the whole chip bag and just "control yourself" kinda gal, so what makes you think it would be any different with projects? If you don't, you risk burn-out. **You don't need to tackle it all at once.**
+
+5. Clean up! Not just your physical environment but your mental. Stop putting things off in the name of the project you're most interested in because those are the exact conditions that lead you to start feeling this way, and end up needing to journal it all out.
+
+That's all for now, but more on this soon. Bye!

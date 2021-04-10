@@ -2,7 +2,7 @@ export default function FeaturePost() {
   return (
   <div className="site-section">
     <div className="container">
-      <div className="half-post-entry d-block d-lg-flex bg-light">
+      <div className="half-post-entry d-block d-lg-flex">
         <div className="img-bg" style={{ backgroundImage: `url('images/profile/new_me.jpg')`}}></div>
         <div className="contents">
           <p className="caption">Oh hey there, friends of Earth!</p>
@@ -15,6 +15,9 @@ export default function FeaturePost() {
     <style jsx>{`
       .intro {
         font-size: small;
+      }
+      .half-post-entry {
+        background-color: var(--light-accent-color);
       }
       @media (min-width: 992px) {
         .site-section {

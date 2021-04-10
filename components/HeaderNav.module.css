@@ -1,4 +1,4 @@
 .nav {
-  background: #f3efe2;
+  background: var(--header-color);
   border: none;
 }

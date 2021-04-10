@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=B612+Mono:400,700&display=swap");
 @import "fonts/icomoon/style.css";
 @import "css/bootstrap.min.css";
 @import "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css";
@@ -16,6 +16,8 @@
 
 :root {
   --default-padding: 20em;
+  --header-color: #f7f4f0;
+  --light-accent-color: #f7f4f0;
 }
 
 a {
@@ -45,9 +47,15 @@ a:hover {
 
 .site-mobile-menu .site-nav-wrap li.active > a {
   color: #b7b2a2;
-  font-weight: 600;
 }
 
+.sticky-wrapper .site-navbar .site-menu > li.active > a {
+  color: #b7b2a2;
+}
+
+.sticky-wrapper .site-navbar .site-menu > li > a:hover {
+  color: #b7b2a2;
+}
 .site-mobile-menu .site-nav-wrap a:hover {
   color: #b7b2a2;
 }
@@ -84,7 +92,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 }
 
 .site-mobile-menu {
-  background: #f5f1e5;
+  background: var(--header-color);
 }
 
 @media {
@@ -99,6 +107,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 
 ::selection {
   background: #ccc0aabf;
+  color: #000;
 }
 
 .row {
@@ -167,11 +176,10 @@ h2.caption {
 }
 
 blockquote > p {
-  font-family: Lora,serif;
+  font-family: Lora, serif;
   font-weight: 500;
   padding: 0;
   font-size: small;
-  letter-spacing: 0.1em;
   color: #000;
 }
 

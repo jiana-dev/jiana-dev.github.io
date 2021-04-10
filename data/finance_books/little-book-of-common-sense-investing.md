@@ -2,6 +2,9 @@
 title: "The Little Book of Common Sense Investing"
 author: "John Bogle"
 date: "2021-03-07T09:09:50.417-07:00"
+description: "An informative read by the inventor of index funds that will likely convince you to jump on the index fund train. This book sparked my interest to look at key numbers and gave me the push I needed to move away from mutual funds with my financial advisor."
+topPick: ""
+
 ---
 
 ###### What is it about?
