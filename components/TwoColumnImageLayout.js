@@ -97,6 +97,7 @@ export default function TwoColumnImageLayout() {
 
       .additional-links-container {
         margin-bottom: 3em;
+        white-space: nowrap;
       }
       .additional-links {
         font-size: small;

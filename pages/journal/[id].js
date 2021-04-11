@@ -4,12 +4,13 @@ import SubscribeSection from '../../components/Subscribe';
 import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
+import dateFormat from 'dateformat';
 
 import { getAllPostIds, getPostData } from '../../lib/dynamic_posts_helper'
 
 const postsDir = 'data/journal_entries';
 
-export default function Book({ postData }) {
+export default function JournalEntry({ postData }) {
   return (
     <>
       <HeadTag pageTitle={`JIANA - ${postData.title}`}/>

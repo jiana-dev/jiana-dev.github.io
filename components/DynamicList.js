@@ -4,6 +4,7 @@ import styles from './BlogList.module.css';
 import BlogPostPreview from './BlogPostPreview';
 import { useRouter } from 'next/router'
 import metadata from '../data/metadata.json';
+import dateFormat from 'dateformat';
 
 export default function DynamicList(props) {
   const router = useRouter()
@@ -41,7 +42,7 @@ export default function DynamicList(props) {
     let blogPost = {
       title: title,
       preview: preview,
-      date: date,
+      date: dateFormat(props.date, "dddd, mmmm dS, yyyy, h:MM TT"),
       readTime: readTime,
       link: `/${props.path}/${id}`
     }

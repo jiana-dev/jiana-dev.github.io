@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yrsa&display=swap');
 
 :root {
-  --default-padding: 20em;
+  --default-padding: 15em;
   --header-color: #f7f4f0;
   --light-accent-color: #f7f4f0;
 }
@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 }
 
 .post-entry-2 .contents {
-  width: 95%;
+  width: 100%;
 }
 
 ::selection {
@@ -142,7 +142,7 @@ div[data-code-block] {
 
 @media (max-width: 1299px) {
   :root {
-    --default-padding: 10em;
+    --default-padding: 7em;
   }
   .site-section { padding: 7em var(--default-padding) 1em var(--default-padding); }
   .subscribe-section {
@@ -154,6 +154,17 @@ div[data-code-block] {
 @media (max-width: 992px) {
   :root {
     --default-padding: 5em;
+  }
+  .site-section { padding: 2em var(--default-padding) 2em var(--default-padding); }
+  .subscribe-section {
+    padding: 5em var(--default-padding);
+    background-color: #f0ede4;
+  }
+}
+
+@media (max-width: 425px) {
+  :root {
+    --default-padding: 2em;
   }
   .site-section { padding: 2em var(--default-padding) 2em var(--default-padding); }
   .subscribe-section {
