@@ -7,7 +7,7 @@ export default function HeaderTop() {
       <div className="row align-items-center">
         <div className="col-12 d-flex">
           <a href="/" className={styles.siteLogo}>
-            JIANA
+            <img src='../site-logo.png' className='logo'/>
           </a>
           <div className="ml-auto d-flex">
             <Icons class="ml-md-auto top-social d-none d-lg-inline-block"/>
@@ -16,6 +16,9 @@ export default function HeaderTop() {
         </div>
       </div>
       <style jsx>{`
+      .logo {
+        width: 40%;
+      }
       .container {
         padding: 1em var(--default-padding);
         background-color: var(--header-color);
