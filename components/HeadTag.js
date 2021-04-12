@@ -70,6 +70,7 @@ export default function HeadTag(props) {
       />
 
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   )
 }
