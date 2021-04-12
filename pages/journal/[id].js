@@ -5,22 +5,35 @@ import Loader from '../../components/Loader';
 import Footer from '../../components/Footer';
 import BlogPostHeader from '../../components/BlogPostHeader';
 import dateFormat from 'dateformat';
+import netlifyAuth from '../../lib/netlifyAuth';
+import LoginForContentButton from '../../components/LoginForContentButton';
 
 import { getAllPostIds, getPostData } from '../../lib/dynamic_posts_helper'
 
 const postsDir = 'data/journal_entries';
 
 export default function JournalEntry({ postData }) {
+  let authContent = netlifyAuth.isAuthenticated ? (
+    <div className="container">
+      <BlogPostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
+      <div className='post-data' dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
+    </div>
+  ) : (
+    <div className="container">
+      <div className='authContent'>
+        <BlogPostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
+      </div>
+      <LoginForContentButton/>
+    </div>
+  )
+
   return (
     <>
       <HeadTag pageTitle={`JIANA - ${postData.title}`}/>
       <Header/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
-          <div className="container">
-            <BlogPostHeader title={postData.title} date={postData.date} readTime={postData.readTime} subtitle={postData.subtitle}/>
-            <div className='post-data' dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
-          </div>
+          {authContent}
         </div>
         <style jsx>{`
         .container {

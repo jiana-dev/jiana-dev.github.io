@@ -4,7 +4,7 @@ import Icons from './Icons.js';
 
 export default function Header(props) {
   return (
-  <div className="site-wrap">
+  <div className={`site-wrap`}>
     <div className="site-mobile-menu site-navbar-target">
       <div className="site-mobile-menu-header">
         <div className="site-mobile-menu-close mt-3">
@@ -17,7 +17,7 @@ export default function Header(props) {
         <Icons class='mobile-menu-icons'/>
       </>
     </div>
-    <div className="header-top">
+    <div className={`header-top`}>
       <HeaderTop/>
       <HeaderNav activePage={props.activePage}/>
     </div>

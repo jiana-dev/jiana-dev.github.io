@@ -3,7 +3,6 @@ import styles from './Book.module.css';
 import parse from 'html-react-parser';
 
 export default function Book(props) {
-  console.log(props)
   return (
     <>
       <Card className={`${styles.bookCard} ${props.topPick && styles.topPick} p-1 m-4`}>

@@ -6,7 +6,6 @@ import SubscribeSection from '../components/Subscribe';
 import Loader from '../components/Loader';
 import Footer from '../components/Footer';
 
-
 export default function Home() {
   return (
     <div className="container site-container">

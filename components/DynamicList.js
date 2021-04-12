@@ -5,6 +5,7 @@ import BlogPostPreview from './BlogPostPreview';
 import { useRouter } from 'next/router'
 import metadata from '../data/metadata.json';
 import dateFormat from 'dateformat';
+import netlifyAuth from '../lib/netlifyAuth';
 
 export default function DynamicList(props) {
   const router = useRouter()
@@ -43,9 +44,9 @@ export default function DynamicList(props) {
       title: title,
       preview: preview,
       date: dateFormat(props.date, "dddd, mmmm dS, yyyy, h:MM TT"),
-      readTime: readTime,
-      link: `/${props.path}/${id}`
+      readTime: readTime
     }
+    blogPost['link'] = netlifyAuth.isAuthenticated ? `/${props.path}/${id}` : undefined
     return <BlogPostPreview key={id} index={id} blogPost={blogPost}/>
   })
 
