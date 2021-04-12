@@ -27,7 +27,7 @@ export default function LoginComponent(props) {
     })
   }
 
-  let loginElement = !loggedIn ? (
+  let loginElement = loggedIn ? (
       <div>
         {user && <>Welcome {user?.user_metadata.full_name}!</>}
         <br />
