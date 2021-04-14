@@ -4,11 +4,10 @@ import resources from '../data/learning_resources.json';
 import styles from './BlogList.module.css';
 import BlogPostPreview from './BlogPostPreview';
 import { useRouter } from 'next/router'
-import metadata from '../data/metadata.json';
 
 export default function ResourceList(props) {
   const router = useRouter()
-  const perPage = metadata.perPage;
+  const perPage = 5;
 
   const [fetchedPosts, setFetchedPosts] = useState([]);
   const [learnPosts, setLearnPosts] = useState([]);
@@ -26,7 +25,6 @@ export default function ResourceList(props) {
       await fetch(`../data/resources/${filename}.json`)
         .then(response => response.json())
         .then(data => {
-          data['date'] = new Date(data['date']).toLocaleString([], {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute:'2-digit'})
           fetched.push(data)
           idx++;
 

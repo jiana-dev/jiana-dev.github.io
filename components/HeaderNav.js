@@ -41,7 +41,7 @@ export default function HeaderNav(props) {
                 <a href="/" className="nav-link text-left">Home</a>
               </li>
               <li className={links['blog'] && "active"}>
-                <a href="/blogs" className="nav-link text-left">Blog</a>
+                <a href="/blog" className="nav-link text-left">Blog</a>
               </li>
               <li className={links['resources'] && "active"}>
                 <a href="/resources" className="nav-link text-left">Resources</a>

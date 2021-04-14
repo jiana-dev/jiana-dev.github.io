@@ -21,3 +21,8 @@
   flex-direction: column;
 }
 
+.smallerImg {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
