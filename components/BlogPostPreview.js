@@ -7,9 +7,9 @@ export default function BlogPostPreview(props) {
   let blogTitle;
   if (props.blogPost.subtitle) {
     let parsedTitle = parse(props.blogPost.title);
-    blogTitle = <a href={!props.disable && (props.blogPost.link || props.link)}>{parsedTitle} - {props.blogPost.subtitle}</a>
+    blogTitle = <a href={props.disable ? '' : (props.blogPost.link || props.link)}>{parsedTitle} - {props.blogPost.subtitle}</a>
   } else {
-    blogTitle = <a href={!props.disable && (props.blogPost.link || props.link)}>{props.blogPost.title}</a>
+    blogTitle = <a href={props.disable ? '' : (props.blogPost.link || props.link)}>{props.blogPost.title}</a>
   }
   return (
       <div className="post-entry-2 d-flex" key={props.index}>

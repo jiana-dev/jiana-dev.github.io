@@ -11,7 +11,7 @@ export default function ResourcePostHeader(props) {
                 <style jsx>{`
                 .date{
                   color: #32312d;
-                  font-family: Prata;
+                  /*font-family: Prata;*/
                   font-size: small;
                 }
                 .centered {

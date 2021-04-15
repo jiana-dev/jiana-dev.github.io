@@ -1,45 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import resources from '../data/learning_resources.json';
 import { Post, BlogPostPreview } from '../components';
 import dateFormat from 'dateformat';
 
 // Refactor so this doesn't get all 
-import { posts } from "../lib/getAllPosts";
+import { posts, resources, sortPosts } from "../lib/getAllPosts";
 
 export default function TwoColumnImageLayout() {
-  const [learnPosts, setLearnPosts] = useState([]);
   const postsToShow = 3
 
-  useEffect(() => {
-    let idx = 0
-    let fetched = []
-
-    resources.posts.slice(0, postsToShow).map(async(filename) => {
-      await fetch(`../data/resources/${filename}.json`)
-        .then(response => response.json())
-        .then(data => {
-          fetched.push(data)
-          idx++;
-
-          if (fetched.length === postsToShow) {
-            fetched.sort(function(a,b){
-              return Date.parse(b.date) - Date.parse(a.date)
-            })
-            setLearnPosts(fetched);
-          }
-        })
-    });
-  }, []);
-
-  let blogps = posts.slice(0, 3).map((blogPost, index) => {
+  let blogps = sortPosts(posts).slice(0, postsToShow).map((blogPost, index) => {
     return (
-      <Post key={index} post={blogPost}/>
+      <Post key={index} post={blogPost} folder='blog'/>
     )
   });
 
-  let learns = learnPosts.map((blogPost, index) => {
+  let resourceps = sortPosts(resources).slice(0, postsToShow).map((blogPost, index) => {
     return (
-      <BlogPostPreview key={index} index={index} blogPost={blogPost} lastUpdated={true}/>
+      <Post key={index} post={blogPost} folder='resources'/>
     )
   });
 
@@ -60,7 +37,7 @@ export default function TwoColumnImageLayout() {
             <div className="section-title">
               <h2 className='caption'>Learning Resources</h2>
             </div>
-            { learns }
+            { resourceps }
             <div className='additional-links-container'>
               <a className='additional-links' href="/resources">Additional Cool Learn-y Doodads</a>
             </div>

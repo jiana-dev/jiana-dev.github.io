@@ -1,0 +1,56 @@
+import BerkshireChart from '../../components/BerkshireChart';
+import BigShortsChart from '../../components/BigShortsChart';
+import OilGasChart from '../../components/OilGasChart';
+import CanadianStocksChart from '../../components/CanadianStocksChart';
+
+import { BlogPost } from '../../components'
+import styles from '../../components/BlogPost.module.css';
+
+export const meta = {
+  "title": "Stock Value Chart",
+  "preview": "A little personal project I worked on to determine if stocks from popular watchlists are over- or under-valued according to Peter Lynch's method for determining the value of a stock.",
+  "date": "2021-03-06T14:51:50.417-07:00",
+  "readTime": "1 min read",
+}
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>
+
+<div className={styles.postContent}>
+  <p><span className={styles.lead}>T</span>his is the result of a script I wrote to value stocks in any given portfolio according to Peter Lynch's method for a stock's fair value. This method is as follows:</p>
+  <code>value rating = p/e ratio / growth rate + dividend yield</code>
+  <p>Let me know via email if you'd like me to run this for any other Yahoo Finance portfolios or any ticker symbols in particular!</p>
+  <h6><strong>How to read the results:</strong></h6>
+  <table>
+  <tbody>
+  <tr>
+    <td>{'value rating < 0'}</td>
+    <td>No predictions on fair value since company's growth or PE is negative.</td>
+  </tr>
+  <tr>
+    <td>{'0 < value rating <= 0.5'}</td>
+    <td>Amazing! Stock is selling for less than or equal to half of what it's worth.</td>
+  </tr>
+  <tr>
+    <td>{'0.5 < value rating <= 1'}</td>
+    <td>Pretty good. The stock is selling for a bit less than what its worth.</td>
+  </tr>
+  <tr>
+    <td>{'value rating = 1'}</td>
+    <td>Stock is exactly at a fair value.</td>
+  </tr>
+  <tr>
+    <td>{'1 < value rating < 2'}</td>
+    <td>Not great. The stock is selling for more than and up to double it's worth.</td>
+  </tr>
+  <tr>
+    <td>value rating > 2</td>
+    <td>Way overpriced.</td>
+  </tr>
+  </tbody>
+  </table>
+  <h5 className='caption pt-5 pb-5'><strong>DISCLAIMER:</strong> This especially does not work for stocks with negative growth rates. Use at your own risk! Values with None could not be calculated automatically.</h5>
+  <BerkshireChart/>
+  <BigShortsChart/>
+  <OilGasChart/>
+  <CanadianStocksChart/>
+</div>

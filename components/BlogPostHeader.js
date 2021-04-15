@@ -22,7 +22,7 @@ export default function BlogPostHeader(props) {
       }
       .date{
         color: #32312d;
-        font-family: Prata;
+        /*font-family: Prata;*/
       }
       .blogPostHeader {
         margin-bottom: 0;

@@ -41,6 +41,7 @@ export default function Contact() {
       font-weight: 600;
       letter-spacing: .1rem;
       text-transform: uppercase;
+      color: #fff;
     }
     .submittedMessage {
       display: flex;
@@ -59,7 +60,7 @@ export default function Contact() {
   
   return (
     <>
-      <HeadTag pageTitle='JIANA - Contact'/>
+      <HeadTag pageTitle="she is sometimes social"/>
       <Header activePage='contact'/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">

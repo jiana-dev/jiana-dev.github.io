@@ -3,7 +3,6 @@ export default function FeaturePost() {
   <div className="site-section">
     <div className="container">
       <div className="half-post-entry d-block d-lg-flex">
-        <div className="img-bg" style={{ backgroundImage: `url('images/profile/new_me.jpg')`}}></div>
         <div className="contents">
           <p className="caption">Oh hey there, friends of Earth!</p>
           <p className="mb-3 intro">Thank you for visiting! I'm just a girl who (<i>please insert <em>sometimes</em> before all verbs</i>) builds things, journals, makes videos, plays music, learns, and is constantly trying to figure it all out.</p>
@@ -16,8 +15,9 @@ export default function FeaturePost() {
       .intro {
         font-size: small;
       }
-      .half-post-entry {
+      .half-post-entry .contents {
         background-color: var(--light-accent-color);
+        width: 100%;
       }
       @media (min-width: 992px) {
         .site-section {

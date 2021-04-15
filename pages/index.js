@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 export default function Home() {
   return (
     <div className="container site-container">
-      <HeadTag pageTitle={`JIANA - Home`}/>
+      <HeadTag pageTitle={`welcome to my brain`}/>
       <Header activePage='home'/>
       <HomeBody/>
       <SubscribeSection/>

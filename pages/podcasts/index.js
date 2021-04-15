@@ -12,7 +12,7 @@ import Button from 'react-bootstrap/Button';
 export default function Podcasts() {
   return (
     <>
-      <HeadTag pageTitle="Jiana's Other Internet Dwellings"/>
+      <HeadTag pageTitle="she talks a lot"/>
       <Header activePage='podcasts'/>
       <div className='body' data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div className="site-section">
@@ -34,7 +34,6 @@ export default function Podcasts() {
               <Card>
                 <Card.Img variant="top" src="../images/podcasts/devinprogressicon.png" />
                 <Card.Body>
-                  <Card.Title className={styles.cardTitle}>Dev In Progress</Card.Title>
                   <Card.Text className={styles.cardText}>
                     I give a technical sprinkle to my wide array of interests and lessons learned in hopes that you can find this content useful, helpful, or relatable.
                   </Card.Text>
@@ -48,7 +47,6 @@ export default function Podcasts() {
               <Card>
                 <Card.Img variant="top" src="../images/podcasts/onestepahead.png" />
                 <Card.Body>
-                  <Card.Title className={styles.cardTitle}>One Step Ahead</Card.Title>
                   <Card.Text className={styles.cardText}>
                     My best friend and I talk milestones, lessons, relationships, and try to give our best advice on navigating life as people who may only just be one step ahead.
                   </Card.Text>

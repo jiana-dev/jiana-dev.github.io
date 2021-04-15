@@ -32,12 +32,12 @@ export default function HeaderNav(props) {
   }
 
   return (
-    <div className={styles.nav + " site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block"} role="banner">
+    <div className={styles.nav + " site-navbar py-2 js-sticky-header site-navbar-target d-none d-lg-block"} role="banner">
       <div className="container">
         <div className="d-flex align-items-center">
           <nav className="site-navigation position-relative" role="navigation">
             <ul className="site-menu main-menu js-clone-nav mr-auto pl-0">
-              <li className={`${links['home'] && "active"} option-first`}>
+              <li className={`${links['home'] && "active"}`}>
                 <a href="/" className="nav-link text-left">Home</a>
               </li>
               <li className={links['blog'] && "active"}>
@@ -52,7 +52,7 @@ export default function HeaderNav(props) {
               <li className={links['journal'] && "active"}>
                 <a href="/journal" className="nav-link text-left">Journal</a>
               </li>
-              <li className={`${links['contact'] && "active"} option-last`}>
+              <li className={`${links['contact'] && "active"}`}>
                 <a href="/contact" className="nav-link text-left">Contact</a>
               </li>
             </ul>
@@ -65,14 +65,6 @@ export default function HeaderNav(props) {
             display: inline-flex;
             width: 100%;
             justify-content: space-between;
-          }
-          @media (min-width: 992px) {
-            .option-first{
-              margin-left: var(--default-padding);
-            }
-            .option-last{
-              margin-right: var(--default-padding);
-            }
           }
 
         `}</style>

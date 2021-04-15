@@ -1,8 +1,8 @@
 import { Layout, Post } from '../../components';
-import { posts } from "../../lib/getAllPosts";
+import { posts, sortPosts } from "../../lib/getAllPosts";
 
 export default function Blog() {
-  let pageContent = posts.map((post, index) => (
+  let pageContent = sortPosts(posts).map((post, index) => (
     <Post post={post} key={index} folder='blog'/>
   ))
 

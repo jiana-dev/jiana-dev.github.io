@@ -8,16 +8,16 @@
   background-color: #f0f0f0;
 }
 .cardText {
-  font-family: 'Lora';
+  /*font-family: 'Lora';*/
   font-size: small;
 }
 
 .cardTitle {
-  font-family: 'Prata';
+  /*font-family: 'Prata';*/
 }
 
 .buttonLink {
-    font-family: 'Lora';
+    /*font-family: 'Lora';*/
     border: 0px solid;
     border-radius: 10px;
     background-color: #acb2a1;
@@ -28,7 +28,7 @@
 }
 
 .buttonLink > a {
-    color: #f0f0f0;
+    color: #fff;
     font-size: small;
     font-weight: 600;
     letter-spacing: .1rem;

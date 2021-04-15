@@ -1,9 +1,9 @@
 import { Layout, Post, LoginForContentButton } from '../../components';
-import { journalEntries } from "../../lib/getAllPosts";
+import { journalEntries, sortPosts } from "../../lib/getAllPosts";
 import netlifyAuth from '../../lib/netlifyAuth';
 
 export default function Journal() {
-  let pageContent = journalEntries.map((post, index) => (
+  let pageContent = sortPosts(journalEntries).map((post, index) => (
     <Post disable post={post} key={index} folder='journal'/>
   ))
 

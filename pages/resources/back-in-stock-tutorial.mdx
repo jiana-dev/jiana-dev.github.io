@@ -1,0 +1,14 @@
+import { BlogPost } from '../../components'
+import BackInStockTutorial from '../../components/BackInStockTutorial'
+
+export const meta = {
+  "title": "Back In Stock Tutorial",
+  "preview": "I wrote a script to e-mail notify me when an item is back in stock online. Here's how I did it.",
+  "date": "2020-09-23T09:24:50.417-07:00",
+  "readTime": "27 min read",
+  imageFolder: 'back_in_stock_tutorial'
+}
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>
+
+<BackInStockTutorial/>

@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yrsa&display=swap');
 
 :root {
-  --default-padding: 15em;
+  --default-padding: 30em;
   --header-color: #f7f4f0;
   --light-accent-color: #f7f4f0;
 }
@@ -66,16 +66,18 @@ a:hover {
 
 body {
   color: black;
-  font-family: 'Lora', serif;
+  /*font-family: 'Lora', serif;*/
+  font-family: var(--font_family_ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol');
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
-  font-family: 'Prata', serif;
+  /*font-family: 'Prata', serif;*/
   padding: 1em 0 0.5em 0;
 }
 
 .caption {
-  font-family: 'Lora', serif;
+  /*font-family: 'Lora', serif;*/
 }
 
 .photo-caption {
@@ -132,8 +134,19 @@ div[data-code-block] {
   background-color: #7e8277;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1601px) {
   .site-section { padding: 7em var(--default-padding) 1em var(--default-padding) ; }
+  .subscribe-section {
+    padding: 5em var(--default-padding);
+    background-color: #f0ede4;
+  }
+}
+
+@media (max-width: 1600px) {
+  :root {
+    --default-padding: 25em;
+  }
+  .site-section { padding: 7em var(--default-padding) 7em var(--default-padding) ; }
   .subscribe-section {
     padding: 5em var(--default-padding);
     background-color: #f0ede4;
@@ -144,7 +157,7 @@ div[data-code-block] {
   :root {
     --default-padding: 7em;
   }
-  .site-section { padding: 7em var(--default-padding) 1em var(--default-padding); }
+  .site-section { padding: 7em var(--default-padding) 7em var(--default-padding); }
   .subscribe-section {
     padding: 5em var(--default-padding);
     background-color: #f0ede4;
@@ -155,7 +168,7 @@ div[data-code-block] {
   :root {
     --default-padding: 5em;
   }
-  .site-section { padding: 2em var(--default-padding) 2em var(--default-padding); }
+  .site-section { padding: 2em var(--default-padding) 5em var(--default-padding); }
   .subscribe-section {
     padding: 5em var(--default-padding);
     background-color: #f0ede4;
@@ -187,10 +200,10 @@ h2.caption {
 }
 
 blockquote > p {
-  font-family: Lora, serif;
+  /*font-family: Lora, serif;*/
   font-weight: 500;
+  font-style: italic;
   padding: 0;
-  font-size: small;
   color: #000;
 }
 
@@ -223,6 +236,7 @@ table {
 
 li {
   line-height: 2;
+  font-size: medium;
 }
 
 td, th {
@@ -274,7 +288,7 @@ strong {
 }
 
 .authContent {
-  height: calc(40vh);
+  height: calc(50vh);
   filter: blur(5px);
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -290,3 +304,11 @@ strong {
   width: 5%;
 }
 
+p {
+  line-height: 2;
+  font-size: medium;
+}
+
+span {
+  line-height: 2;
+}

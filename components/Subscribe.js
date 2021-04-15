@@ -31,7 +31,7 @@ export default function SubscribeSection() {
           <span>(only if ya wanna, of course)</span></p>
           <style jsx>{`
             h2 {
-              font-family: 'Playfair Display';
+              /*font-family: 'Playfair Display';*/
               font-size: medium;
               font-weight: 600;
             }

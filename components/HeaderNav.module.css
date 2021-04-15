@@ -1,4 +1,6 @@
 .nav {
   background: var(--header-color);
   border: none;
+  padding-left: var(--default-padding);
+  padding-right: var(--default-padding);
 }
