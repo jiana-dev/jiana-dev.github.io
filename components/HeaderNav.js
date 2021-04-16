@@ -7,6 +7,7 @@ export default function HeaderNav(props) {
     'resources': false,
     'podcasts': false,
     'journal': false,
+    'about': false,
     'contact': false
   }
 
@@ -25,6 +26,9 @@ export default function HeaderNav(props) {
       break;
     case 'journal':
       links['journal'] = true;
+      break;
+    case 'about':
+      links['about'] = true;
       break;
     case 'contact':
       links['contact'] = true;
@@ -51,6 +55,9 @@ export default function HeaderNav(props) {
               </li>
               <li className={links['journal'] && "active"}>
                 <a href="/journal" className="nav-link text-left">Journal</a>
+              </li>
+              <li className={links['about'] && "active"}>
+                <a href="/about" className="nav-link text-left">About</a>
               </li>
               <li className={`${links['contact'] && "active"}`}>
                 <a href="/contact" className="nav-link text-left">Contact</a>

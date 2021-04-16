@@ -1,4 +1,4 @@
-import { Layout, Post, ResourcePostHeader, Book } from '../components';
+import { Layout, ResourcePostHeader, Book } from '../components';
 import styles from '../components/BlogPost.module.css';
 
 export default function Library({ library, meta, folder, children }) {
@@ -45,7 +45,7 @@ export default function Library({ library, meta, folder, children }) {
     </>
 
   return (
-    <Layout pageTitle='she reads sometimes' activePage='resources' children={pageContent}/>
+    <Layout pageTitle='she reads sometimes' activePage='resources' children={pageContent} classes='nopadding'/>
   )
 }
 

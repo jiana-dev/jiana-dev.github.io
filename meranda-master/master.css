@@ -249,9 +249,10 @@ strong {
   font-weight: 700;
 }
 
-@media (min-width: 480px)
-.modalContainer::before {
-    background-color: rgb(212 196 177 / 70%);
+@media {
+  body > div.modalContainer::before {
+    background-color: rgb(214,202,183) !important;
+  }
 }
 
 .sticky-wrapper {
@@ -288,8 +289,7 @@ strong {
 }
 
 .authContent {
-  height: calc(50vh);
-  filter: blur(5px);
+  filter: blur(13px);
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -311,4 +311,20 @@ p {
 
 span {
   line-height: 2;
+}
+
+.site-section.nopadding {
+  padding: 7em 5em 7em 5em;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1299px) {
+  .profile {
+    width:50%;
+  }
+}
+
+@media screen and (min-width: 1410px) {
+  .profile {
+    width:50%;
+  }
 }

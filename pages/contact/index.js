@@ -48,7 +48,7 @@ export default function Contact() {
       justify-content: center;
       width: 100%;
       border-radius: 30px;
-      background-color: beige;
+      background-color: #e0d4c2;
       padding: 1em;
     }
     .submittedMessage p {

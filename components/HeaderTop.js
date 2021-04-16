@@ -6,13 +6,13 @@ import LoginComponent from './LoginComponent';
 export default function HeaderTop(props) {
   return (
     <div className="container">
-      <div className="row align-items-center">
+      <div className="row align-items-center flex-nowrap">
         <a href="/" className={styles.siteLogo}>
           <img src='/../site-logo.png' className='logo'/>
         </a>
         <div className='d-flex align-items-center'>
-          <Icons class="ml-md-auto top-social d-none d-lg-inline-block"/>
           <LoginComponent/>
+          <Icons class="ml-md-auto top-social d-none d-lg-inline-block"/>
           <a href="#" className="d-lg-none site-menu-toggle js-menu-toggle pl-3"><span className="icon-book h3"></span></a>
         </div>
       </div>

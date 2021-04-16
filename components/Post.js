@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import BlogPostPreview from './BlogPostPreview';
 
-export default function Post({ post, folder, disable }) {
+export default function Post({ post, folder, disable, loggedIn }) {
   const {
     link,
     module: { meta },

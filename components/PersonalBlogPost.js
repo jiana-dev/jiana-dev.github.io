@@ -1,5 +1,5 @@
 import { MDXProvider } from '@mdx-js/react'
-import { Layout, LoginForContentButton, BlogPostHeader } from '../components'
+import { Layout, LoginForContentButton, BlogPostHeader, LoremIpsum } from '../components'
 import netlifyAuth from '../lib/netlifyAuth';
 
 export default function PersonalBlogPost({ children, meta}) {
@@ -12,6 +12,7 @@ export default function PersonalBlogPost({ children, meta}) {
     <div className="container">
       <div className='authContent'>
         <BlogPostHeader title={meta.title} date={meta.date} readTime={meta.readTime} subtitle={meta.subtitle}/>
+        <LoremIpsum/>
       </div>
       <LoginForContentButton/>
     </div>

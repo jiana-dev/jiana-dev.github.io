@@ -1,5 +1,8 @@
 export { default as Layout } from './components/Layout';
 
+//Home
+export { default as HomeBody } from './components/HomeBody';
+
 // LayoutComponents
 export { default as HeadTag } from './components/HeadTag';
 export { default as Header } from './components/Header';
@@ -22,3 +25,5 @@ export { default as ResourcePostFooter } from './components/ResourcePostFooter';
 export { default as Book } from './components/Book';
 
 export { default as Library } from './components/Library';
+
+export { default as LoremIpsum } from './components/LoremIpsum';
