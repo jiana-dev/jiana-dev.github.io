@@ -19,6 +19,7 @@ export default function LoginComponent(props) {
       console.log('login', user)
       netlifyIdentity.on('close', () => console.log('Widget closed'));
       netlifyIdentity.close()
+      Router.reload(window.location.pathname);
     });
   }
 
