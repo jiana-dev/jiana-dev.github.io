@@ -1,19 +1,14 @@
-import netlifyIdentity from 'netlify-identity-widget';
 import { Layout, Post, LoginForContentButton } from '../../components';
 import { secretBlogPosts } from "../../lib/getAllPosts";
 import { useEffect, useState } from 'react'
+import netlifyIdentity from 'netlify-identity-widget'
 
 export default function SecretBlog() {
-  const [user, setUser] = useState(netlifyIdentity.currentUser());
+  let [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    window.netlifyIdentity = netlifyIdentity
-    netlifyIdentity.on('init', user => console.log('init', user));
-    netlifyIdentity.init();
-    setUser(netlifyIdentity.currentUser());
+    setLoggedIn(netlifyIdentity.currentUser() !== null)
   }, [])
-
-  const loggedIn = user !== null;
 
   let pageContent =
   <>

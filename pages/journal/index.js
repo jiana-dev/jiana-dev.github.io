@@ -1,19 +1,14 @@
 import { Layout, Post, LoginForContentButton } from '../../components';
 import { journalEntries, sortPosts } from "../../lib/getAllPosts";
-import netlifyIdentity from 'netlify-identity-widget';
 import { useEffect, useState } from 'react'
+import netlifyIdentity from 'netlify-identity-widget';
 
 export default function Journal() {
-  const [user, setUser] = useState(netlifyIdentity.currentUser());
+  let [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    window.netlifyIdentity = netlifyIdentity
-    netlifyIdentity.on('init', user => console.log('init', user));
-    netlifyIdentity.init();
-    setUser(netlifyIdentity.currentUser());
+    setLoggedIn(netlifyIdentity.currentUser() !== null)
   }, [])
-
-  const loggedIn = user !== null;
 
   let pageContent = sortPosts(journalEntries).map((post, index) => (
     <Post disable loggedIn={loggedIn} post={post} key={index} folder='journal'/>

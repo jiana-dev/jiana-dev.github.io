@@ -4,16 +4,13 @@ import netlifyIdentity from 'netlify-identity-widget';
 import { useEffect, useState } from 'react'
 
 export default function PersonalBlogPost({ children, meta}) {
-  const [user, setUser] = useState(netlifyIdentity.currentUser());
+  let [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    window.netlifyIdentity = netlifyIdentity
-    netlifyIdentity.on('init', user => console.log('init', user));
-    netlifyIdentity.init();
-    setUser(netlifyIdentity.currentUser());
+    setLoggedIn(netlifyIdentity.currentUser() !== null)
   }, [])
 
-  let authContent = user !== null ? (
+  let authContent = loggedIn ? (
     <div className="container">
       <BlogPostHeader title={meta.title} date={meta.date} readTime={meta.readTime} subtitle={meta.subtitle}/>
       <article className='post-data'>{children}</article>
