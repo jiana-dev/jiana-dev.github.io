@@ -10,6 +10,10 @@ export default function LoginComponent(props) {
     netlifyIdentity.on('init', user => console.log('init', user));
     netlifyIdentity.init();
     setUser(netlifyIdentity.currentUser());
+
+    if (netlifyIdentity.currentUser() !== null) {
+      netlifyIdentity.refresh().then((jwt)=>console.log(jwt))
+    }
   }, [])
 
   let login = () => {
@@ -19,7 +23,7 @@ export default function LoginComponent(props) {
       console.log('login', user)
       netlifyIdentity.on('close', () => console.log('Widget closed'));
       netlifyIdentity.close()
-      Router.reload(window.location.pathname);
+      netlifyIdentity.refresh().then((jwt)=>console.log(jwt))
     });
   }
 

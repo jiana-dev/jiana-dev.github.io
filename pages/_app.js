@@ -3,16 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../meranda-master/master.css'
 import '../meranda-master/css/pagination.css';
 import 'loaders.css/src/animations/pacman.scss';
-import netlifyIdentity from 'netlify-identity-widget';
-import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    window.netlifyIdentity = netlifyIdentity
-    netlifyIdentity.on('init', user => console.log('init', user));
-    netlifyIdentity.init();
-  }, [])
-
   return <Component {...pageProps} />
 }
 
