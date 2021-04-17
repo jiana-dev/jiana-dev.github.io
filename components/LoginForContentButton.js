@@ -4,7 +4,7 @@ export default function LoginForContentButton() {
   return (
     <div className='sorry'>
       <p className='small'>i would <b>love</b> to share with you, and maybe one day it'll be open to everyone, but for now, it's just a little personal so i wanna make sure we're friends</p>
-      <LoginComponent text='we cool?'/>
+      <LoginComponent text='friends?'/>
       <style jsx>{`
       .sorry {
         position: fixed;

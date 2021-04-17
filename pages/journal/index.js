@@ -24,7 +24,7 @@ export default function Journal() {
       {pageContent}
     </div>
   ) : (
-    <div className="row" style={{ height: 'calc(50vh);'}}>
+    <div className="row" style={{ height: 'calc(50vh)'}}>
       <div className='authContent'>
         {!loggedIn ? <p><em>if you're reading this... I SEE YOU! stop being sneaky and just make an account... promise i don't bite</em></p> : ''}
         {pageContent}

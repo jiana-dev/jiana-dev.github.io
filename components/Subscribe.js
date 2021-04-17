@@ -41,22 +41,28 @@ export default function SubscribeSection() {
           `}</style>
         </div>
         <div className="email-enter col-md-6 ml-auto">
-          <div className="d-flex">
+          <div className="d-flex flex-column">
             <p className="hidden" hidden>
               <label>Don’t fill this out if you’re human: <input name="bot-field" {...register("bot-field")}/></label>
             </p>
-            <input type="email" className="form-control" placeholder="Enter your email" {...register("email")}/>
-            <button type="submit" className="btn btn-secondary" ><span className="icon-paper-plane"></span></button>
+            <div className="d-flex">
+              <input type="email" className="form-control" placeholder="Enter your email" {...register("email")}/>
+              <button type="submit" className="btn btn-secondary" ><span className="icon-paper-plane"></span></button>
+            </div>
+            <div className="d-flex justify-content-end">
+              { submitted && <p className='submitted'>wow, i'm flattered, thank you so much</p>}
+            </div>
             <style jsx>{`
               input {
                 font-family: 'B612 Mono';
                 font-size: small;
               }
+              p.submitted {
+                font-size: small;
+                color: #9e927b;
+              }
             `}</style>
           </div>
-        </div>
-        <div>
-          { submitted && <p>Submitted! Thank you!</p>}
         </div>
       </form>
     </div>

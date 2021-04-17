@@ -1,8 +1,17 @@
 import netlifyIdentity from 'netlify-identity-widget';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Router from 'next/router'
 
 export default function LoginComponent(props) {
+  const [user, setUser] = useState(netlifyIdentity.currentUser());
+
+  useEffect(() => {
+    window.netlifyIdentity = netlifyIdentity
+    netlifyIdentity.on('init', user => console.log('init', user));
+    netlifyIdentity.init();
+    setUser(netlifyIdentity.currentUser());
+  }, [])
+
   let login = () => {
     netlifyIdentity.open()
     netlifyIdentity.on('open', () => console.log('Widget opened'));
@@ -19,8 +28,6 @@ export default function LoginComponent(props) {
     Router.reload(window.location.pathname);
   }
 
-  let user = netlifyIdentity.currentUser()
-
   let loginElement = user !== null ? (
       <div>
         {user && <>Welcome, {user?.user_metadata.full_name}!</>}
@@ -33,7 +40,6 @@ export default function LoginComponent(props) {
             display: flex;
             align-items: center;
             font-size: small;
-            font-family: 'B612 Mono';
           }
         `}</style>
 
