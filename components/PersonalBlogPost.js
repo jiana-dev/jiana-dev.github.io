@@ -1,9 +1,19 @@
 import { MDXProvider } from '@mdx-js/react'
 import { Layout, LoginForContentButton, BlogPostHeader, LoremIpsum } from '../components'
-import netlifyAuth from '../lib/netlifyAuth';
+import netlifyIdentity from 'netlify-identity-widget';
+import { useEffect, useState } from 'react'
 
 export default function PersonalBlogPost({ children, meta}) {
-  let authContent = netlifyAuth.isAuthenticated ? (
+  const [user, setUser] = useState(netlifyIdentity.currentUser());
+
+  useEffect(() => {
+    window.netlifyIdentity = netlifyIdentity
+    netlifyIdentity.on('init', user => console.log('init', user));
+    netlifyIdentity.init();
+    setUser(netlifyIdentity.currentUser());
+  }, [])
+
+  let authContent = user !== null ? (
     <div className="container">
       <BlogPostHeader title={meta.title} date={meta.date} readTime={meta.readTime} subtitle={meta.subtitle}/>
       <article className='post-data'>{children}</article>

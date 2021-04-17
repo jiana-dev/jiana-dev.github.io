@@ -1,39 +1,42 @@
-import netlifyAuth from '../lib/netlifyAuth';
-import { useEffect, useState } from 'react'
+import netlifyIdentity from 'netlify-identity-widget';
+import { useEffect } from 'react'
+import Router from 'next/router'
 
 export default function LoginComponent(props) {
-  let [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated)
-  let [user, setUser] = useState(null)
-
-  useEffect(() => {
-    netlifyAuth.initialize((user) => {
-      setLoggedIn(!!user)
-      setUser(user)
-    })
-  }, [loggedIn])
-
   let login = () => {
-    netlifyAuth.authenticate((user) => {
-      setLoggedIn(!!user)
-      setUser(user)
-      netlifyAuth.closeModal()
-    })
+    netlifyIdentity.open()
+    netlifyIdentity.on('open', () => console.log('Widget opened'));
+    netlifyIdentity.on('login', (user) => {
+      console.log('login', user)
+      netlifyIdentity.on('close', () => console.log('Widget closed'));
+      netlifyIdentity.close()
+    });
   }
 
   let logout = () => {
-    netlifyAuth.signout(() => {
-      setLoggedIn(false)
-      setUser(null)
-    })
+    netlifyIdentity.logout()
+    netlifyIdentity.on('logout', () => console.log('Logged out'));
+    Router.reload(window.location.pathname);
   }
 
-  let loginElement = loggedIn ? (
+  let user = netlifyIdentity.currentUser()
+
+  let loginElement = user !== null ? (
       <div>
-        {user && <>Welcome {user?.user_metadata.full_name}!</>}
-        <br />
-        <button className='buttonLink' onClick={logout}>
+        {user && <>Welcome, {user?.user_metadata.full_name}!</>}
+        <button className='buttonLink ml-3' onClick={logout}>
           Logout
         </button>
+        <style jsx>{`
+          div {
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+            font-size: small;
+            font-family: 'B612 Mono';
+          }
+        `}</style>
+
       </div>
     ) : (
       <button className='buttonLink' onClick={login}>

@@ -2,14 +2,16 @@ import styles from './BlogList.module.css';
 import parse from 'html-react-parser';
 import ReactMarkdown from 'react-markdown'
 import dateFormat from 'dateformat';
+import netlifyIdentity from 'netlify-identity-widget';
 
 export default function BlogPostPreview(props) {
+  let notLoggedIn = netlifyIdentity.currentUser() === null
   let blogTitle;
   if (props.blogPost.subtitle) {
     let parsedTitle = parse(props.blogPost.title);
-    blogTitle = <a href={props.disable ? '' : (props.blogPost.link || props.link)}>{parsedTitle} - {props.blogPost.subtitle}</a>
+    blogTitle = <a href={props.disable && notLoggedIn ? '' : (props.blogPost.link || props.link)}>{parsedTitle} - {props.blogPost.subtitle}</a>
   } else {
-    blogTitle = <a href={props.disable ? '' : (props.blogPost.link || props.link)}>{props.blogPost.title}</a>
+    blogTitle = <a href={props.disable && notLoggedIn ? '' : (props.blogPost.link || props.link)}>{props.blogPost.title}</a>
   }
   return (
       <div className="post-entry-2 d-flex" key={props.index}>

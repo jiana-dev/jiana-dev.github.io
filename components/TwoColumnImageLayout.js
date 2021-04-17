@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Post, BlogPostPreview, ImageWithCaption } from '../components';
 import dateFormat from 'dateformat';
 

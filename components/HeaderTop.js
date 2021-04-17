@@ -11,8 +11,8 @@ export default function HeaderTop(props) {
           <img src='/../site-logo.png' className='logo'/>
         </a>
         <div className='d-flex align-items-center'>
-          <LoginComponent/>
           <Icons class="ml-md-auto top-social d-none d-lg-inline-block"/>
+          <LoginComponent/>
           <a href="#" className="d-lg-none site-menu-toggle js-menu-toggle pl-3"><span className="icon-book h3"></span></a>
         </div>
       </div>
