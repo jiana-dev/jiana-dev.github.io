@@ -1,11 +1,7 @@
 import styles from '../../components/PodcastPage.module.css';
 
 import React, { useState, useEffect } from 'react';
-import HeadTag from '../../components/HeadTag';
-import Header from '../../components/Header';
-import SubscribeSection from '../../components/Subscribe';
-import Loader from '../../components/Loader';
-import Footer from '../../components/Footer';
+import { Layout } from '../../components';
 import { useRouter } from 'next/router'; // unused
 import { useForm } from "react-hook-form";
 
