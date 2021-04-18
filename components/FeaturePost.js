@@ -1,18 +1,10 @@
 import { ImageWithCaption } from '../components';
 import Card from 'react-bootstrap/Card';
-import netlifyIdentity from 'netlify-identity-widget';
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
+import AuthContext from '../lib/authContext';
 
 export default function FeaturePost() {
-  const [user, setUser] = useState(netlifyIdentity.currentUser());
-
-  useEffect(() => {
-    window.netlifyIdentity = netlifyIdentity
-    netlifyIdentity.on('init', user => console.log('init', user));
-    netlifyIdentity.init();
-    setUser(netlifyIdentity.currentUser());
-  }, [])
-
+  const [user, setUser] = useContext(AuthContext);
   const loggedIn = user !== null;
 
   let secretBlog = loggedIn ?

@@ -1,14 +1,11 @@
 import { MDXProvider } from '@mdx-js/react'
 import { Layout, LoginForContentButton, BlogPostHeader, LoremIpsum } from '../components'
-import netlifyIdentity from 'netlify-identity-widget';
-import { useEffect, useState } from 'react'
+import { useContext } from 'react';
+import AuthContext from '../lib/authContext';
 
 export default function PersonalBlogPost({ children, meta}) {
-  let [loggedIn, setLoggedIn] = useState(false);
-
-  useEffect(() => {
-    setLoggedIn(netlifyIdentity.currentUser() !== null)
-  }, [])
+  const [user, setUser] = useContext(AuthContext);
+  const loggedIn = user !== null;
 
   let authContent = loggedIn ? (
     <div className="container">

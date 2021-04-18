@@ -6,39 +6,14 @@ import 'loaders.css/src/animations/pacman.scss';
 import { useEffect, useState } from 'react'
 import netlifyIdentity from 'netlify-identity-widget'
 import netlifyAuth from '../lib/netlifyAuth';
-import GoTrue from 'gotrue-js';
+import AuthContext from '../lib/authContext';
 
 function MyApp({ Component, pageProps }) {
-  const [loggedIn, setLoggedIn] = useState(netlifyIdentity.currentUser() !== null)
-  const [user, setUser] = useState(netlifyIdentity.currentUser())
+  const user = useState(netlifyIdentity.currentUser())
 
-  console.log("user, loggedIn")
-  console.log(user)
-  console.log(loggedIn)
-
-  useEffect(() => {
-    const auth = new GoTrue({
-      APIUrl: 'https://jianajavier.com/.netlify/identity',
-      audience: '',
-      setCookie: false,
-    });
-
-    console.log(auth.currentUser())
-
-    netlifyAuth.initialize((user) => {
-      setLoggedIn(!!user)
-      setUser(user)
-    })
-  }, [])
-
-  pageProps.auth = {
-    user: user,
-    loggedIn: loggedIn,
-    setUser: setUser,
-    setLoggedIn: setLoggedIn
-  }
-
-  return <Component {...pageProps} />
+  return <AuthContext.Provider value={user}>
+    <Component {...pageProps} />
+  </AuthContext.Provider>
 }
 
 // Only uncomment this method if you have blocking data requirements for

@@ -4,7 +4,7 @@ import styles from '../../components/PodcastPage.module.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-export default function Podcasts() {
+export default function Podcasts(props) {
   let pageContent = 
     <>
       <div className="row">

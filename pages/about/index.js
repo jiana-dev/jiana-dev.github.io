@@ -1,7 +1,7 @@
 import { Layout } from '../../components';
 import FeaturePost from '../../components/FeaturePost';
 
-export default function About() {
+export default function About(props) {
   let children = <FeaturePost/>
 
   return (

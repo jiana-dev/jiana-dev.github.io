@@ -8,6 +8,6 @@ export default function Home(props) {
     </>
 
   return (
-    <Layout pageTitle={`welcome to my brain`} activePage='home' children={children} authProps={props.auth}/>
+    <Layout pageTitle={`welcome to my brain`} activePage='home' children={children}/>
   )
 }
