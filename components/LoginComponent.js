@@ -4,18 +4,25 @@ import { useEffect, useState } from 'react'
 import Router from 'next/router'
 
 export default function LoginComponent({authProps, text}) {
-  const {
-    user,
-    loggedIn,
-    setLoggedIn,
-    setUser,
-  } = authProps
+  let user = undefined
+  let loggedIn = false
+  let setLoggedIn = () => {}
+  let setUser = () => {}
+
+  if(authProps){
+    let {
+      user,
+      loggedIn,
+      setLoggedIn,
+      setUser,
+    } = authProps
+  }
 
   let login = () => {
     netlifyAuth.authenticate((user) => {
       setLoggedIn(!!user)
       setUser(user)
-    })
+    });
   }
 
   let logout = () => {
