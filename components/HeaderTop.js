@@ -3,7 +3,7 @@ import Icons from './Icons.js';
 
 import LoginComponent from './LoginComponent';
 
-export default function HeaderTop(props) {
+export default function HeaderTop({authProps}) {
   return (
     <div className="container">
       <div className="row align-items-center flex-nowrap">
@@ -12,7 +12,7 @@ export default function HeaderTop(props) {
         </a>
         <div className='d-flex align-items-center'>
           <Icons class="ml-md-auto top-social d-none d-lg-inline-block"/>
-          <LoginComponent/>
+          <LoginComponent authProps={authProps}/>
           <a href="#" className="d-lg-none site-menu-toggle js-menu-toggle pl-3"><span className="icon-book h3"></span></a>
         </div>
       </div>

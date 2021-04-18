@@ -3,23 +3,18 @@ import netlifyIdentity from 'netlify-identity-widget'
 import { useEffect, useState } from 'react'
 import Router from 'next/router'
 
-export default function LoginComponent(props) {
-  let [loggedIn, setLoggedIn] = useState(netlifyIdentity.currentUser() !== null)
-  let [user, setUser] = useState(null)
-
-  useEffect(() => {
-    netlifyAuth.initialize((user) => {
-      setLoggedIn(!!user)
-      setUser(user)
-    })
-  }, [loggedIn])
+export default function LoginComponent({authProps, text}) {
+  const {
+    user,
+    loggedIn,
+    setLoggedIn,
+    setUser,
+  } = authProps
 
   let login = () => {
-    netlifyAuth.authenticate(() => {
+    netlifyAuth.authenticate((user) => {
       setLoggedIn(!!user)
       setUser(user)
-      netlifyAuth.closeModal()
-      Router.reload(window.location.pathname)
     })
   }
 
@@ -27,7 +22,6 @@ export default function LoginComponent(props) {
     netlifyAuth.signout(() => {
       setLoggedIn(false)
       setUser(null)
-      Router.reload(window.location.pathname)
     });
   }
 
@@ -49,7 +43,7 @@ export default function LoginComponent(props) {
       </div>
     ) : (
       <button className='buttonLink' onClick={login}>
-        {props.text || 'Login'}
+        {text || 'Login'}
       </button>
     )
 

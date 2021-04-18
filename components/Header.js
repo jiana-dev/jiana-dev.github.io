@@ -2,7 +2,7 @@ import HeaderTop from './HeaderTop';
 import HeaderNav from './HeaderNav';
 import Icons from './Icons.js';
 
-export default function Header(props) {
+export default function Header({authProps, activePage}) {
   return (
   <div className={`site-wrap`}>
     <div className="site-mobile-menu site-navbar-target">
@@ -18,8 +18,8 @@ export default function Header(props) {
       </>
     </div>
     <div className={`header-top`}>
-      <HeaderTop/>
-      <HeaderNav activePage={props.activePage}/>
+      <HeaderTop authProps={authProps}/>
+      <HeaderNav activePage={activePage}/>
     </div>
   </div>
   )
