@@ -7,7 +7,7 @@ export default function Library({ library, meta, folder, children }) {
       link,
       module: { 
         meta: {
-          title, author, description, topPick
+          title, author, description, topPick, bigInfluence
         }
       },
     } = book
@@ -18,6 +18,7 @@ export default function Library({ library, meta, folder, children }) {
         description={description}
         url={`/resources/${folder}${link}`}
         topPick={topPick}
+        bigInfluence={bigInfluence}
         key={link}
       />
     )

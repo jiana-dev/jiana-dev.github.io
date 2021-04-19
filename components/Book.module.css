@@ -26,6 +26,14 @@
   padding-top: 1em;
 }
 
+.bigInfluenceTitle {
+  font-family: 'Helvetica', serif;
+  font-weight: 700;
+  font-size: x-small;
+  color: #a8c8ce;
+  padding-top: 1em;
+}
+
 .headerHolder {
   display: inline-flex;
   align-items: flex-start;
