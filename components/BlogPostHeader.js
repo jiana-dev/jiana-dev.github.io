@@ -6,6 +6,7 @@ export default function BlogPostHeader(props) {
     <div className={`blogPostHeader ${props.centered && 'centered'}`}>
       <h1 className={`${props.centered && 'centered'}`}>{parse(props.title)}</h1>
       {props.subtitle && <h3 className='caption'>{props.subtitle}</h3>}
+      {props.author && <h3 className='caption'>{`by ${props.author}`}</h3>}
       <div className={`${props.centered && 'centered'} post-meta d-flex mb-4`}>
         <div className="vcard">
           <span className="date">

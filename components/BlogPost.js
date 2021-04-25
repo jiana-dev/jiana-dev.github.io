@@ -13,7 +13,7 @@ export default function BlogPost({ children, meta }) {
 
   let kids =
     <MDXProvider components={components}>
-      <BlogPostHeader title={meta.title} date={meta.date} readTime={meta.readTime} subtitle={meta.subtitle}/>
+      <BlogPostHeader title={meta.title} date={meta.date} readTime={meta.readTime} subtitle={meta.subtitle} author={meta.author}/>
       <article>{children}</article>
     </MDXProvider>
 
