@@ -1,0 +1,14 @@
+import { BlogPost } from '../../../components'
+
+export const meta = {
+  title: "When coding",
+  date: "2021-04-25T18:26:50.417-04:00",
+  description: "I ask questions when coding sometimes. These are the places I've found answers that I think could be useful if you've ever wondered the same things.",
+}
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>
+
+| Question | Resources |
+|-|-|
+| Should a method validate it's parameters? | [An opinion-based discussion](https://softwareengineering.stackexchange.com/questions/64926/should-a-method-validate-its-parameters) that might help guide you in making your decision on this controversial topic <hr/> [A blog post on null parameter validation](https://hackernoon.com/c-parameter-null-validation-explained-9h113uca)|
+| What do we think about DRY now? | [Avoid Hasty Abstractions](https://kentcdodds.com/blog/aha-programming)tells us DRY is old news <hr/> [Sandi Metz on "Duplication is better than the wrong abstraction"](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction)|

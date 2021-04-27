@@ -7,7 +7,7 @@ export default function Library({ library, meta, folder, children }) {
       link,
       module: { 
         meta: {
-          title, author, description, topPick, bigInfluence
+          title, author, description, topPick, bigInfluence, pageTitle
         }
       },
     } = book
@@ -46,7 +46,7 @@ export default function Library({ library, meta, folder, children }) {
     </>
 
   return (
-    <Layout pageTitle='she reads sometimes' activePage='resources' children={pageContent} classes='nopadding'/>
+    <Layout pageTitle={meta.pageTitle ? meta.pageTitle : 'she reads sometimes'} activePage='resources' children={pageContent} classes='nopadding'/>
   )
 }
 

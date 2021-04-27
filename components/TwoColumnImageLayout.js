@@ -23,22 +23,12 @@ export default function TwoColumnImageLayout() {
   return (
     <div className="row">
       <div className="col-lg-6">
-        <div className="section-title">
-          <a href="/blog">
-            <ImageWithCaption className='hover' src="/images/text/write-header.png" alt="sometimes i write" style={{ width: '60%'}}/>
-          </a>
-        </div>
         { blogps }
         <div className='additional-links-container'>
           <a className='additional-links' href="/blogs">More Good Blogg-y Stuff</a>
         </div>
       </div>
       <div className="col-lg-6">
-        <div className="section-title">
-          <a href="/resources">
-            <ImageWithCaption className='hover' src="/images/text/learn-header.png" alt="sometimes i learn" style={{ width: '60%'}}/>
-          </a>
-        </div>
         { resourceps }
         <div className='additional-links-container'>
           <a className='additional-links' href="/resources">Additional Cool Learn-y Doodads</a>
