@@ -2,10 +2,11 @@ import { BlogPost, ImageWithCaption } from '../../components'
 import styles from '../../components/BlogPost.module.css';
 
 export const meta = {
-  title: 'A Fantasyland Escape',
+  title: 'Escape to Fantasyland',
   preview: "But I'm still here, mindlessly scrolling, longing for an escape from what feels like an imprisonment of my own mind.",
   date: '05/02/21 14:30:05',
-  readTime: '3 min read'
+  readTime: '3 min read',
+  tag: 'story'
 }
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>

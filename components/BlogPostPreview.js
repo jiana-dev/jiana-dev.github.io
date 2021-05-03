@@ -36,6 +36,11 @@ export default function BlogPostPreview(props) {
               <span className={styles.read + " mx-1"}>
                 {props.blogPost.readTime}
               </span>
+              {props.blogPost.tag &&
+                <span className={styles.tags + " mx-1"}>
+                  {props.blogPost.tag}
+                </span>
+              }
             </span>
           </div>
         </div>

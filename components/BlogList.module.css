@@ -18,6 +18,12 @@
   color: #c4bead;
 }
 
+.tags {
+  background: #f3eee8;
+  padding: 3px 5px;
+  border-radius: 30px;
+}
+
 .blogTitle{
   color: #6b6251;
   font-weight: 500;
