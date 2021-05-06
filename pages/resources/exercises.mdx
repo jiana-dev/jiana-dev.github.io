@@ -1,0 +1,12 @@
+import { Library } from '../../components';
+import { exercises, sortPosts } from "../../lib/getAllPosts";
+
+export const meta = {
+  "title": "Exercises",
+  "preview": "Questions and exercises I've done that have guided self-reflection. I would like to periodically revisit these in order to document growth.",
+  "date": "2021-05-05T09:00:00.000-04:00",
+}
+
+export const folder = 'exercises';
+
+export default ({ children }) =>  <Library meta={meta} library={sortPosts(exercises)} folder={folder}>{children}</Library>
