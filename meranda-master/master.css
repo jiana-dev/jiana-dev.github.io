@@ -134,7 +134,7 @@ div[data-code-block] {
 }
 
 @media (min-width: 1601px) {
-  .site-section { padding: 7em var(--default-padding) 1em var(--default-padding) ; }
+  .site-section { padding: 7em var(--default-padding) 7em var(--default-padding) ; }
   .subscribe-section {
     padding: 5em var(--default-padding);
     background-color: #f0ede4;
