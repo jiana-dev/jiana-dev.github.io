@@ -8,7 +8,8 @@ export default function HeaderNav(props) {
     'podcasts': false,
     'journal': false,
     'about': false,
-    'contact': false
+    'contact': false,
+    'coaching': false
   }
 
   switch(props.activePage) {
@@ -33,6 +34,9 @@ export default function HeaderNav(props) {
     case 'contact':
       links['contact'] = true;
       break;
+    case 'coaching':
+      links['coaching'] = true;
+      break;
   }
 
   return (
@@ -50,9 +54,6 @@ export default function HeaderNav(props) {
               <li className={links['resources'] && "active"}>
                 <a href="/resources" className="nav-link text-left">Resources</a>
               </li>
-              <li className={links['podcasts'] && "active"}>
-                <a href="/podcasts" className="nav-link text-left">Podcasts</a>
-              </li>
               <li className={links['journal'] && "active"}>
                 <a href="/journal" className="nav-link text-left">Journal</a>
               </li>
@@ -61,6 +62,9 @@ export default function HeaderNav(props) {
               </li>
               <li className={`${links['contact'] && "active"}`}>
                 <a href="/contact" className="nav-link text-left">Contact</a>
+              </li>
+              <li className={`${links['coaching'] && "active"}`}>
+                <a href="/coaching" className="nav-link text-left">Coaching</a>
               </li>
             </ul>
           </nav>
