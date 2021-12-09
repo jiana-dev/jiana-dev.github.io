@@ -1,0 +1,36 @@
+import { BlogPost, ImageWithCaption } from '../../../components'
+import styles from '../../../components/BlogPost.module.css';
+
+export const meta = {
+  title: "Presence",
+  author: "Amy Cuddy",
+  date: "2021-05-13T19:11:00.000-04:00",
+  description: "Learning about presence has become so important to me that I'm now tracking it in my bullet journal everyday. Everything I do now has me thinking about power and presence at the forefront. Illuminating!",
+  bigInfluence: true
+}
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>
+
+What's new? Another book changes my life.
+
+I have nothing to say about this book except for that you must read it. I think the first few chapters are the most useful and the last couple are reinforcements of the idea, but reading it will give you the full experience. I've left my notes below as I think it gives it all a good summary.
+
+<div className={styles.imgHolder}>
+  <div className="row col-12">
+    <div className="col-4">
+      <a href="../../../images/presence/Presence1.jpg" download="Presence1">
+        <ImageWithCaption src="../../../images/presence/Presence1.jpg" alt="Presence1" caption=""/>
+      </a>
+    </div>
+    <div className="col-4">
+      <a href="../../../images/presence/Presence2.jpg" download="Presence2">
+        <ImageWithCaption src="../../../images/presence/Presence2.jpg" alt="Presence2" caption="Click to Download Any Page"/>
+      </a>
+    </div>
+    <div className="col-4">
+      <a href="../../../images/presence/Presence3.jpg" download="Presence3">
+        <ImageWithCaption src="../../../images/presence/Presence3.jpg" alt="Presence3" caption=""/>
+      </a>
+    </div>
+  </div>
+</div>
